@@ -9,13 +9,14 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<script src="<?php bloginfo('template_directory'); ?>/js/compressed/modernizr.js"></script>
-	<?php wp_head(); ?> 
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 <div id="container">
     <header id="header">
-		<h1 id="main-title"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+
     </header>
     <div id="main" role="main">
+			<div id='content'>

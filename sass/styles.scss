@@ -5,6 +5,30 @@
 @import "mixins";
 
 
+body {
+}
+
+#container {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include calc(width,'100%-50px');
+	width: 100%;
+	padding-bottom: 0;
+	background: #ffff66; /* Old browsers */
+	background: -moz-linear-gradient(#ffff66,#0033cc); /* FF3.6-15 */
+	background: -webkit-linear-gradient(#ffff66,#0033cc); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(#ffff66,#0033cc); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#0033cc',GradientType=0 ); /* IE6-9 */
+}
+
+#content {
+	background: white;
+	margin: 20px;
+}
+
+
 #main {
 	-webkit-animation: fadein 1s; /* Safari and Chrome */
 	-moz-animation: fadein 1s; /* Firefox */
