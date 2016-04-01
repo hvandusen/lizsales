@@ -1,0 +1,1 @@
+!function($){var e=0;e++,$(document).ready(function(){$("body").mousemove(function(){$(".typewriter pre").css({"font-size":20+3*Math.sin(e/6)}),e++})})}(jQuery);

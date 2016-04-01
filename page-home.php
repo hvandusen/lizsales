@@ -16,34 +16,36 @@
 
 <div class='ascii typewriter'>
 	<pre>
-	    ---------------------        
-	    |                   |        
-	    |     <span>I WRITE</span>       |        
-	    |     <span>ARTIST</span>        |        
-	    |     <span>STATEMENTS</span>    |        
-	(     |                   |&nbsp;&nbsp;        
-	  \  X=====U===========U======D        
-	   \___|_______  V ________|___        
-	    /      \  ///III\\\  /      \        
-	    /------- + ————————— + -------\        
-	    |    0 0 0 0 0 0 0 0 0 0 0 0    |        
-	    |     0 0 0 0 0 0 0 0 0 0 0     |        
-	    |    0 0 0 0 0 0 0 0 0 0 0 0    |        
-	    |     0 0 0 0 0 0 0 0 0 0 0     |        
-	    |    0 0 0 0 0 0 0 0 0 0 0 0    |        
-	    \       (_____________)       /        
-	    \___________________________/        
+	    ---------------------
+	    |                   |
+	    |     <span>I WRITE</span>       |
+	    |     <span>ARTIST</span>        |
+	    |     <span>STATEMENTS</span>    |
+	(     |                   |&nbsp;&nbsp;
+	  \  X=====U===========U======D
+	   \___|_______  V ________|___
+	    /      \  ///III\\\  /      \
+	    /------- + ————————— + -------\
+            |    0 0 0 0 0 0 0 0 0 0 0 0    |
+	    |     0 0 0 0 0 0 0 0 0 0 0     |
+	    |    0 0 0 0 0 0 0 0 0 0 0 0    |
+	    |     0 0 0 0 0 0 0 0 0 0 0     |
+	    |    0 0 0 0 0 0 0 0 0 0 0 0    |
+	    \       (_____________)       /
+	    \___________________________/
 	</pre>
 </div>
 <div class='ascii section'>
 <?php
-$headerBar = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
-	$preName = '|(  ';
-	$postName = '  )|   ';
+$headerBar = '&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+	$preName = '&nbsp;(|';
+	$postName = '  |)&nbsp;';
 	echo '<div>' . $headerBar . '</div>';
-	echo '<div>' . $preName . 'Services'. $postName . '</div>';
+	//note hen- services is 8 chars and the rest are 7!!!
+	echo '<div>' . $preName . '<span>  &nbsp;SERVICES&nbsp;</span>'. $postName . '</div>';
 	echo '<div>' . $headerBar . '</div>'; ?>
 </div>
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

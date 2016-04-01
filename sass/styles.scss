@@ -7,7 +7,7 @@
 
 @font-face {
 			font-family: Plantin;
-			src: url("../css/webfont//plantin-1361529374.ttf") format("truetype");
+			src: url("../css/webfont/plantin.ttf") format("truetype");
 			}
 @font-face {
 		font-family: Elementa;
@@ -27,7 +27,7 @@
 body {
 	@extend .plantin;
 }
- 
+
 #container {
 	margin: 0;
 	position: absolute;
@@ -106,23 +106,26 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	float: right;
 }
 
+.section {
+	text-align: center;
+	padding: 40px 0;
+	margin-bottom: 20px;
+}
+
 .ascii {
 	@extend .elementa;
 	color: black;
 	text-decoration: none;
 	text-align: center;
 	width: 100%;
-	&.section {
-		text-align: center;
-		padding: 40px;
-		margin-bottom: 20px;
-	}
+	margin: 0 7em 0 0;
+
 	&.right {
 		text-align: none;
 	}
 	//make up for lack of centering for ascii art
 	pre {
-		margin: 0 2.3em 0 0;
+		padding-right: 7em;
 	}
 	span {
 		color: #c13a1c;
