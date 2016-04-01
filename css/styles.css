@@ -160,9 +160,11 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
+@font-face { font-family: Plantin; src: url("../css/webfont//plantin-1361529374.ttf") format("truetype"); }
+@font-face { font-family: Elementa; src: url("../css/webfont/ufonts.com_elementa-bold.ttf") format("truetype"); }
 #container { margin: 0; position: absolute; top: 0; left: 0; width: -webkit-calc(100%-50px); width: calc(100%-50px); width: 100%; padding-bottom: 0; background: #ffff66; /* Old browsers */ background: -moz-linear-gradient(#ffff66, #0033cc); /* FF3.6-15 */ background: -webkit-linear-gradient(#ffff66, #0033cc); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(#ffff66, #0033cc); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#0033cc',GradientType=0 ); /* IE6-9 */ }
 
-#content { background: white; margin: 20px; }
+#content { background: white; margin: 20px; background: #ffeee7; min-height: 5300px; }
 
 #main { -webkit-animation: fadein 1s; /* Safari and Chrome */ -moz-animation: fadein 1s; /* Firefox */ -ms-animation: fadein 1s; /* Internet Explorer */ -o-animation: fadein 1s; /* Opera */ animation: fadein 1s; }
 
@@ -177,3 +179,10 @@ td, th { padding: 0; }
 @-o-keyframes fadein { from { opacity: 0; }
   to { opacity: 1; } }
 a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] { text-decoration: none; border: 0 none; }
+
+.nav { height: 2em; padding: 10px; }
+.nav a { padding: 0 10px; }
+
+.left { float: left; }
+
+.right { float: right; }

@@ -5,6 +5,15 @@
 @import "mixins";
 
 
+@font-face {
+			font-family: Plantin;
+			src: url("../css/webfont//plantin-1361529374.ttf") format("truetype");
+			}
+@font-face {
+		font-family: Elementa;
+		src: url('../css/webfont/ufonts.com_elementa-bold.ttf') format('truetype')
+}
+
 body {
 }
 
@@ -26,6 +35,8 @@ body {
 #content {
 	background: white;
 	margin: 20px;
+	background: #ffeee7;
+	min-height: 5300px;
 }
 
 
@@ -66,4 +77,23 @@ body {
 a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	text-decoration: none;
 	border: 0 none;
+}
+
+.nav {
+	height: 2em;
+	padding: 10px;
+	a {
+		padding: 0 10px;
+	}
+}
+
+.left {
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.ascii {
+
 }

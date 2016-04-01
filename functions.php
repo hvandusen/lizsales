@@ -14,7 +14,7 @@ add_action('init', 'chipsScripts');
 	// Use:
 	// if ( isset( $wp_query->query_vars['archive'] )){ do stuff... }
 
-
+add_filter( 'show_admin_bar', '__return_false' );
 /* Change the Stylesheet directory */
 add_filter('stylesheet_uri','wpi_stylesheet_uri',10,2);
 function wpi_stylesheet_uri($stylesheet_uri, $stylesheet_dir_uri){
@@ -37,7 +37,7 @@ add_action( 'widgets_init', 'chips_widgets_init' );
 
 
 // ACF OPTIONS PAGES
-// if(function_exists('acf_add_options_page')) { 
+// if(function_exists('acf_add_options_page')) {
 // 	acf_add_options_page();
 // 	acf_add_options_sub_page('Header');
 // 	acf_add_options_sub_page('Footer');
@@ -52,7 +52,7 @@ function add_fb_open_graph_tags() {
 			$thumbnail_id = get_post_thumbnail_id($post->ID);
 			$thumbnail_object = get_post($thumbnail_id);
 			$image = $thumbnail_object->guid;
-		} else {	
+		} else {
 			$image = ''; // Change this to the URL of the logo you want beside your links shown on Facebook
 		}
 		//$description = get_bloginfo('description');
@@ -143,9 +143,9 @@ add_action('admin_menu', 'remove_admin_menu_items');
 
 function remove_recent_comment_style() {
 	global $wp_widget_factory;
-	remove_action( 
-		'wp_head', 
-		array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) 
+	remove_action(
+		'wp_head',
+		array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' )
 	);
 }
 add_action( 'widgets_init', 'remove_recent_comment_style' );
@@ -163,4 +163,3 @@ function my_custom_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
 }
-
