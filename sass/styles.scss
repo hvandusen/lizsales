@@ -102,6 +102,7 @@ body {
 label {
 		display: table-cell;
 		color: blue;
+		font-weight: bold;
 		border-bottom: solid blue 2px;
 		&.clicked {
 			border-bottom: solid black 2px;
@@ -122,6 +123,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	height: 2em;
 	padding: 10px;
 	color: #0033cc;
+	line-height: 1.8em;
 	a {
 		padding: 0 10px;
 	}
@@ -132,6 +134,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 .right{
 	float: right;
+	&.elementa {
+		color: black;
+		text-decoration: none;
+		line-height: 47px;
+	}
 }
 
 .section {
@@ -141,21 +148,26 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	&.questionnaire {
 		max-width: 67%;
 		.info {
-			margin: 1em 0;
 			color: blue;
 			display: inline-block;
+			margin: 1em 0;
 		}
 		p {
 			color: blue;
 			font-weight: bold;
 		}
 		form {
-			p{
-				color: black;
+			div {
+			}
+			& > p{
+				color: blue;
 			}
 			.txt_input{
 				@extend .input;
 				display: inline;
+				input {
+					vertical-align: middle;
+				}
 			}
 		}
 		.input_inner {
@@ -164,17 +176,19 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.input_content, .input_contents {
 			display: inherit;
 			width: 100%;
-		 
 		}
 		}
 		.input_outer {
     	overflow: hidden;
     	left: 20px;
+			margin: 15px 0;
 		}
 		.button_box {
-			width: 67%;
+			width: 100%;
     	text-align: center;
 			display: inline-block;
+			height: 175px;
+
 		}
 		.wpcf7-form-control-wrap {
 		    //display: table-cell;
@@ -194,17 +208,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.ajax-loader {
 			display: none;
 		}
-		.wpcf7-submit{
+		.wpcf7-submit, .img_input{
 			z-index: 10;
 			@extend .elementa;
 			color: #c13a1c;
 			@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
 			background: #ffff66;
-			position: absolute;
+
 			padding: 39px 62px;
 			border-image-outset: 6px;
+			max-width: 270px;
 			&:focus {
 				outline:none;
+			}
+		& >	input {
+				background: #ffff66;
 			}
 	}
 	.submit_bg {
@@ -231,6 +249,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 	&.right {
 		text-align: none;
+		color: black;
+		text-decoration: none;
 	}
 	//make up for lack of centering for  art
 	pre {

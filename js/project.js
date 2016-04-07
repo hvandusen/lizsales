@@ -5,6 +5,8 @@
 		$(i).wrap($( "<div class='input_outer'><div class='input_inner'></div></div>" ));
 		//$(i).remove();
 	});
+	
+
 	$('input').focus(function(){
 		console.log(this)
 		$('.clicked').removeClass('clicked');
@@ -18,7 +20,6 @@
 
 			//$(this).find('.wpfc7-submit').submit(function(e){
 			var sub = $(this).prev().prev();
-			$(sub).submit();
 				console.dir();
 				//submitter.submit(function(){
 

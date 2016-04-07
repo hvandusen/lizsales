@@ -4,7 +4,7 @@
 	<a class='left'  href='#writers'>Writers</a>
 	<a class='left' href='#process'>Process</a>
 	<a class='left'  href='#pricing'>Pricing</a>
-	<a class='right elementa' href='/questionnaire'>O---K</a>
+	<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---K</a>
 	<a class='right' href='#Contact'>Contact</a>
 </div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
