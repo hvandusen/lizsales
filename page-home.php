@@ -4,7 +4,7 @@
 	<a class='left'  href='#writers'>Writers</a>
 	<a class='left' href='#process'>Process</a>
 	<a class='left'  href='#pricing'>Pricing</a>
-	<a class='right elementa' href='/form'>O---K</a>
+	<a class='right elementa' href='/questionnaire'>O---K</a>
 	<a class='right' href='#Contact'>Contact</a>
 </div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -15,7 +15,7 @@
 </div>
 
 <div class='ascii typewriter'>
-	<pre>
+<pre>
 	    ---------------------
 	    |                   |
 	    |     <span>I WRITE</span>       |
@@ -35,15 +35,11 @@
 	    \___________________________/
 	</pre>
 </div>
-<div class='ascii section'>
-<?php
-$headerBar = '&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
-	$preName = '&nbsp;(|';
-	$postName = '  |)&nbsp;';
-	echo '<div>' . $headerBar . '</div>';
-	//note hen- services is 8 chars and the rest are 7!!!
-	echo '<div>' . $preName . '<span>  &nbsp;SERVICES&nbsp;</span>'. $postName . '</div>';
-	echo '<div>' . $headerBar . '</div>'; ?>
+
+
+
+<div id='services' class='ascii section'>
+<?php asciiBar('SERVICES'); ?>
 </div>
 
 <?php endwhile; ?>

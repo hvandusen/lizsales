@@ -28,6 +28,16 @@
 	}
 }
 
+@mixin border-ascii($url,$offset,$px,$repeat){
+	border-style: solid;
+	border-width: $px;
+	-moz-border-image: $url $offset $repeat ;
+	-webkit-border-image: $url $offset $repeat ;
+	-o-border-image: $url $offset $repeat ;
+	border-image: $url $offset  $repeat ;
+
+}
+
 @mixin clearfix {
 	&:after {
 		content: "";
@@ -38,8 +48,8 @@
 
 @mixin calc($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
-	#{$property}: calc(#{$expression}); 
-} 
+	#{$property}: calc(#{$expression});
+}
 
 @function trans($color, $percentage) {
 	@return lighten($color, (1-$percentage)*5%);

@@ -1,5 +1,6 @@
 @import "compass";
 @import "compass/layout";
+@import "compass/css3/user-interface";
 @import "normalize";
 @import "typography";
 @import "mixins";
@@ -50,6 +51,24 @@ body {
 	min-height: 5300px;
 }
 
+.input {
+	@extend .elementa;
+	color: black;
+	width: auto;
+	border: none;
+	border-bottom: solid blue 2px;
+	width: 100%;
+	background: #ffeee7;
+	@include input-placeholder {
+		color: black;
+	}
+	&:focus {
+
+		outline: none;
+		color: black;
+		border-bottom: solid black 2px;
+	}
+}
 
 #main {
 	-webkit-animation: fadein 1s; /* Safari and Chrome */
@@ -80,6 +99,15 @@ body {
 	to { opacity: 1; }
 }
 
+label {
+		display: table-cell;
+		color: blue;
+		border-bottom: solid blue 2px;
+		&.clicked {
+			border-bottom: solid black 2px;
+		}
+}
+
 // sticky footer mixin; see: http://compass-style.org/reference/compass/layout/sticky_footer/
 // $footerHeight:100px;
 // @include sticky-footer($footerHeight);
@@ -107,9 +135,90 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 
 .section {
-	text-align: center;
+	margin: 0 auto;
 	padding: 40px 0;
 	margin-bottom: 20px;
+	&.questionnaire {
+		max-width: 67%;
+		.info {
+			margin: 1em 0;
+			color: blue;
+			display: inline-block;
+		}
+		p {
+			color: blue;
+			font-weight: bold;
+		}
+		form {
+			p{
+				color: black;
+			}
+			.txt_input{
+				@extend .input;
+				display: inline;
+			}
+		}
+		.input_inner {
+    display: table;
+    width: 100%;
+		.input_content, .input_contents {
+			display: inherit;
+			width: 100%;
+		
+		}
+		}
+		.input_outer {
+    	overflow: hidden;
+    	left: 20px;
+		}
+		.button_box {
+			width: 67%;
+    	text-align: center;
+			display: inline-block;
+		}
+		.wpcf7-form-control-wrap {
+		    //display: table-cell;
+		    width: 100%;
+
+		}
+		//old <div class='button_box'>[submit "Upload Images"]<div class='submit_bg'></div><div class='input_submit'></div></div>
+		.input_submit {
+			//./images/border-across.png
+			//../images/border-vertical.png
+			position: absolute;
+			height: 80px;
+			width: 250px;
+
+			display: inline-block;
+		}
+		.ajax-loader {
+			display: none;
+		}
+		.wpcf7-submit{
+			z-index: 10;
+			@extend .elementa;
+			color: #c13a1c;
+			@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
+			background: #ffff66;
+			position: absolute;
+			padding: 39px 62px;
+			border-image-outset: 6px;
+			&:focus {
+				outline:none;
+			}
+	}
+	.submit_bg {
+		height: 98px;
+		width: 263px;
+		@extend .elementa;
+		color: #c13a1c;
+		background: #ffff66;
+		border: none;
+		position: absolute;
+		margin: 5px;
+		display: inline;
+	}
+	}
 }
 
 .ascii {
@@ -123,14 +232,23 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	&.right {
 		text-align: none;
 	}
-	//make up for lack of centering for ascii art
+	//make up for lack of centering for  art
 	pre {
 		padding-right: 7em;
 	}
-	span {
+	.asciiTitle {
 		color: #c13a1c;
+	}
+	div {
+		.preBar, .postBar {
+			@media (max-width: 1161px){
+				display: none;
+			}
+		}
 	}
 }
 .typewriter {
-
+	p {
+		margin:0;
+	}
 }

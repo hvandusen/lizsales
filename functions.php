@@ -163,3 +163,53 @@ function my_custom_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
 }
+
+function asciiBar($title){
+  $buildMiddle = '<span class="preBar" >';
+  $buildTop = '<span class="preBar" >';
+  $noTitle = '';
+  for ($x = 0; $x <= strlen($title); $x++){
+    $noTitle = $noTitle . '-';
+  }
+  //total bar length!
+  $lenBar = 85;
+  $even = strlen($title) % 2 === 0;
+  //this accounts for the "skip" in the middle of the string
+  if($even)
+    $lenText = strlen($title)+1;
+  else {
+    $lenText = strlen($title)+2;
+  }
+  $padding = ($lenBar-$lenText)/2;
+  $preName = '(|';
+	$postName = '|)<span class="postBar" >';
+  for ($x = 0; $x <= $lenBar; $x++) {
+    if($x<($lenBar-$lenText)/2){
+      $newMiddle = ' ';
+      $newTop = '~';
+    }
+    else if ($x===($lenBar-$lenText)/2){
+      $newMiddle =  '</span>' . $preName . '<span class="asciiTitle">  &nbsp;' . $title . '&nbsp;</span>  '. $postName;
+      $newTop = '</span>' . $preName . '<span>--' . $noTitle . '-</span>'. $postName ;//$newTop . $preName;
+      $x = $x + $lenText;
+    }
+    else{
+      $newMiddle = ' ';
+      $newTop = '~';
+    }
+
+    $buildMiddle = $buildMiddle . $newMiddle;
+    $buildTop = $buildTop . $newTop;
+}
+$buildMiddle = $buildMiddle . '</span>';
+$buildTop = $buildTop . '</span>';
+// bar total is 67. space+ bars+no space
+
+//$headerBar = '&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+  //echo strlen($headerBar);
+	echo '<div>' . $buildTop . '</div>';
+  echo '<div>' . $buildMiddle . '</div>';
+  echo '<div>' . $buildTop . '</div>';
+	//note hen- services is 8 chars and the rest are 7!!!
+
+}
