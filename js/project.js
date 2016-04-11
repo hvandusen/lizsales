@@ -33,17 +33,25 @@
 
 			//});
 		});
+		var animateTypewriter = false;
+		$('#animateTypewriter').click(function(){
+			animateTypewriter = !animateTypewriter;
+			$(this).text((animateTypewriter ? 'animate':'dont animate'));
 
+		})
+		var cnt = 0;
 		$('body').mousemove(function(){
 
 			$('.wpfc7-submit').map(function(e,i){
 				console.log(i);
 			});
-			//$('.typewriter pre').css({
-				//'letter-spacing': 2+Math.sin((count-.5)/10),
-			//	'font-size': 20+ Math.floor(Math.sin(count/10)*10)
-			//});
-			count++;
+			if(animateTypewriter === true){
+				$('.typewriter pre').css({
+					'letter-spacing': 2+Math.sin((cnt-.5)/10),
+					'font-size': 20+ Math.floor(Math.sin(cnt/10)*10)
+				});
+				cnt++;
+			}
 		});
 
 	});

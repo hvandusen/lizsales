@@ -10,8 +10,7 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	 <?php //the_content(); ?>
-
-
+<button id='animateTypewriter'>animate</button>
 <div class='ascii typewriter'>
 <pre>
 	    ---------------------

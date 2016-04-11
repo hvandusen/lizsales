@@ -18,6 +18,7 @@
  asciiBar($title);
  ?>
  </span>
+
 <div class='questionnaire section '>
 
 	<?php the_content(); ?>
