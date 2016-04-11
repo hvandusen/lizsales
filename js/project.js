@@ -5,12 +5,19 @@
 		$(i).wrap($( "<div class='input_outer'><div class='input_inner'></div></div>" ));
 		//$(i).remove();
 	});
-	
+
 
 	$('input').focus(function(){
 		console.log(this)
 		$('.clicked').removeClass('clicked');
 		$(this).parent().prev().addClass('clicked');
+	});
+	var addedImages = 1;
+	$('.img_input input').hide();
+	$($('.img_input input')[0]).show();
+	$('.img_input input').change(function(){
+		$($('.img_input input')[addedImages]).show();
+		addedImages++;
 	});
 
 
@@ -40,5 +47,31 @@
 		});
 
 	});
+	$('.wpcf7-list-item label').map(function(i,e){
+		//$('<span class="xBox">[ ]</span>').prependTo($(e));
+		$(e).html('<span class="chbox">[<span> </span>]</span> '+$(e).html())
+	});
+	var ignoreNextClick = false;
+	$('.wpcf7-list-item >label').click(function(e){
+	//$('.wpcf7-list-item').click(function(e){
+	//e.preventDefault();
+	//e.stopPropagation();
+	ignoreNextClick = !ignoreNextClick;
+	if(ignoreNextClick)
+		return;
+
+
+		console.log('click')
+		var box  = $(this).find('.chbox span');
+		console.log(box.text().indexOf('X')>0)
+		if(box.text().indexOf('X')>0){
+			box.text(box.text().replace('X',' '))
+		}
+
+		else {
+			box.text(box.text().replace(' ','X'))
+		}
+	})
+
 
 })(jQuery);

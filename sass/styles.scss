@@ -50,7 +50,15 @@ body {
 	background: #ffeee7;
 	min-height: 5300px;
 }
-
+label {
+		display: table-cell;
+		color: blue;
+		font-weight: bold;
+		border-bottom: solid blue 2px;
+		&.clicked {
+			border-bottom: solid black 2px;
+		}
+}
 .input {
 	@extend .elementa;
 	color: black;
@@ -99,15 +107,7 @@ body {
 	to { opacity: 1; }
 }
 
-label {
-		display: table-cell;
-		color: blue;
-		font-weight: bold;
-		border-bottom: solid blue 2px;
-		&.clicked {
-			border-bottom: solid black 2px;
-		}
-}
+
 
 // sticky footer mixin; see: http://compass-style.org/reference/compass/layout/sticky_footer/
 // $footerHeight:100px;
@@ -147,6 +147,30 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	margin-bottom: 20px;
 	&.questionnaire {
 		max-width: 67%;
+
+		textarea {
+    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+    background-image: -o-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+    background-image: linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+		width: 100%;
+    background-size: 100% 61px;
+		max-height: 200px;
+    line-height: 61px;
+
+
+		outline: none;
+		border: none;
+		@extend .elementa;
+		&:focus {
+			outline: none;
+		}
+		}
+		.btn {
+			text-align: center;
+			margin: 20px 0px;
+		}
 		.info {
 			color: blue;
 			display: inline-block;
@@ -176,6 +200,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.input_content, .input_contents {
 			display: inherit;
 			width: 100%;
+			&.area label {
+				display: block;
+				border-bottom: none;
+				padding-bottom: 1em;
+			}
 		}
 		}
 		.input_outer {
@@ -187,13 +216,42 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			width: 100%;
     	text-align: center;
 			display: inline-block;
-			height: 175px;
+			height: auto;//175px;
 
 		}
 		.wpcf7-form-control-wrap {
 		    //display: table-cell;
 		    width: 100%;
 
+		}
+		.wpcf7-checkbox {
+			display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+
+	    max-height: 230px;
+	    justify-content: space-between;
+	    align-items: baseline;
+			.wpcf7-list-item {
+			margin-left: 0px;
+			label {
+				font-weight: normal;
+				border: none;
+				padding: 5px 0px;
+				.chbox {
+					@extend .elementa;
+					color: black;
+					span {
+						color: red;
+					}
+				}
+			}
+			input {
+				background: #ffeee7;
+				font-weight: normal;
+				visibility: hidden;
+			}
+			}
 		}
 		//old <div class='button_box'>[submit "Upload Images"]<div class='submit_bg'></div><div class='input_submit'></div></div>
 		.input_submit {
@@ -202,7 +260,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			position: absolute;
 			height: 80px;
 			width: 250px;
-
 			display: inline-block;
 		}
 		.ajax-loader {
@@ -214,7 +271,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			color: #c13a1c;
 			@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
 			background: #ffff66;
-
+			//@include calc(margin-left, '50% - 208px');
 			padding: 39px 62px;
 			border-image-outset: 6px;
 			max-width: 270px;
@@ -224,6 +281,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		& >	input {
 				background: #ffff66;
 			}
+			input {
+				width: 280px;
+    		margin: 17px 0px;
+				display: flex;
+				&:focus {
+					outline:none;
+				}
+			}
+	}
+	.wpcf7-submit {
+		margin: 0px;
 	}
 	.submit_bg {
 		height: 98px;
