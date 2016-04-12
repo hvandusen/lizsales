@@ -164,6 +164,20 @@ function my_custom_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
 }
 
+
+add_filter( 'the_password_form', 'custom_password_form' );
+function custom_password_form() {
+	//' . __( "THIS IS YOUR NEW PASSWORD INTRO TEXT THAT SHOWS ABOVE THE PASSWORD FORM" ) . '
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a><div class="right elementa pword-ok" href="">O---K</div>
+		 </label><div id="pword-box"><input class="pword-field" name="post_password" id="' . $label . '" type="password" style="background: #ffffff; " size="20" placeholder="Password: "/><input type="submit" name="Submit" class="button" value="' . esc_attr__( "ENTER" ) . '" /></div>
+    </form>
+    ';
+    return $o;
+}
+
+
 function asciiBar($title){
   $buildMiddle = '<span class="preBar" >';
   $buildTop = '<span class="preBar" >';

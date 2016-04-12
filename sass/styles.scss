@@ -25,6 +25,20 @@
 		font-size: 20px;
 }
 
+.ascii-border {
+	z-index: 10;
+	@extend .elementa;
+	color: #c13a1c;
+	@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
+	background: #ffff66;
+	//@include calc(margin-left, '50% - 208px');
+	border-image-outset: 6px;
+
+	&:focus {
+		outline:none;
+	}
+}
+
 body {
 	@extend .plantin;
 }
@@ -52,9 +66,9 @@ body {
 }
 label {
 		display: table-cell;
-		color: blue;
+		color: #0033cc;
 		font-weight: bold;
-		border-bottom: solid blue 2px;
+		border-bottom: solid #0033cc 2px;
 		&.clicked {
 			border-bottom: solid black 2px;
 		}
@@ -64,7 +78,7 @@ label {
 	color: black;
 	width: auto;
 	border: none;
-	border-bottom: solid blue 2px;
+	border-bottom: solid #0033cc 2px;
 	width: 100%;
 	background: #ffeee7;
 	@include input-placeholder {
@@ -149,11 +163,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		max-width: 67%;
 
 		textarea {
-    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
-    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
-    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
-    background-image: -o-linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
-    background-image: linear-gradient(#ffeee7, #ffeee7 47px, blue 47px, blue 49px, #ffeee7 49px);
+    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
+    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
+    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
+    background-image: -o-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
+    background-image: linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
 		width: 100%;
     background-size: 100% 61px;
 		max-height: 200px;
@@ -172,19 +186,19 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			margin: 20px 0px;
 		}
 		.info {
-			color: blue;
+			color: #0033cc;
 			display: inline-block;
 			margin: 1em 0;
 		}
 		p {
-			color: blue;
+			color: #0033cc;
 			font-weight: bold;
 		}
 		form {
 			div {
 			}
 			& > p{
-				color: blue;
+				color: #0033cc;
 			}
 			.txt_input{
 				@extend .input;
@@ -223,6 +237,48 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		    //display: table-cell;
 		    width: 100%;
 
+		}
+		.post-password-form {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #0033cc;
+			text-align: center;
+			#pword-box {
+				margin-top: 230px;
+				display: flex;
+				justify-content: center;
+				//henry
+
+				input {
+					@extend .ascii-border;
+					padding: 10px 20px;
+				}
+			}
+			.pword-ok {
+				margin:30px;
+			}
+			.pword-back {
+				    float: left;
+						margin:	30px;
+						color: #ffff66;
+						text-decoration: none;
+						span {
+							@extend .elementa;
+							color:	black;
+							border-bottom: none;
+						}
+						div{
+							display: inline-block;
+							border-bottom: solid 1px #ffff66;
+						}
+			}
+			p{
+					color: white;
+					display:none;
+			}
 		}
 		.wpcf7-checkbox {
 			display: flex;
@@ -266,6 +322,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: none;
 		}
 		.wpcf7-submit, .img_input{
+
 			z-index: 10;
 			@extend .elementa;
 			color: #c13a1c;
