@@ -69,15 +69,16 @@
 		return;
 
 
-		console.log('click')
 		var box  = $(this).find('.chbox span');
-		console.log(box.text().indexOf('X')>0)
-		if(box.text().indexOf('X')>0){
+		console.log(box)
+		console.log(box.text().indexOf('X')>-1)
+		if(box.text().indexOf('X')>-1){
 			box.text(box.text().replace('X',' '))
+			console.log('remove x')
 		}
-
 		else {
-			box.text(box.text().replace(' ','X'))
+			console.log('add x')
+			box.text('X');//box.text().replace(' ','X'))
 		}
 	})
 

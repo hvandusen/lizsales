@@ -165,17 +165,19 @@ function my_custom_dashboard_widgets() {
 }
 
 
-add_filter( 'the_password_form', 'custom_password_form' );
+
 function custom_password_form() {
 	//' . __( "THIS IS YOUR NEW PASSWORD INTRO TEXT THAT SHOWS ABOVE THE PASSWORD FORM" ) . '
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-    $o = '<form class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-pass.php" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a><div class="right elementa pword-ok" href="">O---K</div>
+    $o = '<form class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a><div class="right elementa pword-ok" href="">O---K</div>
 		 </label><div id="pword-box"><input class="pword-field" name="post_password" id="' . $label . '" type="password" style="background: #ffffff; " size="20" placeholder="Password: "/><input type="submit" name="Submit" class="button" value="' . esc_attr__( "ENTER" ) . '" /></div>
     </form>
     ';
     return $o;
 }
+
+add_filter( 'the_password_form', 'custom_password_form' );
 
 
 function asciiBar($title){
