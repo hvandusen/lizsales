@@ -14,6 +14,12 @@
 		font-family: Elementa;
 		src: url('../css/webfont/ufonts.com_elementa-bold.ttf') format('truetype')
 }
+@font-face {
+		font-family: Elementa-Bold;
+		src: url('../css/webfont/ufonts.com_elementa-bold.ttf') format('truetype')
+}
+
+$blue: #0033cc;
 
 .plantin{
 		font-family: Plantin;
@@ -52,10 +58,10 @@ body {
 	width: 100%;
 	padding-bottom: 0;
 	background: #ffff66; /* Old browsers */
-	background: -moz-linear-gradient(#ffff66,#0033cc); /* FF3.6-15 */
-	background: -webkit-linear-gradient(#ffff66,#0033cc); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(#ffff66,#0033cc); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#0033cc',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(#ffff66,$blue); /* FF3.6-15 */
+	background: -webkit-linear-gradient(#ffff66,$blue); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(#ffff66,$blue); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='$blue',GradientType=0 ); /* IE6-9 */
 }
 
 #content {
@@ -66,9 +72,9 @@ body {
 }
 label {
 		display: table-cell;
-		color: #0033cc;
+		color: $blue;
 		font-weight: bold;
-		border-bottom: solid #0033cc 2px;
+		border-bottom: solid $blue 2px;
 		&.clicked {
 			border-bottom: solid black 2px;
 		}
@@ -78,7 +84,7 @@ label {
 	color: black;
 	width: auto;
 	border: none;
-	border-bottom: solid #0033cc 2px;
+	border-bottom: solid $blue 2px;
 	width: 100%;
 	background: #ffeee7;
 	@include input-placeholder {
@@ -136,7 +142,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .nav {
 	height: 2em;
 	padding: 10px;
-	color: #0033cc;
+	color: $blue;
 	line-height: 1.8em;
 	a {
 		padding: 0 10px;
@@ -155,24 +161,55 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 }
 
+
 .section {
 	margin: 0 auto;
 	padding: 40px 0;
 	margin-bottom: 20px;
-	&.questionnaire {
+	//buy form
+	#wpcf7-f25-p7-o1{
+		max-width: 67%;
+	  margin: 0 auto;
+	.pricing-fields {
+
+		display: flex;
+		flex-direction: column;
+		max-height: 570px;
+		flex-wrap: wrap;
+		//align-items: center;
+		p{
+			max-width: 360px;
+			text-align: left;
+			margin: 1.5em 0;
+			margin-right: 150px;
+			.wpcf7-list-item:last-child {
+
+			}
+		}
+	}
+	}
+
+	p {
+		max-width: 67%;
+		text-align: left;
+		color: $blue;
+		margin: 0 auto;
+		@extend .plantin;
+	}
+
+	&.questionnaire, #wpcf7-f25-p7-o1 {
 		max-width: 67%;
 
 		textarea {
-    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
-    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
-    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
-    background-image: -o-linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
-    background-image: linear-gradient(#ffeee7, #ffeee7 47px, #0033cc 47px, #0033cc 49px, #ffeee7 49px);
+    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
+    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
+    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
+    background-image: -o-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
+    background-image: linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
 		width: 100%;
     background-size: 100% 61px;
 		max-height: 200px;
     line-height: 61px;
-
 
 		outline: none;
 		border: none;
@@ -186,19 +223,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			margin: 20px 0px;
 		}
 		.info {
-			color: #0033cc;
+			color: $blue;
 			display: inline-block;
 			margin: 1em 0;
 		}
 		p {
-			color: #0033cc;
+			color: $blue;
 			font-weight: bold;
+			max-width: none;
+			margin: 0;
 		}
 		form {
 			div {
 			}
 			& > p{
-				color: #0033cc;
+				color: $blue;
 			}
 			.txt_input{
 				@extend .input;
@@ -244,7 +283,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: #0033cc;
+			background: $blue;
 			text-align: center;
 			#pword-box {
 				margin-top: 230px;
@@ -396,4 +435,38 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	p {
 		margin:0;
 	}
+}
+.thankyou {
+	text-align: right;
+
+		.ty-1{
+
+		}
+		.ty-2{
+
+		}
+		.ty-3{
+			&:after {
+					//content: "aaaa";
+				color: #ffeee7;
+			}
+		}
+		.ty-4{
+
+		}
+		.ty-5{
+
+		}
+		.ty-6{
+			&:after {
+				content: "aaaaaaaaaaaaa";
+				color: #ffeee7;
+			}
+		}
+		.ty-7 {
+			&:after {
+				content: "aaaaaaaaaaaaa";
+				color: #ffeee7;
+			}
+		}
 }
