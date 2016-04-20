@@ -68,7 +68,7 @@ body {
 	background: white;
 	margin: 20px;
 	background: #ffeee7;
-	min-height: 5300px;
+	//min-height: 5300px;
 }
 label {
 		display: table-cell;
@@ -207,7 +207,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 	&.questionnaire, #wpcf7-f25-p7-o1 {
 		max-width: 67%;
-
+		margin: 3em auto;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
@@ -239,7 +239,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			color: $blue;
 			font-weight: bold;
 			max-width: none;
-			margin: 0;
+			margin: 2em 0;
+			line-height: 1em;
 		}
 		form {
 			div {
@@ -272,7 +273,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.input_outer {
     	overflow: hidden;
     	left: 20px;
-			margin: 15px 0;
+			padding: 15px 0;
 		}
 		.button_box {
 			width: 100%;
@@ -353,7 +354,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			input {
 				background: #ffeee7;
 				font-weight: normal;
-				//visibility: hidden;
+				visibility: hidden;
 			}
 			}
 		}
