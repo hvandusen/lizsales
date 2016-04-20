@@ -181,6 +181,7 @@ $('#coupon').change(function(e){
 		//apply it
 	$('#price').attr('value',calculateTotal());
 });
+	if(window.ajaxurl)
 	$.ajax({
         url: ajaxurl,
         type: "GET",

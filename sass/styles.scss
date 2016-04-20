@@ -56,6 +56,7 @@ body {
 	left: 0;
 	@include calc(width,'100%-50px');
 	width: 100%;
+	min-height: 100%;
 	padding-bottom: 0;
 	background: #ffff66; /* Old browsers */
 	background: -moz-linear-gradient(#ffff66,$blue); /* FF3.6-15 */

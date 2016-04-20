@@ -3,8 +3,11 @@ function chipsScripts() {
 	if (!is_admin()) {
 		wp_register_script('libsJS',get_bloginfo('template_directory') . '/js/compressed/libs.js');
 		wp_enqueue_script('libsJS');
-		wp_register_script('scriptsJS',get_bloginfo('template_directory') . '/js/compressed/project.js');
-		wp_enqueue_script('scriptsJS');
+		//if(is_page('home')){
+			wp_register_script('scriptsJS',get_bloginfo('template_directory') . '/js/compressed/project.js');
+			wp_enqueue_script('scriptsJS');
+		//}
+
 	}
 }
 add_action('init', 'chipsScripts');
