@@ -286,3 +286,46 @@ function paypalOutput( $atts ){
 	return ob_get_clean();
 }
 add_shortcode( 'paypal', 'paypalOutput' );
+
+function send_my_mail(){
+	$coupons = get_field('coupon_codes', 'option');
+	$str = '[  ';//'"name": "joe"';
+	$c = 0;
+	foreach($coupons as $coupon){
+		if(!$c==0){
+			$str.= ',';
+		}
+			$str.= '{"name" :"' . $coupon['coupon_name'] .'",';//'{"name":"' . $coupon['coupon_name'] . '"},';
+			$str.= '"discount" :' . $coupon['coupon_discount'] .',';
+			if($coupon['type']==''){
+				$str.= '"percent" : 0}';
+			}
+			else {
+				$str.= '"percent" : 1}';
+			}
+			//$str.= '"percent" :' . $coupon['type'] .'}';
+			$c = $c+1;
+	//	$str = $str + $coupon['coupon_name'];
+	//print_r($coupon['coupon_name'].);
+	}
+
+	$str.=' ]';
+	print_r($str);
+	//print_r('{ name: "' . $coupons[0]['coupon_name'] .'", price: '. $coupons[0]['coupon_discount']);
+	//echo $str;//'coupon1,coupon2,coupon3,coupon4,blank';
+}
+
+add_action('wp_ajax_sendmail', 'send_my_mail');
+add_action('wp_ajax_nopriv_sendmail', 'send_my_mail');
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'coupon codes',
+		'menu_title'	=> 'coupon codes',
+		'menu_slug' 	=> 'coupons',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+}

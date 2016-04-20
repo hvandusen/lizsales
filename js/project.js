@@ -6,10 +6,10 @@
 		//$(i).remove();
 	});
 var cart = {};
-$('#price').attr('value','900');
+
 
 	$('input').focus(function(){
-		console.log(this)
+		//console.log(this)
 		$('.clicked').removeClass('clicked');
 		$(this).parent().prev().addClass('clicked');
 	});
@@ -85,7 +85,7 @@ $('#price').attr('value','900');
 
 
 		if(allOfTheAbove && $(this).find('input')[0].checked=== false){
-			console.log('please get rid!!');
+			//console.log('please get rid!!');
 			box.text(' ');
 			allOfTheAbove = false;
 		}
@@ -104,7 +104,7 @@ $('#price').attr('value','900');
 			});
 			inputs.map(function(i,e){
 				var thisPrice = parseInt($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
-				console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
+				//console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
 			//	console.log($(e).closest('label').text());
 					var actualCheckbox = 	$(e).find('input');
 					var checked = actualCheckbox[0].checked;
@@ -134,19 +134,64 @@ $('#price').attr('value','900');
 				}
 			});
 			forceAll = true;
-			var tt = total();
-			console.log(tt);
+			console.log(cart);
+			$('#price').attr('value',calculateTotal());
+			console.log($('#price').attr('value'));
 	});
-function total(){
+function calculateTotal(){
 	var allofem = 0;
 	Object.keys(cart).map(function(i,e){
-		allofem += parseInt(cart[e]);
+		allofem += parseInt(cart[i]);
+		//console.log(cart[i])
 	});
+	if(currentCoupon !== ''){
+		console.dir(currentCoupon);
+		console.log('from '+allofem);
+		if(currentCoupon.percent){
+			allofem = Math.floor(allofem*((1-(currentCoupon.discount/100))));
+		}
+		console.log('to '+allofem);
+	}
+
 	return allofem;
 }
 function setReal(input,checked){
 	input.attr('checked',checked);
 }
+var currentCoupon = '';
+var coupons;// = [];
+//update coupon code
+$('#coupon').change(function(e){
+	console.log('pick this coupon');
+	var input = $(this).prop('value');
+	currentCoupon = '';
+	coupons.map(function(e,i){
+		console.log(e);
+		if(input === e.name){
+			currentCoupon = e;
+		}
+	});
+	if(currentCoupon === '')
+		console.log('wrong coupon code');
+		//apply it
+	$('#price').attr('value',calculateTotal());
+});
+	$.ajax({
+        url: ajaxurl,
+        type: "GET",
+        cache: false,
+        data: 'data' + '&action=sendmail',//action defines which function to use in add_action,
+				success: function(i,e){
+					if(e === 'success'){
+						coupons = i.substring(0, i.length - 1);//.split(',');
+						console.dir(coupons);
+						coupons = JSON.parse(coupons);
+						console.log(coupons);
+					}
+				}
+});
+
+//});
 
 
 })(jQuery);
