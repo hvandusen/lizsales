@@ -242,7 +242,7 @@ function paypalOutput( $atts ){
 			$label = $atts['label'];
 		}
 		else {
-			$label = 'Buy now';
+			$label = 'BUY NOW';
 		}
 	}
 	ob_start();
@@ -275,7 +275,11 @@ function paypalOutput( $atts ){
 			    <input type="hidden" name="currency_code" value="USD">
 			    <input type="hidden" name="lc" value="AU">
 			    <input type="hidden" name="bn" value="PP-BuyNowBF">
-					<input type="submit" class="paypal-submit" value="<?php echo $label; ?>" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<div class='btn'>
+						<div class="button_box">
+							<input type="submit" class="paypal-submit" value="<?php echo $label; ?>" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					  </div>
+					</div>
 					</form>
 				</div>
 		</div>

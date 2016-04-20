@@ -140,20 +140,25 @@ var cart = {};
 	});
 function calculateTotal(){
 	var allofem = 0;
+	var discount = 0;
 	Object.keys(cart).map(function(i,e){
 		allofem += parseInt(cart[i]);
-		//console.log(cart[i])
+		console.log(cart[i])
 	});
 	if(currentCoupon !== ''){
 		console.dir(currentCoupon);
 		console.log('from '+allofem);
 		if(currentCoupon.percent){
-			allofem = Math.floor(allofem*((1-(currentCoupon.discount/100))));
+			//allofem = Math.floor(allofem*((1-(currentCoupon.discount/100))));
+			discount = Math.floor(allofem*(currentCoupon.discount/100));
 		}
-		console.log('to '+allofem);
+		else {
+			discount = currentCoupon.discount;
+		}
+		console.log('to '+(allofem-discount));
 	}
 
-	return allofem;
+	return allofem-discount;
 }
 function setReal(input,checked){
 	input.attr('checked',checked);

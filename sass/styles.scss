@@ -369,32 +369,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.ajax-loader {
 			display: none;
 		}
-		.wpcf7-submit, .img_input{
 
-			z-index: 10;
-			@extend .elementa;
-			color: #c13a1c;
-			@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
-			background: #ffff66;
-			//@include calc(margin-left, '50% - 208px');
-			padding: 39px 62px;
-			border-image-outset: 6px;
-			max-width: 270px;
-			&:focus {
-				outline:none;
-			}
-		& >	input {
-				background: #ffff66;
-			}
-			input {
-				width: 280px;
-    		margin: 17px 0px;
-				display: flex;
-				&:focus {
-					outline:none;
-				}
-			}
-	}
 	.wpcf7-submit {
 		margin: 0px;
 	}
@@ -410,6 +385,46 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		display: inline;
 	}
 	}
+}
+
+.wpcf7-submit, .img_input, .paypal-submit{
+
+	z-index: 10;
+	@extend .elementa;
+	color: #c13a1c;
+	@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
+	background: #ffff66;
+	//@include calc(margin-left, '50% - 208px');
+	padding: 39px 62px;
+	border-image-outset: 6px;
+	max-width: 270px;
+	&:focus {
+		outline:none;
+	}
+& >	input {
+		background: #ffff66;
+	}
+	input {
+		width: 280px;
+		margin: 17px 0px;
+		display: flex;
+		&:focus {
+			outline:none;
+		}
+	}
+}
+
+#coupon-label {
+	border-bottom: none;
+	    padding-bottom: 3em;
+			input {
+				background: #ffeee7;
+				border: none;
+				border-bottom: $blue solid 2px;
+				&:focus {
+					outline: none;
+				}
+			}
 }
 
 .ascii {
