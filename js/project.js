@@ -5,7 +5,8 @@
 		$(i).wrap($( "<div class='input_outer'><div class='input_inner'></div></div>" ));
 		//$(i).remove();
 	});
-
+var cart = {};
+$('#price').attr('value','900');
 
 	$('input').focus(function(){
 		console.log(this)
@@ -24,14 +25,7 @@
 
 	$(document).ready(function(){
 		$('.input_submit').click(function(){
-
-			//$(this).find('.wpfc7-submit').submit(function(e){
 			var sub = $(this).prev().prev();
-				console.dir();
-				//submitter.submit(function(){
-
-
-			//});
 		});
 		var animateTypewriter = false;
 		$('#animateTypewriter').click(function(){
@@ -60,27 +54,99 @@
 		$(e).html('<span class="chbox">[<span> </span>]</span> '+$(e).html())
 	});
 	var ignoreNextClick = false;
+	var cartTotal = 0;
 	$('.wpcf7-list-item >label').click(function(e){
-	//$('.wpcf7-list-item').click(function(e){
-	//e.preventDefault();
-	//e.stopPropagation();
-	ignoreNextClick = !ignoreNextClick;
-	if(ignoreNextClick)
-		return;
-
-
+		ignoreNextClick = !ignoreNextClick;
+		if(ignoreNextClick)
+			return;
+		var input_group = $(this).closest('p').index();
+		var price = parseInt($(this).text().split('$')[1]);
+		var allOfTheAbove = $(this).text().indexOf('All of')>-1;
+		var inputIndex = $(this).parent().index();
 		var box  = $(this).find('.chbox span');
-		console.log(box)
-		console.log(box.text().indexOf('X')>-1)
+
+		//setup cart
+		if(!cart.hasOwnProperty(input_group))
+			cart[input_group] = 0;
+
+		//if already selected
+		console.log(box.text())
 		if(box.text().indexOf('X')>-1){
-			box.text(box.text().replace('X',' '))
-			console.log('remove x')
+			box.text(' ');//box.text().replace('X',' '))
+			cart[input_group]-= price;
+			cartTotal -= price;
 		}
 		else {
-			console.log('add x')
-			box.text('X');//box.text().replace(' ','X'))
+			box.text('X');//box.text(box.text().replace(' ','X'));//box.text().replace(' ','X'))
+			cart[input_group]+= price;
+			cartTotal += price;
+			//$(this).find('input').attr('checked',true);
 		}
-	})
+
+
+		if(allOfTheAbove && $(this).find('input')[0].checked=== false){
+			console.log('please get rid!!');
+			box.text(' ');
+			allOfTheAbove = false;
+		}
+
+
+			//update all checkboxes
+			var inputs = $(this).closest('.wpcf7-form-control').find('.wpcf7-list-item');
+			var forceAll = true;
+			inputs.map(function(i,e){
+				var actualCheckbox = 	$(e).find('input');
+				var checked = actualCheckbox[0].checked;
+				if(i<inputs.length-1){
+					if(!checked)
+						forceAll = false;
+					}
+			});
+			inputs.map(function(i,e){
+				var thisPrice = parseInt($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
+				console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
+			//	console.log($(e).closest('label').text());
+					var actualCheckbox = 	$(e).find('input');
+					var checked = actualCheckbox[0].checked;
+					var checkbox = 	$(e).find('.chbox span');
+				if(i<inputs.length-1){
+					if(allOfTheAbove === true || forceAll === true){
+						$(actualCheckbox).attr('checked',false);
+						$(checkbox).text($(checkbox).text().replace('X',' '));
+					}
+				}
+				else {
+					if(allOfTheAbove === true || forceAll === true){
+						$(checkbox).text($(checkbox).text().replace(' ','X'));
+						$(actualCheckbox).prop('checked',true);
+						cart[input_group] = thisPrice;
+						cart[input_group].all = true;
+					}
+					else {
+					 $(actualCheckbox).attr('checked',false);
+						$(checkbox).text($(checkbox).text().replace('X',' '));
+						if(cart[input_group].all === true){
+							alert();
+							cart[input_group] -= thisPrice;
+							cart[input_group].all = false;
+						}
+					}
+				}
+			});
+			forceAll = true;
+			var tt = total();
+			console.log(tt);
+	});
+function total(){
+	var allofem = 0;
+	Object.keys(cart).map(function(i,e){
+		allofem += parseInt(cart[e]);
+	});
+	return allofem;
+}
+function setReal(input,checked){
+	input.attr('checked',checked);
+}
 
 
 })(jQuery);

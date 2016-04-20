@@ -223,11 +223,12 @@ $buildTop = $buildTop . '</span>';
 
 //$headerBar = '&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
   //echo strlen($headerBar);
+	echo '<div class="bar">';
 	echo '<div>' . $buildTop . '</div>';
   echo '<div>' . $buildMiddle . '</div>';
   echo '<div>' . $buildTop . '</div>';
 	//note hen- services is 8 chars and the rest are 7!!!
-
+echo '</div>';
 }
 function paypalOutput( $atts ){
 	if(isset($atts)){
@@ -268,7 +269,7 @@ function paypalOutput( $atts ){
 			    <input type="hidden" name="business" value="henry@dusendusen.com">
 			    <input type="hidden" name="item_name" value="<?php echo $name; ?>">
 			    <input type="hidden" name="item_number" value="1">
-			    <input type="hidden" name="amount" value="<?php echo $price; ?>">
+			    <input type="hidden" id='price' name="amount" value="<?php echo $price; ?>">
 			    <input type="hidden" name="no_shipping" value="0">
 			    <input type="hidden" name="no_note" value="1">
 			    <input type="hidden" name="currency_code" value="USD">

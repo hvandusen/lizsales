@@ -164,9 +164,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 .section {
 	margin: 0 auto;
-	padding: 40px 0;
-	margin-bottom: 20px;
+	//padding: 40px 0;
+	//margin-bottom: 20px;
 	//buy form
+//padding-top: 4em;
+//padding-bottom: 4.5em;
+ .bar {
+	 padding-top: 4em;
+	 padding-bottom: 3.6em;
+ }
 	#wpcf7-f25-p7-o1{
 		max-width: 67%;
 	  margin: 0 auto;
@@ -179,6 +185,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		//align-items: center;
 		p{
 			max-width: 360px;
+			line-height: 0.8em;
 			text-align: left;
 			margin: 1.5em 0;
 			margin-right: 150px;
@@ -195,6 +202,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		color: $blue;
 		margin: 0 auto;
 		@extend .plantin;
+			line-height: 1.4em;
 	}
 
 	&.questionnaire, #wpcf7-f25-p7-o1 {
@@ -257,6 +265,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				display: block;
 				border-bottom: none;
 				padding-bottom: 1em;
+				line-height: 1em;
 			}
 		}
 		}
@@ -344,7 +353,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			input {
 				background: #ffeee7;
 				font-weight: normal;
-				visibility: hidden;
+				//visibility: hidden;
 			}
 			}
 		}
@@ -409,7 +418,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	text-decoration: none;
 	text-align: center;
 	width: 100%;
-	margin: 0 7em 0 0;
+// 	margin: 0 7em 0 0;
+// 	margin-top: 2em;
+// margin-bottom: 2.2em;
 
 	&.right {
 		text-align: none;
@@ -437,8 +448,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 }
 .thankyou {
-	text-align: right;
-
+	margin-top: 3em;
+	pre {
+		display: inline-block;
+		text-align: right;
+	}
 		.ty-1{
 
 		}

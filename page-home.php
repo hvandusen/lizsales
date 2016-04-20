@@ -14,9 +14,9 @@
 <pre>
 	    ---------------------
 	    |                   |
-	    |     <span>I WRITE</span>       |
-	    |     <span>ARTIST</span>        |
-	    |     <span>STATEMENTS</span>    |
+	    |     <span class='asciiTitle'>I WRITE</span>       |
+	    |     <span class='asciiTitle'>ARTIST</span>        |
+	    |     <span class='asciiTitle'>STATEMENTS</span>    |
 	(     |                   |&nbsp;&nbsp;
 	  \  X=====U===========U======D
 	   \___|_______  V ________|___
@@ -63,11 +63,11 @@ Sorry, we do not accept current art students as clients. Sorry, we are not comfo
 </div>
 <div class='ascii thankyou'>
 <pre>
-<span class='ty-1'>	______ _ _</span>
-<span class='ty-2'>(_) | | | | | |</span>
-<span class='ty-3'>|||__,__|| __       |</span>
-<span class='ty-4'>_ | |/ \ / | / |/ | |/_)   |   | /  \_|   |  |</span>
-<span class='ty-5'>(_/ | |_/\_/|_/ | |_/| \_/   \_/|/\__/  \_/|_/O</span>
+<span class='ty-1'>	______ _                    _                        </span>
+<span class='ty-2'>(_) |  | |                  | |                      |</span>
+<span class='ty-3'>|  | |     __,   _  _   | |           __         |</span>
+<span class='ty-4'>_ |  |/ \   /  |  / |/ |  |/_)   |   | /  \_|   |  |</span>
+<span class='ty-5'>(_/   |   |_/\_/|_/  |  |_/| \_/   \_/|/\__/  \_/|_/O</span>
 <span class='ty-6'>/|</span>
 <span class='ty-7'>\|</span>
 	</pre>
