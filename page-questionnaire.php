@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<br>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -13,12 +14,8 @@
  </span>
 
 <div class='questionnaire section '>
-
 	<?php the_content(); ?>
-
-
 </div>
-
 
 
 <?php endwhile; ?>

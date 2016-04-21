@@ -42,9 +42,9 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 <div id='process' class='ascii section'>
 <?php asciiBar('PROCESS'); ?>
 <p>You will be assigned a writer based on your request. After you supply your assigned writer with images of your artwork and answers to
-a general questionnaire. Then he or she will reach out to you with more specific follow up questions by phone or email, depending on your preference. This call may last up to one hour. A draft of your statement will be written and sent to you for your review. A second edit will be sent to you based on your feedback on this draft. You are allowed up to two revisions. Finally, your customized artist statement, biography, project statement and/or press release will be finished and ready to share.
-Writings created by I Write Artist Statements automatically become the property of the artist they were created for. This is commonly referred to as the “work-for-hire” doctrine. You may alter or use the writing in any way you wish without crediting I Write Artist Statements.
-Sorry, we do not accept current art students as clients. Sorry, we are not comfortable doing your homework for you.</p>
+a general questionnaire. Then he or she will reach out to you with more specific follow up questions by phone or email, depending on your preference. This call may last up to one hour. A draft of your statement will be written and sent to you for your review. A second edit will be sent to you based on your feedback on this draft. You are allowed up to two revisions. Finally, your customized artist statement, biography, project statement and/or press release will be finished and ready to share.</p>
+<p>Writings created by I Write Artist Statements automatically become the property of the artist they were created for. This is commonly referred to as the “work-for-hire” doctrine. You may alter or use the writing in any way you wish without crediting I Write Artist Statements.
+<br><i>Sorry, we do not accept current art students as clients. Sorry, we are not comfortable doing your homework for you.</i></p>
 </div>
 
 <div id='pricing' class='ascii section'>

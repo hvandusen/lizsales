@@ -1,5 +1,11 @@
 (function ($) {
 	var count = 0;
+	var scrolls = {};
+	$('textarea').scroll(function(){
+		console.log($(this).scrollTop());
+		scrolls[$(this).closest('.input_outer').index()] = $(this).scrollTop();
+		$(this).css('background-position-y', -1* $(this).scrollTop());
+	});
 	count++;
 	$('.input_contents').map(function(e,i){
 		$(i).wrap($( "<div class='input_outer'><div class='input_inner'></div></div>" ));
@@ -24,6 +30,12 @@ var cart = {};
 
 
 	$(document).ready(function(){
+		$('.numbers').map(function(i,e){
+			console.log(e);
+			$(e).prop('value','1. \n2. \n3.');
+			$(e).css('color','#0033cc');
+		});
+
 		$('.input_submit').click(function(){
 			var sub = $(this).prev().prev();
 		});
@@ -49,16 +61,19 @@ var cart = {};
 		});
 
 	});
+
 	$('.wpcf7-list-item label').map(function(i,e){
 		//$('<span class="xBox">[ ]</span>').prependTo($(e));
 		$(e).html('<span class="chbox">[<span> </span>]</span> '+$(e).html())
 	});
 	var ignoreNextClick = false;
 	var cartTotal = 0;
+
 	$('.wpcf7-list-item >label').click(function(e){
 		ignoreNextClick = !ignoreNextClick;
 		if(ignoreNextClick)
 			return;
+
 		var input_group = $(this).closest('p').index();
 		var price = parseInt($(this).text().split('$')[1]);
 		var allOfTheAbove = $(this).text().indexOf('All of')>-1;
@@ -90,7 +105,7 @@ var cart = {};
 			allOfTheAbove = false;
 		}
 
-
+		if(window.ajaxurl){
 			//update all checkboxes
 			var inputs = $(this).closest('.wpcf7-form-control').find('.wpcf7-list-item');
 			var forceAll = true;
@@ -102,6 +117,7 @@ var cart = {};
 						forceAll = false;
 					}
 			});
+
 			inputs.map(function(i,e){
 				var thisPrice = parseInt($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
 				//console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
@@ -137,6 +153,27 @@ var cart = {};
 			console.log(cart);
 			$('#price').attr('value',calculateTotal());
 			console.log($('#price').attr('value'));
+			}
+	});
+
+	$('.truefalse .wpcf7-list-item').click(function(){
+		console.dir($(this).closest('.truefalse').find('.chbox span'));
+		$(this).closest('.truefalse').find('.chbox span').map(function(i,e){
+			$(e).text(' ');
+			console.log($(e))
+		});
+		$(this).find('.chbox span').text('X');
+		return;
+		$(this).find('input').prop('checked',true);
+		$(this).find('.chbox span').text('X')
+		$('.truefalse .last').find('input').prop('checked',false);
+		$('.truefalse .last').find('.chbox span').text(' ')
+	});
+	$('.truefalse .last').click(function(){
+		$(this).find('.chbox span').text('X')
+		$(this).find('input').prop('checked',true);
+		$('.truefalse .first').find('input').prop('checked',false);
+		$('.truefalse .first').find('.chbox span').text(' ')
 	});
 function calculateTotal(){
 	var allofem = 0;

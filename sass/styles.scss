@@ -27,8 +27,8 @@
 			}
  @font-face {
  			font-family: Plantin-light-italic;
- 			src: url("../css/webfont/PlantLightItalic2.ttf");
-			src: url("../css/webfont/PlantLightItalic21.woff") format('woff');
+ 			src: url("../css/webfont/Plantin-LightItalic2.ttf");
+			src: url("../css/webfont/Plantin-LightItalic21.woff") format('woff');
  			}
  @font-face {
  			font-family: Plantin-bold;
@@ -71,6 +71,13 @@ $blue: #0033cc;
 		font-size: 27px;
 }
 
+i {
+	    font-family: Plantin-light-italic;
+}
+
+strong {
+	    font-family: Plantin-bold;
+}
 
 
 .elementa{
@@ -288,7 +295,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		p {
 			color: $blue;
 		  @extend .plantin-bold;
-
 			max-width: none;
 			margin: 2em 0;
 			line-height: 1em;
@@ -318,6 +324,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: none;
 				padding-bottom: 1em;
 				line-height: 1em;
+
+			}
+			span.textarea-9 {
+					&:before {
+						//content: "1. 2. 3."
+
+				}
+			}
+			&.truefalse {
+
+				display: block;
+				& > label {
+				padding: 1em 0;
+				 border:	none;
+			}
 			}
 		}
 		}
@@ -380,7 +401,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					display:none;
 			}
 		}
-		.wpcf7-checkbox {
+		.wpcf7-checkbox, .wpcf7-radio {
 			display: flex;
 	    flex-direction: column;
 	    flex-wrap: wrap;
