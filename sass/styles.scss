@@ -71,7 +71,7 @@ $blue: #0033cc;
 		font-size: 27px;
 }
 
-i {
+i,em {
 	    font-family: Plantin-light-italic;
 }
 
@@ -79,6 +79,9 @@ strong {
 	    font-family: Plantin-bold;
 }
 
+.other_text {
+	display: none;
+}
 
 .elementa{
 		font-family: Elementa-Bold;
@@ -266,6 +269,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	&.questionnaire, #wpcf7-f25-p7-o1 {
 		max-width: 67%;
 		margin: 3em auto;
+		margin-bottom: 0px;
+		padding-bottom: 1em;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
@@ -325,7 +330,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: none;
 				padding-bottom: 1em;
 				line-height: 1em;
-
+			}
+			&.other_text{
+				display: none;
 			}
 			span.textarea-9 {
 					&:before {

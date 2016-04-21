@@ -19,13 +19,12 @@ var cart = {};
 		$('.clicked').removeClass('clicked');
 		$(this).parent().prev().addClass('clicked');
 	});
-	var addedImages = 1;
-	$('.img_input input').hide();
-	$($('.img_input input')[0]).show();
-	$('.img_input input').change(function(){
-		$($('.img_input input')[addedImages]).show();
-		addedImages++;
-	});
+$('.wpcf7-not-valid-tip').map(function(e,i){
+	var label = $(i).parent().prev();
+	console.log($(i).parent().prev());//.closest('label'));
+	label.css('color','red');
+	$(this).remove();
+});
 
 
 
@@ -156,7 +155,13 @@ var cart = {};
 			}
 	});
 
+	$('.radio-409 .last input').click(function(){
+		console.log('sadgjoia');
+		$('.other_text').css('display','block');
+
+	})
 	$('.truefalse .wpcf7-list-item').click(function(){
+
 		console.dir($(this).closest('.truefalse').find('.chbox span'));
 		$(this).closest('.truefalse').find('.chbox span').map(function(i,e){
 			$(e).text(' ');
