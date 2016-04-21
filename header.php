@@ -12,6 +12,7 @@
 	<?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
 
 <div id="container">
@@ -20,3 +21,11 @@
     </header>
     <div id="main" role="main">
 			<div id='content'>
+				<div class='nav'>
+					<a class='left' href='/#services'>Services</a>
+					<a class='left' href='/#writers'>Writers</a>
+					<a class='left' href='/#process'>Process</a>
+					<a class='left' href='/#pricing'>Pricing</a>
+					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---K</a>
+					<a class='right' href='#Contact'>Contact</a>
+				</div>

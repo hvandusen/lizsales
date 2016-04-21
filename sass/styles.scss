@@ -7,27 +7,74 @@
 
 
 @font-face {
-			font-family: Plantin;
-			src: url("../css/webfont/plantin.ttf") format("truetype");
+			font-family: Plantin-old;
+			//src: url("../css/webfont/plantin.ttf") format("truetype");
+			src: url("../css/webfont/Plantin.ttf") format('truetype');
 			}
+@font-face {
+			font-family: Plantin-new;
+			//src: url("../css/webfont/plantin.ttf") format("truetype");
+			src: url("../css/webfont/Plantin-Light.ttf") format('truetype');
+			}
+@font-face {
+			font-family: Plantin-italic;
+			src: url("../css/webfont/PlantinItalic21.ttf") format('truetype');
+			}
+@font-face {
+			font-family: Plantin-light;
+				src: url("../css/webfont/Plantin-Light.ttf") format('truetype');
+				src: url("../css/webfont/Plantin-Light1.woff") format('woff');
+			}
+ @font-face {
+ 			font-family: Plantin-light-italic;
+ 			src: url("../css/webfont/PlantLightItalic2.ttf");
+			src: url("../css/webfont/PlantLightItalic21.woff") format('woff');
+ 			}
+ @font-face {
+ 			font-family: Plantin-bold;
+ 			src: url("../css/webfont/Plantin-Bold2.ttf") format('truetype');
+ 			}
 @font-face {
 		font-family: Elementa;
 		src: url('../css/webfont/ufonts.com_elementa-bold.ttf') format('truetype')
 }
+
 @font-face {
 		font-family: Elementa-Bold;
-		src: url('../css/webfont/ufonts.com_elementa-bold.ttf') format('truetype')
+		src: url('../css/webfont/Elementa-Bold.ttf');
+		src: url('../css/webfont/Elementa-Bold.woff');
+}
+@font-face {
+		font-family: Elementa-FF;
+		src: url('../css/webfont/Elementa FF');
 }
 
 $blue: #0033cc;
 
 .plantin{
-		font-family: Plantin;
+		font-family: Plantin-new;
 		font-size: 27px;
 }
 
+.plantin-bold{
+		font-family: Plantin-bold;
+		font-size: 27px;
+}
+
+.plantin-light{
+		font-family: Plantin-light;
+		font-size: 27px;
+}
+
+.plantin-light-italic{
+		font-family: Plantin-light-italic;
+		font-size: 27px;
+}
+
+
+
 .elementa{
-		font-family: Elementa;
+		font-family: Elementa-Bold;
 		font-size: 20px;
 }
 
@@ -74,7 +121,7 @@ body {
 label {
 		display: table-cell;
 		color: $blue;
-		font-weight: bold;
+		@extend .plantin-bold;
 		border-bottom: solid $blue 2px;
 		&.clicked {
 			border-bottom: solid black 2px;
@@ -165,6 +212,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 .section {
 	margin: 0 auto;
+
 	//padding: 40px 0;
 	//margin-bottom: 20px;
 	//buy form
@@ -190,6 +238,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			text-align: left;
 			margin: 1.5em 0;
 			margin-right: 150px;
+			@extend .plantin-bold;
 			.wpcf7-list-item:last-child {
 
 			}
@@ -238,7 +287,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		}
 		p {
 			color: $blue;
-			font-weight: bold;
+		  @extend .plantin-bold;
+
 			max-width: none;
 			margin: 2em 0;
 			line-height: 1em;
@@ -334,7 +384,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: flex;
 	    flex-direction: column;
 	    flex-wrap: wrap;
-
 	    max-height: 230px;
 	    justify-content: space-between;
 	    align-items: baseline;
@@ -344,6 +393,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				font-weight: normal;
 				border: none;
 				padding: 5px 0px;
+				@extend .plantin-light;
 				.chbox {
 					@extend .elementa;
 					color: black;
@@ -425,6 +475,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: $blue solid 2px;
 				&:focus {
 					outline: none;
+					border-bottom: black solid 2px;
 				}
 			}
 }
