@@ -200,6 +200,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	color: $blue;
 	line-height: 1.8em;
 	a {
+		color: $blue;
 		padding: 0 10px;
 	}
 }

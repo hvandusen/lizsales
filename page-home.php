@@ -2,6 +2,7 @@
 <script type="text/javascript">
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 </script>
+
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	 <?php //the_content(); ?>
@@ -61,8 +62,8 @@ a general questionnaire. Then he or she will reach out to you with more specific
 <span class='ty-1'>	______ _                    _                        </span>
 <span class='ty-2'>(_) |  | |                  | |                      |</span>
 <span class='ty-3'>|  | |     __,   _  _   | |           __         |</span>
-<span class='ty-4'>_ |  |/ \   /  |  / |/ |  |/_)   |   | /  \_|   |  |</span>
-<span class='ty-5'>(_/   |   |_/\_/|_/  |  |_/| \_/   \_/|/\__/  \_/|_/O</span>
+<span class='ty-4'>_|  |/ \   /  |  / |/ |  |/_)   |   | /  \_|   |  |</span>
+<span class='ty-5'>(_/  |   |_/\_/|_/  |  |_/| \_/   \_/|/\__/  \_/|_/O</span>
 <span class='ty-6'>/|</span>
 <span class='ty-7'>\|</span>
 	</pre>
