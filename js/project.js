@@ -84,23 +84,23 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 			cart[input_group] = 0;
 
 		//if already selected
-		console.log(box.text())
-		if(box.text().indexOf('X')>-1){
-			box.text(' ');//box.text().replace('X',' '))
+		if(box.html().indexOf('X')>-1){
+			box.html(' ');//box.html().replace('X',' '))
 			cart[input_group]-= price;
 			cartTotal -= price;
+
 		}
 		else {
-			box.text('X');//box.text(box.text().replace(' ','X'));//box.text().replace(' ','X'))
+			box.html('X');//box.html(box.html().replace(' ','X'));//box.html().replace(' ','X'))
 			cart[input_group]+= price;
 			cartTotal += price;
 			//$(this).find('input').attr('checked',true);
 		}
-
+		console.log("text: "+box.html())
 
 		if(allOfTheAbove && $(this).find('input')[0].checked=== false){
 			//console.log('please get rid!!');
-			box.text(' ');
+			box.html(' ');
 			allOfTheAbove = false;
 		}
 

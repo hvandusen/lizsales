@@ -223,7 +223,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 .section {
 	margin: 0 auto;
-
+	margin-bottom: 1em;
 	//padding: 40px 0;
 	//margin-bottom: 20px;
 	//buy form
@@ -237,28 +237,41 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		max-width: 67%;
 	  margin: 0 auto;
 	.pricing-fields {
-
+		max-height: 704px;
 		display: flex;
 		flex-direction: column;
 		max-height: 570px;
+		    max-height: 606px;
 		flex-wrap: wrap;
-		//align-items: center;
+		align-items: stretch;
 		p{
-			max-width: 360px;
+			//max-width: 306px;
 			line-height: 0.8em;
 			text-align: left;
 			margin: 1.5em 0;
-			margin-right: 150px;
+			//margin-right: 150px;
+			margin: 15px 0px;
 			@extend .plantin-bold;
+			width: 56%;
 			.wpcf7-list-item:last-child {
-
+				//@extend i;
+				font-family: Plantin-light-italic;
+				color:red;
+				font-weight: bold;
 			}
 		}
 	}
 	}
 
+	.last {
+		//display:none;
+		font-family: Plantin-light-italic;
+		@extend .plantin-light-italic;
+	}
+
+
 	p {
-		max-width: 67%;
+		max-width: 60%;
 		text-align: left;
 		color: $blue;
 		margin: 0 auto;
@@ -268,9 +281,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 	&.questionnaire, #wpcf7-f25-p7-o1 {
 		max-width: 67%;
+	  max-width: 60%;
 		margin: 3em auto;
-		margin-bottom: 0px;
 		padding-bottom: 1em;
+		margin-top: 0em;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
@@ -281,7 +295,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     background-size: 100% 61px;
 		max-height: 200px;
     line-height: 61px;
-
 		outline: none;
 		border: none;
 		@extend .elementa;
@@ -303,6 +316,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		  @extend .plantin-bold;
 			max-width: none;
 			margin: 2em 0;
+			margin: .1em 0;
 			line-height: 1em;
 		}
 		form {
@@ -416,12 +430,14 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	    max-height: 230px;
 	    justify-content: space-between;
 	    align-items: baseline;
+			margin-top: .5em;
 			.wpcf7-list-item {
-			margin-left: 0px;
+
 			label {
 				font-weight: normal;
 				border: none;
-				padding: 5px 0px;
+				//padding: 5px 0px;
+				line-height: 1.4em;
 				@extend .plantin-light;
 				.chbox {
 					@extend .elementa;
@@ -435,6 +451,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				background: #ffeee7;
 				font-weight: normal;
 				visibility: hidden;
+				position: absolute;
 			}
 			}
 		}
@@ -486,6 +503,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		background: #ffff66;
 	}
 	input {
+		display:none;
 		width: 280px;
 		margin: 17px 0px;
 		display: flex;
@@ -580,4 +598,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				color: #ffeee7;
 			}
 		}
+}
+
+span.wpcf7-list-item {
+    margin-left: 0em!important;
 }
