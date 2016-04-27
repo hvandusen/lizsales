@@ -40,12 +40,6 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	}
 ?>
 
-
-
-<div id='contact' class='ascii section'>
-<?php asciiBar('CONTACT'); ?>
-<p>For all inquires including writing samples please email us.</p>
-</div>
 <div class='ascii thankyou'>
 <pre>
 <span class='ty-1'>	______ _                    _                        </span>

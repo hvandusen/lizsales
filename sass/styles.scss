@@ -50,7 +50,7 @@
 }
 
 $blue: #0033cc;
-
+$red: #c13a1c;
 .plantin{
 		font-family: Plantin-new;
 		font-size: 27px;
@@ -91,7 +91,7 @@ strong {
 .ascii-border {
 	z-index: 10;
 	@extend .elementa;
-	color: #c13a1c;
+	color: $red;
 	@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
 	background: #ffff66;
 	//@include calc(margin-left, '50% - 208px');
@@ -133,6 +133,7 @@ label {
 		color: $blue;
 		@extend .plantin-bold;
 		border-bottom: solid $blue 2px;
+		min-width: 210px;
 		&.clicked {
 			border-bottom: solid black 2px;
 		}
@@ -265,8 +266,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 	.last {
 		//display:none;
-		font-family: Plantin-light-italic;
-		@extend .plantin-light-italic;
+		label{
+
+		}
+
 	}
 
 
@@ -285,6 +288,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		margin: 3em auto;
 		padding-bottom: 1em;
 		margin-top: 0em;
+		margin-top: 3.6em;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
@@ -315,8 +319,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			color: $blue;
 		  @extend .plantin-bold;
 			max-width: none;
-			margin: 2em 0;
-			margin: .1em 0;
+			margin: .2em 0;
 			line-height: 1em;
 		}
 		form {
@@ -324,6 +327,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			& > p{
 				color: $blue;
+				padding: 2em 0
 			}
 			.txt_input{
 				@extend .input;
@@ -379,7 +383,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.wpcf7-form-control-wrap {
 		    //display: table-cell;
 		    width: 100%;
-
+				//display: none;
+				.wpcf7-file {
+					display: none;
+				}
 		}
 		.post-password-form {
 			position: absolute;
@@ -447,6 +454,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					}
 				}
 			}
+			&.last {
+				label {
+					@extend .plantin-light-italic;
+				}
+			}
 			input {
 				background: #ffeee7;
 				font-weight: normal;
@@ -475,7 +487,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		height: 98px;
 		width: 263px;
 		@extend .elementa;
-		color: #c13a1c;
+		color: $red;
 		background: #ffff66;
 		border: none;
 		position: absolute;
@@ -489,7 +501,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 	z-index: 10;
 	@extend .elementa;
-	color: #c13a1c;
+	color: $red;
 	@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
 	background: #ffff66;
 	//@include calc(margin-left, '50% - 208px');
@@ -510,6 +522,16 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		&:focus {
 			outline:none;
 		}
+	}
+}
+
+.img_input {
+	label {
+		border-bottom: none;
+		@extend .elementa;
+		display: inline;
+		text-transform: uppercase;
+		color: $red;
 	}
 }
 
@@ -547,12 +569,16 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		padding-right: 7em;
 	}
 	.asciiTitle {
-		color: #c13a1c;
+		color: $red;
 	}
 	div {
+		.preBar:before {
+			content : "      "
+		}
+
 		.preBar, .postBar {
 			@media (max-width: 1161px){
-				display: none;
+				//display: none;
 			}
 		}
 	}

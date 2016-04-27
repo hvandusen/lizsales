@@ -1,6 +1,28 @@
 (function ($) {
 	var count = 0;
 	var scrolls = {};
+	var max_bars = 38;
+	function setHeaders(){
+		$('.bar').map(function(e,i){
+			var bar = $(i).find('div')[0];
+			console.log($(bar).text().length);
+		});
+		if(window.innerWidth>1408)
+			return;
+		var remove = /*Math.abs(*/Math.floor((window.innerWidth-1108)/7);
+		console.log(remove)
+
+		var newString = '';
+		for(var i =0;i<remove;i++){
+			newString+= '~';
+		}
+
+		$('.postBar, .preBar').text(newString);
+	}
+  $(window).resize(function(){
+		setHeaders();
+	});
+
 	$('textarea').scroll(function(){
 		console.log($(this).scrollTop());
 		scrolls[$(this).closest('.input_outer').index()] = $(this).scrollTop();
@@ -102,6 +124,7 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 			//console.log('please get rid!!');
 			box.html(' ');
 			allOfTheAbove = false;
+
 		}
 
 		if(window.ajaxurl){
@@ -126,8 +149,12 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 					var checkbox = 	$(e).find('.chbox span');
 				if(i<inputs.length-1){
 					if(allOfTheAbove === true || forceAll === true){
-						$(actualCheckbox).attr('checked',false);
-						$(checkbox).text($(checkbox).text().replace('X',' '));
+						$(actualCheckbox).attr('checked',true);
+						$(checkbox).text($(checkbox).text().replace(' ','X'));
+						$(e).css('opacity',.5);
+					}
+					else{
+						$(e).css('opacity',1);
 					}
 				}
 				else {
