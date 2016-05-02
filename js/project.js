@@ -51,6 +51,7 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 
 
 	$(document).ready(function(){
+			setHeaders();
 		$('.numbers').map(function(i,e){
 			console.log(e);
 			$(e).prop('value','1. \n2. \n3.');

@@ -2753,6 +2753,94 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/border-1-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91856,
+		"inputAbbreviatedPath": "\/images\/border-1-hover.png",
+		"outputAbbreviatedPath": "\/images\/border-1-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 113738,
+		"inputAbbreviatedPath": "\/images\/border-1.png",
+		"outputAbbreviatedPath": "\/images\/border-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24221,
+		"inputAbbreviatedPath": "\/images\/border-2.png",
+		"outputAbbreviatedPath": "\/images\/border-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-2_hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14154,
+		"inputAbbreviatedPath": "\/images\/border-2_hover.png",
+		"outputAbbreviatedPath": "\/images\/border-2_hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-3-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6261,
+		"inputAbbreviatedPath": "\/images\/border-3-hover.png",
+		"outputAbbreviatedPath": "\/images\/border-3-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10845,
+		"inputAbbreviatedPath": "\/images\/border-3.png",
+		"outputAbbreviatedPath": "\/images\/border-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-4-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6777,
+		"inputAbbreviatedPath": "\/images\/border-4-hover.png",
+		"outputAbbreviatedPath": "\/images\/border-4-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9158,
+		"inputAbbreviatedPath": "\/images\/border-4.png",
+		"outputAbbreviatedPath": "\/images\/border-4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/border-across.png": {
 		"fileType": 32768,
 		"ignore": 0,

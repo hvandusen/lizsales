@@ -5,7 +5,14 @@
 @import "typography";
 @import "mixins";
 
-
+@font-face{
+	font-family:Elementa-b;
+	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix");
+	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix") format("eot"),
+	url("../css/webfont/93b67223-1e10-4d00-a9e2-b2d2ed25fc4f.woff2") format("woff2"),
+	url("../css/webfont/9b93b76b-c9ed-40aa-a9df-9cedd8148292.woff") format("woff"),
+	url("../css/webfont/06f57c89-5613-46c0-aeaa-44325cb06709.ttf") format("truetype");
+}
 @font-face {
 			font-family: Plantin-old;
 			//src: url("../css/webfont/plantin.ttf") format("truetype");
@@ -40,9 +47,10 @@
 }
 
 @font-face {
-		font-family: Elementa-Bold;
-		src: url('../css/webfont/Elementa-Bold.ttf');
-		src: url('../css/webfont/Elementa-Bold.woff');
+		font-family: Elementa-bb;
+		src: url('../css/webfont/ElementaBold.ttf')  format('truetype');
+		src: url('../css/webfont/ElementaBold.woff');
+		src: url('../css/webfont/ElementaBold.eot');
 }
 @font-face {
 		font-family: Elementa-FF;
@@ -84,7 +92,7 @@ strong {
 }
 
 .elementa{
-		font-family: Elementa-Bold;
+		font-family: Elementa;
 		font-size: 20px;
 }
 
@@ -133,14 +141,13 @@ label {
 		color: $blue;
 		@extend .plantin-bold;
 		border-bottom: solid $blue 2px;
-		min-width: 210px;
 		&.clicked {
 			border-bottom: solid black 2px;
 		}
 }
 .input {
 	@extend .elementa;
-	color: black;
+	color: #c13a1c;
 	width: auto;
 	border: none;
 	border-bottom: solid $blue 2px;
@@ -233,6 +240,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
  .bar {
 	 padding-top: 4em;
 	 padding-bottom: 3.6em;
+	 white-space: nowrap;
  }
 	#wpcf7-f25-p7-o1{
 		max-width: 67%;
@@ -288,7 +296,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		margin: 3em auto;
 		padding-bottom: 1em;
 		margin-top: 0em;
-		margin-top: 3.6em;
+		//margin-top: 3.6em;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 47px, $blue 47px, $blue 49px, #ffeee7 49px);
@@ -343,11 +351,16 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.input_content, .input_contents {
 			display: inherit;
 			width: 100%;
+
+			label {
+					white-space: nowrap;
+			}
 			&.area label {
 				display: block;
 				border-bottom: none;
 				padding-bottom: 1em;
 				line-height: 1em;
+				white-space: normal;
 			}
 			&.other_text{
 				display: none;
@@ -377,8 +390,23 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			width: 100%;
     	text-align: center;
 			display: inline-block;
-			height: auto;//175px;
-
+			//height: auto;//175px;
+			&.submit_q {
+				input {
+					background-image: url(../images/border-4.png);
+					background-size: cover;
+					width: 407px;
+					height: 139px;
+					background-repeat: no-repeat;
+					max-width: none;
+					background-color: transparent;
+					border-color: transparent;
+					&:hover {
+						background-image: url(../images/border-4-hover.png);
+						color: #ffff66;
+					}
+				}
+			}
 		}
 		.wpcf7-form-control-wrap {
 		    //display: table-cell;
@@ -498,16 +526,19 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 
 .wpcf7-submit, .img_input, .paypal-submit{
-
+	font-family: Elementa-b;
+	color: #c13a1c;
 	z-index: 10;
 	@extend .elementa;
-	color: $red;
-	@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
-	background: #ffff66;
+	//color: $red;
+	//@include border-ascii(url(../images/border-newer.png), 47 , 14px, round);
+	//background: #ffff66;
 	//@include calc(margin-left, '50% - 208px');
 	padding: 39px 62px;
 	border-image-outset: 6px;
 	max-width: 270px;
+	background-image: url(../images/border-3.png);
+	background-size: cover;
 	&:focus {
 		outline:none;
 	}
@@ -522,6 +553,26 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		&:focus {
 			outline:none;
 		}
+	}
+}
+.img_input{
+	padding: 60px 64px;
+	&:hover {
+		color: #ffff66;
+		background-image: url(../images/border-3-hover.png);
+	}
+}
+.paypal-submit{
+	padding: 60px 64px;
+	width: 378px;
+	max-width: none;
+	height: 143px;
+	background-image: url(../images/border-1.png);
+	background-color: transparent;
+	border: none;
+	&:hover {
+		background-image: url(../images/border-1-hover.png);
+		color: #ffff66;
 	}
 }
 
