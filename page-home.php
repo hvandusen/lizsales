@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<style>
+	.mobile-title {
+			display: block;
+	}
+</style>
 <script type="text/javascript">
 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 </script>

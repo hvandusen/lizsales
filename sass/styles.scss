@@ -61,21 +61,23 @@ $red: #c13a1c;
 .plantin{
 		font-family: Plantin-new;
 		font-size: 27px;
+		@media(max-width: 480px){
+			font-size: 20px;
+		}
 }
 
 .plantin-bold{
 		font-family: Plantin-bold;
-		font-size: 27px;
 }
 
 .plantin-light{
 		font-family: Plantin-light;
-		font-size: 27px;
+		//font-size: 27px;
 }
 
 .plantin-light-italic{
 		font-family: Plantin-light-italic;
-		font-size: 27px;
+		//font-size: 27px;
 }
 
 i,em {
@@ -93,6 +95,9 @@ strong {
 .elementa{
 		font-family: Elementa;
 		font-size: 20px;
+		@media(max-width: 480px){
+			font-size: 16px;
+		}
 }
 
 .ascii-border {
@@ -686,4 +691,98 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 span.wpcf7-list-item {
     margin-left: 0em!important;
+}
+
+.mobile-title {
+	display: none;
+}
+
+@media(max-width:480px){
+
+	#content {
+		margin: 10px;
+	}
+	.nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		.right.elementa {
+		order: 1;
+		}
+	}
+
+	.section {
+		&.questionnaire {
+			max-width: 80%;
+			.input_contents label {
+				border-bottom: none;
+			}
+			.img_input {
+				height: 26px;
+				width: 120px;
+				padding: 24px 43px;
+			}
+			.wpcf7-checkbox,  .wpcf7-radio {
+				flex-wrap: nowrap;
+				max-height: none;
+			}
+			textarea {
+	    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
+	    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
+	    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
+	    background-image: -o-linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
+	    background-image: linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
+			background-size: 100% 34px;
+			line-height: 34px;
+			background-position-y: 8px;
+		}
+		.submit_q input{
+			width: 232px !important;
+			height: 83px !important;
+			padding: 0!important;
+		}
+		}
+		.bar {
+			padding: 1em 0;
+		}
+		#wpcf7-f25-p7-o1{
+			max-width: 80%;
+			.pricing-fields {
+				max-height: none;
+				p {
+					width: auto;
+				}
+			}
+		}
+		p {
+    max-width: 80%;
+		}
+	}
+
+	#coupon-label input{
+		  width: 80%;
+	}
+
+	.typewriter{
+		display: none;
+	}
+	.mobile-title {
+		color: $red;
+		font-family: Elementa-b;
+	  text-align: center;
+		padding-top: 1em;
+	}
+
+	//make buttons smaller
+	.paypal-submit {
+		width: 220px;
+    height: 83px;
+		padding: 0;
+	}
+
+	.thankyou pre {
+		    line-height: 1em;
+				font-size: .4em;
+	}
 }

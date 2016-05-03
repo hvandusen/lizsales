@@ -21,6 +21,7 @@
     </header>
     <div id="main" role="main">
 			<div id='content'>
+				<div class='mobile-title'>I Write Artist Statements</div>
 				<div class='nav'>
 					<a class='left' href='/#services'>Services</a>
 					<a class='left' href='/#writers'>Writers</a>

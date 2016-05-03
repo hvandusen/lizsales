@@ -8,7 +8,7 @@
 		display: none;
 	}
 	.right.elementa {
-		display: block;
+		display: none;
 	}
 	.pword-back div {
 		color: #0033cc;
@@ -17,6 +17,7 @@
 	.bar {
 		  margin-top: 3em;
 	}
+
 </style>
 <br>
 
