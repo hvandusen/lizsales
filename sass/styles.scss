@@ -5,14 +5,6 @@
 @import "typography";
 @import "mixins";
 
-@font-face{
-	font-family:Elementa-b;
-	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix");
-	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix") format("eot"),
-	url("../css/webfont/93b67223-1e10-4d00-a9e2-b2d2ed25fc4f.woff2") format("woff2"),
-	url("../css/webfont/9b93b76b-c9ed-40aa-a9df-9cedd8148292.woff") format("woff"),
-	url("../css/webfont/06f57c89-5613-46c0-aeaa-44325cb06709.ttf") format("truetype");
-}
 @font-face {
 			font-family: Plantin-old;
 			//src: url("../css/webfont/plantin.ttf") format("truetype");
@@ -55,6 +47,15 @@
 @font-face {
 		font-family: Elementa-FF;
 		src: url('../css/webfont/Elementa FF');
+}
+
+@font-face{
+	font-family:Elementa-b;
+	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix");
+	src: url("../css/webfont/2f4a34a5-5eb8-4ff8-b7fc-8e9ee23a0a5b.eot?#iefix") format("eot"),
+	url("../css/webfont/93b67223-1e10-4d00-a9e2-b2d2ed25fc4f.woff2") format("woff2"),
+	url("../css/webfont/9b93b76b-c9ed-40aa-a9df-9cedd8148292.woff") format("woff"),
+	url("../css/webfont/06f57c89-5613-46c0-aeaa-44325cb06709.ttf") format("truetype");
 }
 
 $blue: #0033cc;
@@ -291,7 +292,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		max-width: 67%;
 	  max-width: 60%;
 		margin: 3em auto;
-		margin-bottom: 0em; 
+		margin-bottom: 0em;
 		textarea {
     background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
     background-image: -moz-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
@@ -623,6 +624,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 	//make up for lack of centering for  art
 	pre {
+		font-family: Elementa;
 		font-family: Elementa-b;
 		padding-right: 7em;
 	}
