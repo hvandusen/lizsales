@@ -27,5 +27,5 @@
 					<a class='left' href='/#process'>Process</a>
 					<a class='left' href='/#pricing'>Pricing</a>
 					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---K</a>
-					<a class='right' href='#Contact'>Contact</a>
+					<a class='right' href='#contact'>Contact</a>
 				</div>

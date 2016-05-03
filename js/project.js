@@ -54,7 +54,7 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 			setHeaders();
 		$('.numbers').map(function(i,e){
 			console.log(e);
-			$(e).prop('value','1. \n2. \n3.');
+			$(e).prop('value','<span>1.</span> \n<span>2.</span> \n<span>3.</span>');
 			$(e).css('color','#0033cc');
 		});
 
@@ -184,7 +184,6 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 	});
 
 	$('.radio-409 .last input').click(function(){
-		console.log('sadgjoia');
 		$('.other_text').css('display','block');
 
 	})

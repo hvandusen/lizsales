@@ -1,4 +1,23 @@
 <?php get_header(); ?>
+<a href="/" class="pword-back"><span>&lt;---</span>
+<div>iwriteartiststatements.com</div>
+</a>
+
+<style>
+	.left, .right{
+		display: none;
+	}
+	.right.elementa {
+		display: block;
+	}
+	.pword-back div {
+		color: #0033cc;
+		border-bottom: solid 1px #0033cc;
+	}
+	.bar {
+		  margin-top: 3em;
+	}
+</style>
 <br>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -8,7 +27,7 @@
 
  <span class='ascii'>
  <?php
- $title = 'Artist Statement Questionnaire';
+ $title = 'ARTIST STATEMENT QUESTIONNAIRE';
  asciiBar($title);
  ?>
  </span>
