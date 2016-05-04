@@ -357,6 +357,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			label {
 					white-space: nowrap;
+					@media(max-width: 480px){
+						display: block;
+					}
 			}
 			&.area label {
 				display: block;
@@ -511,7 +514,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	margin:30px;
 }
 .pword-back {
-			float: left;
+			//float: left;
+			left: 14px;
 			margin:	30px;
 			color: #ffff66;
 			text-decoration: none;
@@ -527,6 +531,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: solid 1px #ffff66;
 				display: inline;
 			}
+			&.blue {
+				color: #0033cc;
+				div{
+				border-bottom: solid 1px #0033cc;
+			}
+			}
+}
+.key {
+	position: absolute;
+top: 14px;
+color: black;
+right: 44px;
+text-decoration: none;
+font-family: Elementa-b;
+margin: 30px;
 }
 
 .wpcf7-submit, .img_input, .paypal-submit{
@@ -697,6 +716,24 @@ span.wpcf7-list-item {
 	display: none;
 }
 
+.thankyou-page {
+	background-color: $blue;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	.ascii pre {
+		color: white;
+	}
+	.thanksgif {
+		margin-top: 100px;
+
+		width: 90%;
+		height: 80%;
+	}
+}
+
 @media(max-width:480px){
 
 	#content {
@@ -735,7 +772,7 @@ span.wpcf7-list-item {
 	    background-image: linear-gradient(#ffeee7, #ffeee7 26px, $blue 26px, $blue 27px, #ffeee7 27px);
 			background-size: 100% 34px;
 			line-height: 34px;
-			background-position-y: 8px;
+			background-position-y: 7px;
 		}
 		.submit_q input{
 			width: 232px !important;
@@ -784,5 +821,8 @@ span.wpcf7-list-item {
 	.thankyou pre {
 		    line-height: 1em;
 				font-size: .4em;
+	}
+	.pword-back {
+		  margin: 10px 5px;
 	}
 }

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<a href="/" class="pword-back"><span>&lt;---</span>
+<a href="/" class="pword-back blue"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
 
@@ -11,8 +11,8 @@
 		display: none;
 	}
 	.pword-back div {
-		color: #0033cc;
-		border-bottom: solid 1px #0033cc;
+		/*color: #0033cc;
+		border-bottom: solid 1px #0033cc;*/
 	}
 	.bar {
 		  margin-top: 3em;
