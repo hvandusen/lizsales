@@ -201,7 +201,7 @@ add_filter( 'the_password_form', 'custom_password_form' );
 
 
 
-function asciiBar($title){
+function asciiBar($title,$short){
   $buildMiddle = '<span class="preBar" >';
   $buildTop = '<span class="preBar" >';
   $noTitle = '';
@@ -209,7 +209,7 @@ function asciiBar($title){
     $noTitle = $noTitle . '-';
   }
   //total bar length!
-  $lenBar = 85;
+  $lenBar = 79;
   $even = strlen($title) % 2 === 0;
   //this accounts for the "skip" in the middle of the string
   if($even)

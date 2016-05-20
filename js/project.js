@@ -2,11 +2,15 @@
 	var count = 0;
 	var scrolls = {};
 	var max_bars = 38;
+
+
 	function setHeaders(){
 		$('.bar').map(function(e,i){
 			var bar = $(i).find('div')[0];
 			console.log($(bar).text().length);
 		});
+		return;
+
 		if(window.innerWidth>1408)
 			return;
 		var remove = /*Math.abs(*/Math.floor((window.innerWidth-1108)/7);
@@ -20,8 +24,16 @@
 		$('.postBar, .preBar').text(newString);
 	}
   $(window).resize(function(){
-		setHeaders();
+		if(window.innerWidth< 1193)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+		else {
+			$('.postBar, .preBar').text(bigSquigs);
+		}
+		//setHeaders();
 	});
+	if(window.innerWidth< 1193)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+
 
 	$('textarea').scroll(function(){
 		console.log($(this).scrollTop());
@@ -49,9 +61,13 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 });
 
 
-
+var bigSquigs;
 	$(document).ready(function(){
-			setHeaders();
+			//setHeaders();
+			bigSquigs = $($('.preBar')[0]).text();
+			if(window.innerWidth< 1193)
+			$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+			//numbered input area
 		$('.numbers').map(function(i,e){
 			console.log(e);
 			$(e).prop('value','<span>1.</span> \n<span>2.</span> \n<span>3.</span>');
@@ -61,29 +77,10 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 		$('.input_submit').click(function(){
 			var sub = $(this).prev().prev();
 		});
-		var animateTypewriter = false;
-		$('#animateTypewriter').click(function(){
-			animateTypewriter = !animateTypewriter;
-			$(this).text((animateTypewriter ? 'animate':'dont animate'));
-
-		})
 		var cnt = 0;
-		$('body').mousemove(function(){
-
-			$('.wpfc7-submit').map(function(e,i){
-				console.log(i);
-			});
-			if(animateTypewriter === true){
-				$('.typewriter pre').css({
-					'letter-spacing': 2+Math.sin((cnt-.5)/10),
-					'font-size': 20+ Math.floor(Math.sin(cnt/10)*10)
-				});
-				cnt++;
-			}
-		});
 
 	});
-
+	//checkboxes
 	$('.wpcf7-list-item label').map(function(i,e){
 		//$('<span class="xBox">[ ]</span>').prependTo($(e));
 		$(e).html('<span class="chbox">[<span> </span>]</span> '+$(e).html())
@@ -185,14 +182,12 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 
 	$('.radio-409 .last input').click(function(){
 		$('.other_text').css('display','block');
-
 	})
 	$('.truefalse .wpcf7-list-item').click(function(){
 
-		console.dir($(this).closest('.truefalse').find('.chbox span'));
+
 		$(this).closest('.truefalse').find('.chbox span').map(function(i,e){
 			$(e).text(' ');
-			console.log($(e))
 		});
 		$(this).find('.chbox span').text('X');
 		return;
@@ -207,6 +202,7 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 		$('.truefalse .first').find('input').prop('checked',false);
 		$('.truefalse .first').find('.chbox span').text(' ')
 	});
+
 function calculateTotal(){
 	var allofem = 0;
 	var discount = 0;

@@ -154,7 +154,7 @@ body {
 
 #content {
 	background: white;
-	margin: 20px;
+	margin: 25px;
 	background: #ffeee7;
 	//min-height: 5300px;
 }
@@ -216,6 +216,9 @@ label {
 }
 
 
+//
+
+
 
 // sticky footer mixin; see: http://compass-style.org/reference/compass/layout/sticky_footer/
 // $footerHeight:100px;
@@ -263,7 +266,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 //padding-top: 4em;
 //padding-bottom: 4.5em;
  .bar {
-	 padding-top: 4.1em;
+	 margin-top: 4.1em;
 	 padding-bottom: 3.6em;
 	 white-space: nowrap;
  }
@@ -320,9 +323,34 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 
 	&.questionnaire, #wpcf7-f25-p7-o1 {
-		max-width: 67%;
-	  max-width: 60%;
-
+		.question {
+			color: #03c;
+			margin-bottom: 2em;
+			&.q01 .input-outer .input-inner .one-liner:first {
+				display: none;
+			}
+			&.q03 {
+				.wpcf7-form-control {
+							margin-bottom: 2.8em;
+				}
+				p:first-child {
+					margin: 20px 0px;
+				}
+				#check2 {
+					margin: 20px 0px 0px 0px;
+				}
+			}
+		}
+		.one-liner {
+			label {
+	    	white-space: nowrap;
+			}
+			&:last-of-type {
+				//margin-bottom: 1.2em;
+			}
+		}
+		max-width: 62%;
+		max-width: 66%;
 		margin-bottom: 0em;
 		textarea {
 	    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
@@ -337,9 +365,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			outline: none;
 			border: none;
 			@extend .elementa;
-		&:focus {
-			outline: none;
-		}
+			&:focus {
+				outline: none;
+			}
 		}
 		.btn {
 			text-align: center;
@@ -359,20 +387,18 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			line-height: 1.3em;
 		}
 		form {
-			div {
-			}
 			& > p{
 				color: $blue;
 				//padding: 2em 0
 				margin: 2em 0;
+				margin-bottom: 1.8em;
 			}
 			.form-text {
 				text-align: left;
-    	@extend .plantin;
-    	color: $blue;
-			margin-bottom: 15px;
+	    	@extend .plantin;
+	    	color: $blue;
+				margin-bottom: 15px;
 			}
-
 			.txt_input{
 				@extend .input;
 				display: inline;
@@ -388,10 +414,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: inherit;
 			width: 100%;
 			&.num {
-				margin-top: 2em;
+				//margin-top: 2em;
 			}
 			label {
-					white-space: nowrap;
+					//white-space: nowrap;
 					@media(max-width: 480px){
 						display: block;
 					}
@@ -402,6 +428,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			//	padding-bottom: 1em;
 				line-height: 1em;
 				white-space: normal;
+				padding-bottom: 0.5em;
 			}
 			&.other_text{
 				display: none;
@@ -422,7 +449,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 		}
 		}
-		.input_outer {
+
+		div .input_outer {
     	overflow: hidden;
     	left: 20px;
 			padding: 15px 0;
@@ -460,7 +488,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		    width: 100%;
 				//display: none;
 				.wpcf7-file {
-					display: none;
+					position: absolute;
+					//display: none;
 				}
 		}
 		.post-password-form {
@@ -581,7 +610,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .pword-back {
 			//float: left;
 			left: 14px;
-			margin:	30px;
+			margin:	22px;
+			//margin: 14px;
 			color: #ffff66;
 			text-decoration: none;
 			position: absolute;
@@ -593,13 +623,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			div{
 				display: inline-block;
-				border-bottom: solid 1px #ffff66;
+				//border-bottom: solid 1px #ffff66;
 				display: inline;
+				text-decoration: underline;
 			}
 			&.blue {
 				color: #0033cc;
 				div{
-				border-bottom: solid 1px #0033cc;
+				//border-bottom: solid 1px #0033cc;
+				    //text-decoration: underline;
 			}
 			}
 }
@@ -621,7 +653,7 @@ margin: 30px;
 	padding: 39px 62px;
 	border-image-outset: 6px;
 	max-width: 270px;
-	background-image: url(../images/border-3.png);
+	background-image: url(../images/border_3.png);
 	background-size: cover;
 	&:focus {
 		outline:none;
@@ -642,10 +674,11 @@ margin: 30px;
 .img_input{
 	padding: 60px 66px;
 	margin: 1em;
-	margin-bottom: 3em;
+	//margin-bottom: 3em;
 	&:hover {
 		color: #ffff66;
-		background-image: url(../images/border-3-hover.png);
+		//background-image: url(../images/border-3-hover.png);
+		background-position: 82.8% 0px;
 		cursor: pointer;
 
 	}
@@ -668,13 +701,15 @@ margin: 30px;
     width: 25%;
 	max-width: none;
 	//height: 143px;
-	background-image: url(../images/border-1.png);
+	background-image: url(../images/border_1.png);
 	background-color: transparent;
 	border: none;
 
 	&:hover {
-		background-image: url(../images/border-1-hover.png);
+		//background-image: url(../images/border-1-hover.png);
 		color: #ffff66;
+		background-position: 392px 0px;
+		    background-position: 80.6% 0px;
 	}
 }
 
@@ -693,6 +728,7 @@ margin: 30px;
 		display: inline;
 		text-transform: uppercase;
 		color: $red;
+		    padding: calc(15.7% - 13px) 29%;
 	}
 }
 
@@ -731,6 +767,7 @@ margin: 30px;
 		font-family: Elementa;
 		font-family: Elementa-b;
 		padding-right: 7em;
+		    overflow: inherit;
 	}
 	.asciiTitle {
 		color: $red;
@@ -907,5 +944,11 @@ span.wpcf7-list-item {
 	}
 	.pword-back {
 		  margin: 10px 5px;
+	}
+}
+body#page-id-10 {
+	.bar {
+		margin-top: none;
+		margin-bottom: 4em;
 	}
 }

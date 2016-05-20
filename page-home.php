@@ -42,7 +42,7 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	if(is_array($sections))
 	foreach($sections as $section){
 		echo "<div id='" . strtolower($section['name']) . "' class='ascii section'>";
-		asciiBar(strtoupper($section['name']));
+		asciiBar(strtoupper($section['name']),false);
 		echo $section['text'];
 		echo "</div>";
 	}

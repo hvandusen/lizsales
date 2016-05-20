@@ -15,7 +15,7 @@
 		border-bottom: solid 1px #0033cc;*/
 	}
 	.bar {
-		  margin-top: 3em;
+		  margin-bottom: 4.7em;
 	}
 
 </style>
@@ -29,7 +29,8 @@
  <span class='ascii'>
  <?php
  $title = 'ARTIST STATEMENT QUESTIONNAIRE';
- asciiBar($title);
+
+ asciiBar($title,true);
  ?>
  </span>
 
