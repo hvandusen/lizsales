@@ -174,13 +174,31 @@ function custom_password_form() {
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<div class="key" href="">O---K</div><form class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a>
-		 </label><div id="pword-box"><input class="pword-field" name="post_password" id="' . $label . '" type="password" style="background: #ffffff; " size="20" placeholder="Password: "/><input type="submit" name="Submit" class="button" value="' . esc_attr__( "ENTER" ) . '" /></div>
-    </form>
-    ';
+		 </label><div id="pword-box"><span><input class="pword-field button1" name="post_password" id="' . $label . '" type="password" style="" size="20" placeholder="Password: "/><input type="submit" name="Submit" class="button button2" value="' . esc_attr__( "ENTER" ) . '" /></span></div>';
+  	if (isset($_COOKIE['wp-postpass_' . COOKIEHASH]) and
+  	$_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password){
+   $o = $o . '<p style="color:#C00;">Password Invalid, please try again.</p>';
+  }
+	 $o = $o . '</form>';
+
     return $o;
 }
 
 add_filter( 'the_password_form', 'custom_password_form' );
+
+
+
+
+
+//add_filter( 'the_password_form', 'invalid_password',9 );
+
+
+
+
+
+
+
+
 
 
 function asciiBar($title){

@@ -13,7 +13,9 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body <?php
+body_class();
+?>>
 
 <div id="container">
     <header id="header">
@@ -23,10 +25,10 @@
 			<div id='content'>
 				<div class='mobile-title'>I Write Artist Statements</div>
 				<div class='nav'>
-					<a class='left' href='/#services'>Services</a>
-					<a class='left' href='/#writers'>Writers</a>
-					<a class='left' href='/#process'>Process</a>
-					<a class='left' href='/#pricing'>Pricing</a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#services'>Services  </a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#writers'>Writers</a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#process'>Process</a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#pricing'>Pricing</a>
 					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---K</a>
-					<a class='right' href='#contact'>Contact</a>
+					<a class='right' href='mailto:info@iwriteartiststatements.com'>Contact</a>
 				</div>

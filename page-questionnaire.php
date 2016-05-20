@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<a href="/" class="pword-back blue"><span>&lt;---</span>
+<a href="<?php bloginfo('wpurl'); ?>" class="pword-back blue"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
 
