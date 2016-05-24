@@ -210,6 +210,9 @@ function asciiBar($title,$short){
   }
   //total bar length!
   $lenBar = 79;
+	if($short){
+		$lenBar = 50;
+	}
   $even = strlen($title) % 2 === 0;
   //this accounts for the "skip" in the middle of the string
   if($even)

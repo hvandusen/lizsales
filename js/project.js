@@ -23,16 +23,23 @@
 
 		$('.postBar, .preBar').text(newString);
 	}
+	if(window.location.pathname.indexOf('questionnaire')>-1 && window.innerWidth<850){
+		//alert();
+		$('.postBar, .preBar').text('~~~~~~~~~');
+		//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~');
+	}
+
   $(window).resize(function(){
 		if(window.innerWidth< 1193)
 		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
 		else {
 			$('.postBar, .preBar').text(bigSquigs);
 		}
+
 		//setHeaders();
 	});
 	if(window.innerWidth< 1193)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+		$('.postBar, .preBar').text('~~~~~~~~');
 
 
 	$('textarea').scroll(function(){
