@@ -211,7 +211,7 @@ function asciiBar($title,$short){
   //total bar length!
   $lenBar = 79;
 	if($short){
-		$lenBar = 50;
+		$lenBar = 79;
 	}
   $even = strlen($title) % 2 === 0;
   //this accounts for the "skip" in the middle of the string
@@ -248,9 +248,9 @@ $buildTop = $buildTop . '</span>';
 //$headerBar = '&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(|––––––––––––|)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
   //echo strlen($headerBar);
 	echo '<div class="bar">';
-	echo '<div>' . $buildTop . '</div>';
-  echo '<div>' . $buildMiddle . '</div>';
-  echo '<div>' . $buildTop . '</div>';
+	echo '<div class="bar-top">' . $buildTop . '</div>';
+  echo '<div class="bar-middle">' . $buildMiddle . '</div>';
+  echo '<div class="bar-bottom">' . $buildTop . '</div>';
 	//note hen- services is 8 chars and the rest are 7!!!
 echo '</div>';
 }

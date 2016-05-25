@@ -35,6 +35,8 @@
 		else {
 			$('.postBar, .preBar').text(bigSquigs);
 		}
+		if(window.innerWidth< 480)
+		$('.postBar, .preBar').text('~~~~~~');
 
 		//setHeaders();
 	});
@@ -74,6 +76,8 @@ var bigSquigs;
 			bigSquigs = $($('.preBar')[0]).text();
 			if(window.innerWidth< 1193)
 			$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+			if(window.innerWidth< 480)
+			$('.postBar, .preBar').text('~~~~~~');
 			//numbered input area
 		$('.numbers').map(function(i,e){
 			console.log(e);
