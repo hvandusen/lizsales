@@ -275,5 +275,20 @@ $('#coupon').change(function(e){
 
 //});
 
+//password screen
+if(window.innerWidth>480){
+		$('.button2').mouseenter(function(e){
+			//$(this).parent().
+		});
+		$('.button2').mouseleave(function(e){
+
+		});
+}
+
+$('.wpcf7-file').change(function(e){
+	console.log('file is '+e.currentTarget.value);
+	$('.img_input').addClass('fileUploaded');
+})
+
 
 })(jQuery);
