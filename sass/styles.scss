@@ -492,6 +492,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				//display: none;
 				.wpcf7-file {
 					position: absolute;
+					    cursor: pointer;
 					//padding: 0px 0px 0px 31px;
 					//top: 16px;
 					margin: 0;
@@ -516,10 +517,13 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				justify-content: center;
 				//henry
 				span {
-					background-image: url(../images/border-2.png);
-					background-size: cover;
+					background-image: url(../images/border-2-both.png);
+					background-size: 225% 100%;//cover;
 					//padding: calc(3.8% - 10px) 0px;
 					width: 46%;
+					&.hovered {
+						background-position: 87.6% 0%;
+					}
 				}
 				input {
 
@@ -537,6 +541,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 						width: 29%;
 						//padding: 37px 50px;
 						    padding: calc(8.8% - 10px) 0;
+						color:#ffff66;
 					}
 					@extend .ascii-border;
 					//padding: 37px 30px;

@@ -278,10 +278,10 @@ $('#coupon').change(function(e){
 //password screen
 if(window.innerWidth>480){
 		$('.button2').mouseenter(function(e){
-			//$(this).parent().
+			$(this).parent().addClass('hovered')
 		});
 		$('.button2').mouseleave(function(e){
-
+			$(this).parent().removeClass('hovered')
 		});
 }
 
