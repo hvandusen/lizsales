@@ -314,7 +314,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 
 	p {
-		max-width: 60%;
+		//max-width: 60%;
+		max-width: 66%;
 		text-align: left;
 		color: $blue;
 		margin: 0 auto;
@@ -775,6 +776,11 @@ margin: 30px;
 		label {
 			padding: 0;
 			line-height: 100px;
+			@media(max-width: 480px){
+				line-height: 30px;
+		    position: absolute;
+				left: 45px;
+			}
 		}
 	}
 }
@@ -930,6 +936,11 @@ span.wpcf7-list-item {
 				height: 26px;
 				width: 120px;
 				padding: 24px 43px;
+				@media(max-width: 480px){
+					position: relative;
+				}
+				min-width: auto;
+				min-height: auto;
 			}
 			.wpcf7-checkbox,  .wpcf7-radio {
 				flex-wrap: nowrap;
