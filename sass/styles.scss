@@ -343,6 +343,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			&.q01 .input-outer .input-inner .one-liner:first {
 				display: none;
 			}
+			&.q02 {
+				padding-top: 1em;
+			}
 			&.q03 {
 				.wpcf7-form-control {
 							margin-bottom: 2.8em;
@@ -371,6 +374,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		max-width: 66%;
 		margin-bottom: 0em;
 		textarea {
+			    font-size: 22px;
 	    background-image: -webkit-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
 	    background-image: -moz-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
 	    background-image: -ms-linear-gradient(#ffeee7, #ffeee7 48px, $blue 48px, $blue 49px, #ffeee7 49px);
