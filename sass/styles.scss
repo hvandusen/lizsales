@@ -360,6 +360,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.one-liner {
 			label {
 	    	white-space: nowrap;
+				width: 219px;
 			}
 			&:last-of-type {
 				//margin-bottom: 1.2em;
