@@ -274,26 +274,12 @@ function paypalOutput( $atts ){
 
 		<div class="paypal-form">
 				<div class="paypal-item-single">
-	<!--					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_xclick">
-						<input type="hidden" name="business" value="diana@fine-arts.org">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="item_name" value="">
-						<input type="hidden" id="totalTicketAmtThird" readonly="" name="amount" value="<?php echo $price; ?>">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_SM.gif:NonHostedGuest">
-						<input type="submit" class="paypal-submit" value="<?php echo $label; ?>" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-					</form>
-					-->
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			    <input type="hidden" name="cmd" value="_xclick">
 			    <input type="hidden" name="business" value="henry@dusendusen.com">
 			    <input type="hidden" name="item_name" value="<?php echo $name; ?>">
 			    <input type="hidden" name="item_number" value="1">
-			    <input type="hidden" id='price' name="amount" value="<?php echo $price; ?>">
+			    <input type="hidden" id='price' name="amount" value="0<?php //echo $price; ?>">
 			    <input type="hidden" name="no_shipping" value="0">
 			    <input type="hidden" name="no_note" value="1">
 			    <input type="hidden" name="currency_code" value="USD">

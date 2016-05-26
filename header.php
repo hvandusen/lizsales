@@ -23,7 +23,7 @@ body_class();
     </header>
     <div id="main" role="main">
 			<div id='content'>
-				<div class='mobile-title'>I Write Artist Statements</div>
+				<div class='mobile-title'>I WRITE ARTIST STATEMENTS</div>
 				<div class='nav'>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#services'>Services  </a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#writers'>Writers</a>

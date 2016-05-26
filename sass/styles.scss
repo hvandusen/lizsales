@@ -400,7 +400,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				text-align: left;
 	    	@extend .plantin;
 	    	color: $blue;
-				margin-bottom: 15px;
+				//margin-bottom: 15px;
 			}
 			.txt_input{
 				@extend .input;
@@ -524,10 +524,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					&.hovered {
 						background-position: 87.6% 0%;
 					}
+					@media(max-width:480px){
+						width: 75%;
+					}
 				}
 				input {
-
-
 					border: none;
 					    background: none;
 							&.button1 {
@@ -541,7 +542,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 						width: 29%;
 						//padding: 37px 50px;
 						    padding: calc(8.8% - 10px) 0;
-						color:#ffff66;
+					//	color:#ffff66;
 					}
 					@extend .ascii-border;
 					//padding: 37px 30px;
@@ -836,7 +837,11 @@ margin: 30px;
 	}
 }
 .thankyou {
+	@media(max-width: 480px){
+		visibility: hidden;
+	}
 	margin-top: 3em;
+	padding-bottom: 4em;
 	pre {
 		display: inline-block;
 		text-align: right;
@@ -971,10 +976,11 @@ span.wpcf7-list-item {
 		display: none;
 	}
 	.mobile-title {
-		color: $red;
+		color: black;//$red;
 		font-family: Elementa-b;
 	  text-align: center;
-		padding-top: 1em;
+		font-size: 16px;
+		padding: 1em 0;
 	}
 
 	//make buttons smaller
