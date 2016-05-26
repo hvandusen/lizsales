@@ -335,6 +335,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.question {
 			color: #03c;
 			margin-bottom: 2em;
+			&.q01 > p{
+
+				margin-bottom: 1.6em;
+			}
 			&.q01 .input-outer .input-inner .one-liner:first {
 				display: none;
 			}
