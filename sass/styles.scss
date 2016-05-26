@@ -941,6 +941,8 @@ span.wpcf7-list-item {
 				}
 				min-width: auto;
 				min-height: auto;
+				min-width: initial;
+				min-height: initial;
 			}
 			.wpcf7-checkbox,  .wpcf7-radio {
 				flex-wrap: nowrap;
