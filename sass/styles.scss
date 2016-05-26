@@ -522,6 +522,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			height: 100%;
 			background: $blue;
 			text-align: center;
+			.wrong-pword {
+				margin-top: 1em;
+				display: inline-block;
+				text-align: center;
+			}
 			.pp {
 				margin-top: 20%;
 			}
