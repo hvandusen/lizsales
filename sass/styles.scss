@@ -345,6 +345,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			&.q02 {
 				padding-top: 1em;
+				i {
+					margin-top: -5px;
+				}
+				.pleaseUpload {
+					line-height: 1em;
+				}
 			}
 			&.q03 {
 				.wpcf7-form-control {
