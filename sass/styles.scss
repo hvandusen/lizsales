@@ -742,11 +742,12 @@ margin: 30px;
 .paypal-submit{
 	padding: 60px 64px;
 	width: 378px;
-	padding: calc(4.7% - 13px) 0px;
+	//padding: calc(4.7% - 13px) 0px;
+	padding: calc(5.7% - 13px) 0px;
     width: 25%;
 	max-width: none;
 	//height: 143px;
-	background-image: url(../images/border_1.png);
+	background-image: url(../images/border_1_2.png);
 	background-color: transparent;
 	border: none;
 
@@ -754,7 +755,13 @@ margin: 30px;
 		//background-image: url(../images/border-1-hover.png);
 		color: #ffff66;
 		background-position: 392px 0px;
-		    background-position: 80.6% 0px;
+		  //  background-position: 80.6% 0px;
+				background-position: 71.4% 0px;
+
+
+
+
+
 	}
 }
 
