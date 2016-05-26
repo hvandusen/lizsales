@@ -400,14 +400,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		}
 		form {
 			& > p{
-				color: $blue;
+				color: $blue; 
 				//padding: 2em 0
 				margin: 2em 0;
 				margin-bottom: 1.8em;
 			}
 			.form-text {
 				text-align: left;
-				margin-bottom: 0.6em;
+				//margin-bottom: 0.6em;
+				    margin-bottom: 21px;
 	    	@extend .plantin;
 	    	color: $blue;
 				//margin-bottom: 15px;
