@@ -522,8 +522,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			height: 100%;
 			background: $blue;
 			text-align: center;
+			.pp {
+				margin-top: 20%;
+			}
 			#pword-box {
-				margin-top: 230px;
+				//margin-top: 230px;
 				display: flex;
 				justify-content: center;
 				//henry
@@ -756,7 +759,7 @@ margin: 30px;
 		color: #ffff66;
 		background-position: 392px 0px;
 		  //  background-position: 80.6% 0px;
-				background-position: 71.5% 0px; 
+				background-position: 71.5% 0px;
 
 
 
