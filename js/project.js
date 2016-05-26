@@ -281,9 +281,11 @@ $('#coupon').change(function(e){
 if(window.innerWidth>480){
 		$('.button2').mouseenter(function(e){
 			$(this).parent().addClass('hovered')
+			$(this).css('color','#ffff66');
 		});
 		$('.button2').mouseleave(function(e){
-			$(this).parent().removeClass('hovered')
+			$(this).parent().removeClass('hovered');
+			$(this).css('color','#c13a1c');
 		});
 }
 
