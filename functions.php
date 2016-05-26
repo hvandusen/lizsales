@@ -202,7 +202,7 @@ add_filter( 'the_password_form', 'custom_password_form' );
 
 
 function asciiBar($title,$short){
-  $buildMiddle = '<span class="preBar" >';
+  $buildMiddle = '<span class="preBar hold" >';
   $buildTop = '<span class="preBar" >';
   $noTitle = '';
   for ($x = 0; $x <= strlen($title); $x++){
@@ -222,7 +222,7 @@ function asciiBar($title,$short){
   }
   $padding = ($lenBar-$lenText)/2;
   $preName = '(|';
-	$postName = '|)<span class="postBar" >';
+	$postName = '|)<span class="postBar hold" >';
   for ($x = 0; $x <= $lenBar; $x++) {
     if($x<($lenBar-$lenText)/2){
       $newMiddle = ' ';
