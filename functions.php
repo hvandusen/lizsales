@@ -177,7 +177,7 @@ function custom_password_form() {
 		 </label><div class="pp"><div id="pword-box"><span><input class="pword-field button1" name="post_password" id="' . $label . '" type="password" style="" size="20" placeholder="Password: "/><input type="submit" name="Submit" class="button button2" value="' . esc_attr__( "ENTER" ) . '" /></span></div></div>';
   	if (isset($_COOKIE['wp-postpass_' . COOKIEHASH]) and
   	$_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password){
-   $o = $o . '<p style="color:#C00;">Password Invalid, please try again.</p>';
+   $o = $o . '<p style="color:#C00;">Password invalid, please try again.</p>';
   }
 	 $o = $o . '</form>';
 
