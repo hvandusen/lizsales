@@ -2,7 +2,9 @@
 	var count = 0;
 	var scrolls = {};
 	var max_bars = 38;
-
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		alert();
+}
 
 	function setHeaders(){
 		$('.bar').map(function(e,i){

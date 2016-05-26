@@ -308,6 +308,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				@extend .plantin-light-italic;
 			}
 		}
+			@media(max-width: 720px){
+					max-height: none;
+					p{
+							  width: 86%;
+					}
+			}
 	}
 
 	}
@@ -969,8 +975,9 @@ span.wpcf7-list-item {
 		}
 		#wpcf7-f25-p7-o1{
 			max-width: 80%;
+
 			.pricing-fields {
-				max-height: none;
+						max-height: none;
 				p {
 					width: auto;
 				}
