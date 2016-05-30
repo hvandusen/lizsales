@@ -188,7 +188,9 @@ var bigSquigs;
 			});
 			forceAll = true;
 			console.log(cart);
-			$('#price').attr('value',calculateTotal());
+			$('#price').attr('value',calculateTotal().toFixed(2));
+			$('#amt').text(calculateTotal().toFixed(2));
+			$('#realTotal').text(calculateTotal()+'.00');
 			console.log($('#price').attr('value'));
 			}
 	});
@@ -227,15 +229,16 @@ function calculateTotal(){
 		console.dir(currentCoupon);
 		console.log('from '+allofem);
 		if(currentCoupon.percent){
-			//allofem = Math.floor(allofem*((1-(currentCoupon.discount/100))));
 			discount = Math.floor(allofem*(currentCoupon.discount/100));
 		}
 		else {
 			discount = currentCoupon.discount;
 		}
-		console.log('to '+(allofem-discount));
+		$('#couponAmt').text(discount.toFixed(2));
+		console.log('to '+(allofem-discount).toFixed(2));
 	}
-
+	$('#amt').text(allofem.toFixed(2));
+	$('#realTotal').text((allofem-discount).toFixed(2));
 	return allofem-discount;
 }
 function setReal(input,checked){
@@ -254,10 +257,13 @@ $('#coupon').change(function(e){
 			currentCoupon = e;
 		}
 	});
-	if(currentCoupon === '')
+	if(currentCoupon === ''){
 		console.log('wrong coupon code');
+		$('#couponAmt').text('0');
+	}
 		//apply it
 	$('#price').attr('value',calculateTotal());
+
 });
 	if(window.ajaxurl)
 	$.ajax({

@@ -830,18 +830,48 @@ margin: 30px;
 	}
 }
 
+#total {
+	margin-bottom: .5em;
+	color: $blue;
+		@extend .plantin;
+}
+
+#discount {
+	color: $red;
+	margin-bottom: 1.7em;
+	font-size: 27px;
+	@extend .plantin-light-italic;
+}
+
+#actual {
+	color: $blue;
+	font-size: 27px;
+	margin-bottom: 4em;
+
+	@extend .plantin-bold;
+}
+
+
 #coupon-label {
+	display: inherit;
+	span {
+		border-bottom: solid $blue 1px;
+		padding-bottom: 1px;
+	}
+
 	border-bottom: none;
-	    padding-bottom: 3em;
+	    padding: 3em 0;
 			input {
+				width: calc(100% - 200px);
 				background: #ffeee7;
 				border: none;
 				border-bottom: $blue solid 1px;
 				&:focus {
 					outline: none;
-					border-bottom: black solid 1px;
+					border-bottom: $blue solid 1px;
 				}
 			}
+
 }
 
 .ascii {
