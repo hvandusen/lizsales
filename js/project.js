@@ -67,8 +67,9 @@ var cart = {};
 $('.wpcf7-not-valid-tip').map(function(e,i){
 	var label = $(i).parent().prev();
 	console.log($(i).parent().prev());//.closest('label'));
-	label.css('color','red');
-	$(this).remove();
+
+	label.addClass('input-error')
+	$(this).remove(); 
 });
 
 

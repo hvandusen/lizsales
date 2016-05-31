@@ -1026,20 +1026,48 @@ span.wpcf7-list-item {
 }
 
 .thankyou-page {
-	background-color: $blue;
+	background-color: #ffff66;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	height: 100%;
+	//height: 100%;
+	.pword-back {
+		div {
+			color: $blue;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	.smiley {
+		background-image: url(http://liz.dev/wp-content/themes/lizsales/images/smiley.gif);
+    margin-top: calc(100px);
+    height: calc(100% - 219px);
+    background-size: auto 91%;
+    background-repeat: no-repeat;
+    background-position: top center;
+		
+	}
+	.thanks-text {
+		text-align: center;
+
+		color: $blue;
+		position: absolute;
+		width: 100%;
+		bottom: 100px;
+		@extend .plantin-bold;
+	}
 	.ascii pre {
 		color: white;
 	}
 	.thanksgif {
 		margin-top: 100px;
 
-		width: 90%;
-		height: 80%;
+		width: 100%;
+		pre {
+			padding: 0;
+		}
 	}
 }
 
@@ -1155,4 +1183,16 @@ body#page-id-10 {
 .finalMessage{
 	margin-bottom: 3em;
 	color: $blue;
+}
+
+.input-error {
+	//position: relative;
+	&:before {
+		content: '>>';
+		color: $red;
+    position: absolute;
+    /* left: -37px; */
+    left: calc(18.3% - 33px);
+    font-size: 18px;
+	}
 }

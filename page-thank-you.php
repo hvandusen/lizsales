@@ -3,11 +3,13 @@
 	<a href="/" class="pword-back"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
-<a href='/questionnaire' class='key'> 0---k</a>
-
-<div class='ascii thanksgif'>
+<div class='smiley'>
+<!-- <img src='<?php bloginfo('template_directory'); ?>/images/smiley.gif'></img> -->
+</div>
+<div class='thanks-text'>Thank you! Your response has been submitted.</div>
+<!-- <div class='ascii thanksgif'>
 <pre>
-Thank you!!
-</pre>
+
+</pre> -->
 </div>
 </div>
