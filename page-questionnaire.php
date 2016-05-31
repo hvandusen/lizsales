@@ -15,7 +15,7 @@
 		border-bottom: solid 1px #0033cc;*/
 	}
 	.bar {
-		  margin-bottom: 4.7em;
+		  margin-bottom: 5.6em;
 	}
 
 </style>

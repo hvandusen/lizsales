@@ -336,6 +336,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.question {
 			color: #03c;
 			margin-bottom: 2em;
+			margin-bottom: 2.6em;
 			&.q01 > p{
 
 				margin-bottom: 1.6em;
@@ -352,7 +353,23 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					line-height: 1em;
 				}
 			}
+			&.q4, &.q9, &.q17, &.q18 {
+				margin-bottom: 2em;
+			}
+			&.q8 {
+				margin-bottom: 3.4em;
+			}
+			&.q16{
+				margin-bottom: 1.8em;
+			}
+			&.q19{
+				margin-bottom: 1.2em;
+			}
+			&.q20 {
+				margin-bottom: 3.2em;
+			}
 			&.q03 {
+				margin-bottom: 3.6em;
 				.wpcf7-form-control {
 							margin-bottom: 2.8em;
 				}
@@ -460,6 +477,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: none;
 			//	padding-bottom: 1em;
 				line-height: 1em;
+				//line-height:1.4em;
 				white-space: normal;
 				padding-bottom: 0.5em;
 			}
@@ -481,6 +499,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			}
 		}
+		}
+
+		.wpcf7-form-control-wrap {
+			//display: inline-block;
 		}
 
 		div .input_outer {
@@ -674,6 +696,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			text-decoration: none;
 			position: absolute;
     	top: 14px;
+			&:hover {
+				color: $red!important;
+			}
 			span {
 				@extend .elementa;
 				color:	black;
@@ -687,6 +712,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			&.blue {
 				color: #0033cc;
+				&:hover {
+					color: $red;
+				}
 				div{
 				//border-bottom: solid 1px #0033cc;
 				    //text-decoration: underline;
@@ -740,7 +768,11 @@ margin: 30px;
 	&:hover, &.fileUploaded {
 		color: #ffff66;
 		//background-image: url(../images/border-3-hover.png);
-		background-position: 82.8% 0px;
+		@media(min-width: 905px){
+			background-position: 82.8% 0px;
+		}
+		//
+		background-position: 82.5% 0px;
 		cursor: pointer;
 		.uploadText{
 		visibility: hidden;

@@ -111,7 +111,9 @@ var bigSquigs;
 		var allOfTheAbove = $(this).text().indexOf('All of')>-1;
 		var inputIndex = $(this).parent().index();
 		var box  = $(this).find('.chbox span');
-
+		var removeAll = box.html().indexOf('X')>-1 && $(this).text().indexOf('All of')>-1;
+		// if(removeAll)
+		// console.log('remove all please');
 		//setup cart
 		if(!cart.hasOwnProperty(input_group))
 			cart[input_group] = 0;
@@ -121,7 +123,7 @@ var bigSquigs;
 			box.html(' ');//box.html().replace('X',' '))
 			cart[input_group]-= price;
 			cartTotal -= price;
-
+			//if selected from select all, and price needs to be readjusted
 		}
 		else {
 			box.html('X');//box.html(box.html().replace(' ','X'));//box.html().replace(' ','X'))
@@ -131,12 +133,13 @@ var bigSquigs;
 		}
 		console.log("text: "+box.html())
 
-		if(allOfTheAbove && $(this).find('input')[0].checked=== false){
-			//console.log('please get rid!!');
+		//undo all of the above
+		if(allOfTheAbove && ($(this).find('input')[0].checked=== false )){
+			console.log('please get rid!!');
 			box.html(' ');
 			allOfTheAbove = false;
-
 		}
+		 console.log(allOfTheAbove);
 
 		if(window.ajaxurl){
 			//update all checkboxes
@@ -150,7 +153,7 @@ var bigSquigs;
 						forceAll = false;
 					}
 			});
-
+			var turnOffDeal = 0;
 			inputs.map(function(i,e){
 				var thisPrice = parseInt($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
 				//console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
@@ -158,6 +161,7 @@ var bigSquigs;
 					var actualCheckbox = 	$(e).find('input');
 					var checked = actualCheckbox[0].checked;
 					var checkbox = 	$(e).find('.chbox span');
+					//first inputs
 				if(i<inputs.length-1){
 					if(allOfTheAbove === true || forceAll === true){
 						$(actualCheckbox).attr('checked',true);
@@ -165,25 +169,48 @@ var bigSquigs;
 						$(e).css('opacity',.5);
 					}
 					else{
+						console.log('opacity is '+ $(e).css('opacity'));
+						//if(they were transparent )
+						if($(e).css('opacity')=== '0.5' && checked)
+							{
+								console.log('yeah')
+								turnOffDeal += thisPrice;
+							}
 						$(e).css('opacity',1);
 					}
+
+					if(removeAll){
+						console.log('remove '+i)
+						$(e).css('opacity',1);
+						 $(actualCheckbox).attr('checked',false);
+					  $(checkbox).text($(checkbox).text().replace('X',' '));
+					}
 				}
+				//all of the above  input
 				else {
 					if(allOfTheAbove === true || forceAll === true){
 						$(checkbox).text($(checkbox).text().replace(' ','X'));
 						$(actualCheckbox).prop('checked',true);
 						cart[input_group] = thisPrice;
 						cart[input_group].all = true;
+						console.log('do it all please')
 					}
 					else {
 					 $(actualCheckbox).attr('checked',false);
 						$(checkbox).text($(checkbox).text().replace('X',' '));
-						if(cart[input_group].all === true){
-							alert();
-							cart[input_group] -= thisPrice;
-							cart[input_group].all = false;
-						}
+						console.log('dont do it all please');
 					}
+					if(removeAll){
+						console.log('remove '+i)
+						$(e).css('opacity',1);
+						 $(actualCheckbox).attr('checked',false);
+					  $(checkbox).text($(checkbox).text().replace('X',' '));
+						cart[input_group] = 0;
+					}
+				}
+				if(turnOffDeal>0){
+					console.log('guys we gotta reset the price to '+turnOffDeal)
+					cart[input_group] = turnOffDeal;
 				}
 			});
 			forceAll = true;
@@ -191,7 +218,7 @@ var bigSquigs;
 			$('#price').attr('value',calculateTotal().toFixed(2));
 			$('#amt').text(calculateTotal().toFixed(2));
 			$('#realTotal').text(calculateTotal()+'.00');
-			console.log($('#price').attr('value'));
+			console.log('the price is now '+$('#price').attr('value'));
 			}
 	});
 
