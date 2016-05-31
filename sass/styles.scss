@@ -1048,7 +1048,9 @@ span.wpcf7-list-item {
     background-size: auto 91%;
     background-repeat: no-repeat;
     background-position: top center;
-
+		@media(max-width:480px){
+			    background-size: 120% auto;
+		}
 	}
 	.thanks-text {
 		text-align: center;
