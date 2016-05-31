@@ -118,6 +118,10 @@ strong {
 		}
 }
 
+.noBold {
+	@extend .plantin;
+}
+
 .ascii-border {
 	z-index: 10;
 	@extend .elementa;
@@ -516,6 +520,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: inline-block;
 			//height: auto;//175px;
 			&.submit_q {
+				margin-bottom: 3em;
 				input {
 					background-image: url(../images/border-4.png);
 					background-size: cover;
@@ -545,6 +550,25 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				.wpcf7-file {
 					position: absolute;
 					    cursor: pointer;
+							&:before {
+								//content: 'aaaaaaaaa';
+								content: '';
+								//background: #C13A1C;
+								/* padding-top: 100px; */
+								color: transparent;
+								z-index: 100;
+								position: absolute;
+								width: 90px;
+								left: 100px;
+								//color: #C13A1C;
+								/* float: left; */
+								line-height: 1.2em;
+								background-repeat: no-repeat;
+								background-position: -1040px -63px;
+				    background-image: url(../images/border3.png);
+
+
+							}
 					//padding: 0px 0px 0px 31px;
 					//top: 16px;
 					margin: 0;
@@ -552,7 +576,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					@media(max-width: 950px){
 						  top: 39px;
 					}
-
+					input {
+						visibility: hidden;
+					}
 				}
 		}
 		.post-password-form {
@@ -1124,4 +1150,9 @@ body#page-id-10 {
 		margin-top: none;
 		margin-bottom: 4em;
 	}
+}
+
+.finalMessage{
+	margin-bottom: 3em;
+	color: $blue;
 }

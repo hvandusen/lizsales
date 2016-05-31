@@ -82,8 +82,8 @@ var bigSquigs;
 			$('.postBar, .preBar').text('~~~~~~');
 			//numbered input area
 		$('.numbers').map(function(i,e){
-			console.log(e);
-			$(e).prop('value','<span>1.</span> \n<span>2.</span> \n<span>3.</span>');
+			console.log('fuck');
+			$(e).prop('value','<span >1.</span> \n<span>2.</span> \n<span>3.</span>');
 			$(e).css('color','#0033cc');
 		});
 
