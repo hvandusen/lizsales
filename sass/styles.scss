@@ -425,6 +425,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			margin: 0.7em 0px;
 			//margin-bottom: 1.7em;
 			padding-bottom: 1em;
+
 		}
 		.info {
 			color: $blue;
@@ -483,6 +484,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				border-bottom: none;
 			//	padding-bottom: 1em;
 				line-height: 1em;
+				line-height: 1.3em;
 				//line-height:1.4em;
 				white-space: normal;
 				padding-bottom: 0.5em;
@@ -538,6 +540,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 						color: #ffff66;
 					}
 				}
+				padding-bottom: 6em;
+
 			}
 
 		}
@@ -550,6 +554,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		    width: 100%;
 				//display: none;
 				.wpcf7-file {
+					color: transparent;
+					//padding-left: 160px;
 					position: absolute;
 					    cursor: pointer;
 							&:before {
