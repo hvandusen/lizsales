@@ -17,6 +17,21 @@
 	.bar {
 		  margin-bottom: 5.6em;
 	}
+	@media(max-width: 480px){
+		.bar {
+			display: none;
+		}
+	}
+	.mobile-header {
+		  display: none;
+	}
+	@media(max-width: 480px){
+		.mobile-header {
+			display: block;
+	    text-align: center;
+	    margin-top: 50px;
+		}
+	}
 
 </style>
 <br>
@@ -25,7 +40,7 @@
 
 	 <?php //the_content(); ?>
 
-
+<div class='mobile-header'>ARTIST STATEMENT QUESTIONNAIRE</div>
  <span class='ascii'>
  <?php
  $title = 'ARTIST STATEMENT QUESTIONNAIRE';

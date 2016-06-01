@@ -889,12 +889,14 @@ margin: 30px;
 }
 
 #total {
+	display: none;
 	margin-bottom: .5em;
 	color: $blue;
 		@extend .plantin;
 }
 
 #discount {
+	display: none;
 	color: $red;
 	margin-bottom: 1.7em;
 	font-size: 27px;
@@ -904,7 +906,7 @@ margin: 30px;
 #actual {
 	color: $blue;
 	font-size: 27px;
-	margin-bottom: 4em;
+	margin-bottom: 3em;
 
 	@extend .plantin-bold;
 }
@@ -914,11 +916,12 @@ margin: 30px;
 	display: inherit;
 	span {
 		border-bottom: solid $blue 1px;
-		padding-bottom: 1px;
+		//padding-bottom: 1px;
 	}
 
 	border-bottom: none;
 	    padding: 3em 0;
+			padding-top: 2em;
 			input {
 				width: calc(100% - 200px);
 				background: #ffeee7;
@@ -929,7 +932,10 @@ margin: 30px;
 					border-bottom: $blue solid 1px;
 				}
 			}
-
+#coupon {
+	@extend .elementa;
+	font-size: 22px;
+}
 }
 
 .ascii {
@@ -1198,8 +1204,15 @@ body#page-id-10 {
 		font-family: Plantin;
 left: calc(18.3% - 37px);
     font-size: 18px;
+		@media(max-width:480px){
+			left: calc(18.3% - 49px);
+			line-height: 1em;
+			content: '>';
+		}
 	}
 }
+
+
 .questionnaire .wpcf7-validation-errors {
 	padding-bottom: 80px;
 	border: none;

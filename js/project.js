@@ -69,7 +69,7 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 	console.log($(i).parent().prev());//.closest('label'));
 
 	label.addClass('input-error')
-	$(this).remove(); 
+	$(this).remove();
 });
 
 
@@ -283,6 +283,7 @@ $('#coupon').change(function(e){
 		console.log(e);
 		if(input === e.name){
 			currentCoupon = e;
+			$('#total,#discount').css('display','block'); 
 		}
 	});
 	if(currentCoupon === ''){
