@@ -2,8 +2,9 @@
 	var count = 0;
 	var scrolls = {};
 	var max_bars = 38;
+	var mobile = false;
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
+		mobile = true;
 }
 
 	function setHeaders(){
@@ -41,6 +42,9 @@
 		$('.postBar, .preBar').text('~~~~~~');
 
 		//setHeaders();
+		// if(mobile && window.innerWidth>480){
+		// 	$('.pleaseRotate').css('display','block');
+		// }
 	});
 	if(window.innerWidth< 1193)
 		$('.postBar, .preBar').text('~~~~~~~~');
@@ -283,7 +287,7 @@ $('#coupon').change(function(e){
 		console.log(e);
 		if(input === e.name){
 			currentCoupon = e;
-			$('#total,#discount').css('display','block'); 
+			$('#total,#discount').css('display','block');
 		}
 	});
 	if(currentCoupon === ''){
