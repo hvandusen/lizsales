@@ -279,7 +279,7 @@ function setReal(input,checked){
 var currentCoupon = '';
 var coupons;// = [];
 //update coupon code
-$('#coupon').change(function(e){
+$('#coupon').on('input',function(e){
 	console.log('pick this coupon');
 	var input = $(this).prop('value');
 	currentCoupon = '';
@@ -292,6 +292,7 @@ $('#coupon').change(function(e){
 	});
 	if(currentCoupon === ''){
 		console.log('wrong coupon code');
+		$('#total,#discount').css('display','none');
 		$('#couponAmt').text('0');
 	}
 		//apply it

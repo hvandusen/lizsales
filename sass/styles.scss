@@ -941,6 +941,7 @@ margin: 30px;
 #coupon {
 	@extend .elementa;
 	font-size: 22px;
+	    color: black;
 }
 }
 
@@ -988,8 +989,9 @@ margin: 30px;
 	}
 }
 .thankyou {
-	@media(max-width: 480px){
+	@media(max-width: 740px){
 		visibility: hidden;
+		max-width: 480px;
 	}
 	margin-top: 3em;
 	padding-bottom: 4em;
