@@ -1015,6 +1015,7 @@ margin: 30px;
 .thankyou {
 	@media(max-width: 740px){
 		visibility: hidden;
+		display: none;
 		max-width: 480px;
 	}
 	margin-top: 3em;
