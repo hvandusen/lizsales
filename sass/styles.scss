@@ -273,9 +273,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	//buy form
 //padding-top: 4em;
 //padding-bottom: 4.5em;
-@media(max-width: 740px){
-	    padding-bottom: 4em;
+&#contact{
+	@media(max-width: 740px){
+		    padding-bottom: 7em;
+	}
 }
+
  .bar {
 	 margin-top: 4.1em;
 	 padding-bottom: 3.6em;
