@@ -189,8 +189,8 @@ label {
 	&:focus {
 
 		outline: none;
-		color: black;
-		border-bottom: solid black 1px;
+		//color: black;
+		//border-bottom: solid black 1px;
 	}
 }
 
@@ -396,9 +396,19 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			label {
 	    	white-space: nowrap;
 				width: 219px;
+				&:active {
+					border-bottom: solid black 1px;
+				}
 			}
 			&:last-of-type {
 				//margin-bottom: 1.2em;
+			}
+			input {
+				border-bottom: none!important;
+			}
+			.one-l{
+				display: inline-block;
+				width: 219px;
 			}
 		}
 		max-width: 62%;
@@ -560,7 +570,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		    width: 100%;
 				//display: none;
 				.wpcf7-file {
-					//color: transparent;  
+					//color: transparent;
 					//padding-left: 160px;
 					position: absolute;
 					    cursor: pointer;

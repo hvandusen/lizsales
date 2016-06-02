@@ -374,5 +374,16 @@ $('.wpcf7-file').change(function(e){
 	$('.img_input').addClass('fileUploaded');
 })
 
+$('.one-liner label').click(function(){
+	$('.one-liner label').css({
+		'color' : '#0033cc',
+		'border-bottom' : 'solid #0033cc 1px'
+	});
+	$(this).css({
+		'color' : 'black',
+		'border-bottom' : 'solid black 1px'
+	});
+		$(this).find('.one-l').css('color', '#0033cc');
+});
 
 })(jQuery);
