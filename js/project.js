@@ -10,14 +10,14 @@
 	function setHeaders(){
 		$('.bar').map(function(e,i){
 			var bar = $(i).find('div')[0];
-			console.log($(bar).text().length);
+			//console.log($(bar).text().length);
 		});
 		return;
 
 		if(window.innerWidth>1408)
 			return;
 		var remove = /*Math.abs(*/Math.floor((window.innerWidth-1108)/7);
-		console.log(remove)
+		//console.log(remove)
 
 		var newString = '';
 		for(var i =0;i<remove;i++){
@@ -51,7 +51,7 @@
 
 
 	$('textarea').scroll(function(){
-		console.log($(this).scrollTop());
+		//console.log($(this).scrollTop());
 		scrolls[$(this).closest('.input_outer').index()] = $(this).scrollTop();
 		$(this).css('background-position-y', -1* $(this).scrollTop());
 	});
@@ -61,16 +61,17 @@
 		//$(i).remove();
 	});
 var cart = {};
+var words = {};
 
 
 	$('input').focus(function(){
-		//console.log(this)
+		////console.log(this)
 		$('.clicked').removeClass('clicked');
 		$(this).parent().prev().addClass('clicked');
 	});
 $('.wpcf7-not-valid-tip').map(function(e,i){
 	var label = $(i).parent().prev();
-	console.log($(i).parent().prev());//.closest('label'));
+	//console.log($(i).parent().prev());//.closest('label'));
 
 	label.addClass('input-error')
 	$(this).remove();
@@ -87,7 +88,7 @@ var bigSquigs;
 			$('.postBar, .preBar').text('~~~~~~');
 			//numbered input area
 		$('.numbers').map(function(i,e){
-			console.log('fuck');
+			//console.log('fuck');
 			$(e).prop('value','<span >1.</span> \n<span>2.</span> \n<span>3.</span>');
 			$(e).css('color','#0033cc');
 		});
@@ -113,38 +114,54 @@ var bigSquigs;
 
 		var input_group = $(this).closest('p').index();
 		var price = parseInt($(this).text().split('$')[1]);
+		var wordCount = $(this).text().split('] ')[1].split(' ')[0];
+		console.log(wordCount)
 		var allOfTheAbove = $(this).text().indexOf('All of')>-1;
 		var inputIndex = $(this).parent().index();
 		var box  = $(this).find('.chbox span');
 		var removeAll = box.html().indexOf('X')>-1 && $(this).text().indexOf('All of')>-1;
 		// if(removeAll)
-		// console.log('remove all please');
+		// //console.log('remove all please');
 		//setup cart
 		if(!cart.hasOwnProperty(input_group))
 			cart[input_group] = 0;
+
+			if(!words.hasOwnProperty(input_group))
+				words[input_group] = '';
 
 		//if already selected
 		if(box.html().indexOf('X')>-1){
 			box.html(' ');//box.html().replace('X',' '))
 			cart[input_group]-= price;
 			cartTotal -= price;
+			if(wordCount==='All'){
+				console.log('already selected')
+				words[input_group] = '';
+			}
+			else
+			words[input_group] = words[input_group].replace(wordCount+', ','')
 			//if selected from select all, and price needs to be readjusted
 		}
 		else {
 			box.html('X');//box.html(box.html().replace(' ','X'));//box.html().replace(' ','X'))
 			cart[input_group]+= price;
 			cartTotal += price;
+			console.log(words)
+			if(wordCount==='All')
+				words[input_group] = 'All';
+				else
+			words[input_group] += wordCount+', ';
 			//$(this).find('input').attr('checked',true);
 		}
-		console.log("text: "+box.html())
+		//console.log("text: "+box.html())
 
 		//undo all of the above
 		if(allOfTheAbove && ($(this).find('input')[0].checked=== false )){
-			console.log('please get rid!!');
+			//console.log('please get rid!!');
 			box.html(' ');
 			allOfTheAbove = false;
 		}
-		 console.log(allOfTheAbove);
+		 //console.log(allOfTheAbove);
 
 		if(window.ajaxurl){
 			//update all checkboxes
@@ -161,8 +178,8 @@ var bigSquigs;
 			var turnOffDeal = 0;
 			inputs.map(function(i,e){
 				var thisPrice = parseInt($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
-				//console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
-			//	console.log($(e).closest('label').text());
+				////console.log($(e).closest('.wpcf7-list-item-label').context.innerText.split('$')[1]);
+			//	//console.log($(e).closest('label').text());
 					var actualCheckbox = 	$(e).find('input');
 					var checked = actualCheckbox[0].checked;
 					var checkbox = 	$(e).find('.chbox span');
@@ -174,18 +191,18 @@ var bigSquigs;
 						$(e).css('opacity',.5);
 					}
 					else{
-						console.log('opacity is '+ $(e).css('opacity'));
+						//console.log('opacity is '+ $(e).css('opacity'));
 						//if(they were transparent )
 						if($(e).css('opacity')=== '0.5' && checked)
 							{
-								console.log('yeah')
+								//console.log('yeah')
 								turnOffDeal += thisPrice;
 							}
 						$(e).css('opacity',1);
 					}
 
 					if(removeAll){
-						console.log('remove '+i)
+						//console.log('remove '+i)
 						$(e).css('opacity',1);
 						 $(actualCheckbox).attr('checked',false);
 					  $(checkbox).text($(checkbox).text().replace('X',' '));
@@ -198,15 +215,15 @@ var bigSquigs;
 						$(actualCheckbox).prop('checked',true);
 						cart[input_group] = thisPrice;
 						cart[input_group].all = true;
-						console.log('do it all please')
+						//console.log('do it all please')
 					}
 					else {
 					 $(actualCheckbox).attr('checked',false);
 						$(checkbox).text($(checkbox).text().replace('X',' '));
-						console.log('dont do it all please');
+						//console.log('dont do it all please');
 					}
 					if(removeAll){
-						console.log('remove '+i)
+						//console.log('remove '+i)
 						$(e).css('opacity',1);
 						 $(actualCheckbox).attr('checked',false);
 					  $(checkbox).text($(checkbox).text().replace('X',' '));
@@ -214,16 +231,17 @@ var bigSquigs;
 					}
 				}
 				if(turnOffDeal>0){
-					console.log('guys we gotta reset the price to '+turnOffDeal)
+					//console.log('guys we gotta reset the price to '+turnOffDeal)
 					cart[input_group] = turnOffDeal;
 				}
 			});
 			forceAll = true;
-			console.log(cart);
-			$('#price').attr('value',calculateTotal().toFixed(2));
-			$('#amt').text(calculateTotal().toFixed(2));
-			$('#realTotal').text(calculateTotal()+'.00');
-			console.log('the price is now '+$('#price').attr('value'));
+			//console.log(cart);
+			var calcTotal = calculateTotal().toFixed(2);
+			$('#price').attr('value',calcTotal);
+			$('#amt').text(calcTotal);
+			$('#realTotal').text(calcTotal);
+			//console.log('the price is now '+$('#price').attr('value'));
 			}
 	});
 
@@ -255,11 +273,11 @@ function calculateTotal(){
 	var discount = 0;
 	Object.keys(cart).map(function(i,e){
 		allofem += parseInt(cart[i]);
-		console.log(cart[i])
+		//console.log(cart[i])
 	});
 	if(currentCoupon !== ''){
-		console.dir(currentCoupon);
-		console.log('from '+allofem);
+		//console.dir(currentCoupon);
+		//console.log('from '+allofem);
 		if(currentCoupon.percent){
 			discount = Math.floor(allofem*(currentCoupon.discount/100));
 		}
@@ -267,10 +285,31 @@ function calculateTotal(){
 			discount = currentCoupon.discount;
 		}
 		$('#couponAmt').text(discount.toFixed(2));
-		console.log('to '+(allofem-discount).toFixed(2));
+		//console.log('to '+(allofem-discount).toFixed(2));
 	}
 	$('#amt').text(allofem.toFixed(2));
 	$('#realTotal').text((allofem-discount).toFixed(2));
+	$('#package').val('Artist statement: 100 words, Press Release/Blurb: 400 words');
+	//console.log($('#package').val());
+	//$('.pricing-fields p').map(function(e,i){
+	var productText = '';
+	for(var i=0;i<4;i++){
+		var field = $('.pricing-fields > p')[i];
+		var buyType = $(field).text().split(/(\d+)/g)[0].split('[')[0];
+		//console.log(buyType);
+		if(cart[i]!==undefined && cart[i] > 0){
+			productText += buyType + ': $'+cart[i]+','
+			//console.log(buyType);
+			// if(words[i] === 'All')
+			// 	productText += 'All,';
+			// else
+			// productText +=words[i].slice(0, -2)+ ' words,';
+			//console.log($(field).find('.wpcf7-list-item-label').length);
+		}
+	}
+		console.log("Prod text: "+productText)
+		$('#package').val(productText);
+	//})
 	return allofem-discount;
 }
 function setReal(input,checked){
@@ -280,19 +319,20 @@ var currentCoupon = '';
 var coupons;// = [];
 //update coupon code
 $('#coupon').on('input',function(e){
-	console.log('pick this coupon');
+	//console.log('pick this coupon');
 	var input = $(this).prop('value');
 	currentCoupon = '';
 	coupons.map(function(e,i){
-		console.log(e);
+		//console.log(e);
 		if(input === e.name){
 			currentCoupon = e;
 			$('#total,#discount').css('display','block');
 		}
 	});
 	if(currentCoupon === ''){
-		console.log('wrong coupon code');
-		$('#total,#discount').css('display','none');
+		//console.log('wrong coupon code');
+		$('#total').css('display','none');
+		$('#discount').css('display','block');
 		$('#couponAmt').text('0');
 	}
 		//apply it
@@ -308,9 +348,9 @@ $('#coupon').on('input',function(e){
 				success: function(i,e){
 					if(e === 'success'){
 						coupons = i.substring(0, i.length - 1);//.split(',');
-						console.dir(coupons);
+						//console.dir(coupons);
 						coupons = JSON.parse(coupons);
-						console.log(coupons);
+						//console.log(coupons);
 					}
 				}
 });
@@ -330,7 +370,7 @@ if(window.innerWidth>480){
 }
 
 $('.wpcf7-file').change(function(e){
-	console.log('file is '+e.currentTarget.value);
+	//console.log('file is '+e.currentTarget.value);
 	$('.img_input').addClass('fileUploaded');
 })
 

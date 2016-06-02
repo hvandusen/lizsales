@@ -277,7 +277,7 @@ function paypalOutput( $atts ){
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			    <input type="hidden" name="cmd" value="_xclick">
 			    <input type="hidden" name="business" value="elizabethjanesales@gmail.com">
-			    <input type="hidden" name="item_name" value="<?php echo $name; ?>">
+			    <input type="hidden" id='package' name="item_name" value="<?php echo $name; ?>">
 			    <input type="hidden" name="item_number" value="1">
 			    <input type="hidden" id='price' name="amount" value="0<?php //echo $price; ?>">
 			    <input type="hidden" name="no_shipping" value="0">

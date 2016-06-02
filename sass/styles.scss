@@ -119,6 +119,9 @@ strong {
 }
 
 .noBold {
+	&:before {
+		content: ''!important;
+	}
 	@extend .plantin;
 }
 
@@ -478,6 +481,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					@media(max-width: 480px){
 						display: block;
 					}
+					&.followup {
+						margin-top: 1em;
+					}
 			}
 			&.area label {
 				display: block;
@@ -573,7 +579,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 								line-height: 1.2em;
 								background-repeat: no-repeat;
 								background-position: -1040px -63px;
-				    background-image: url(../images/border3.png);
+				    background-image: url(../images/border3-2.png);
 
 
 							}
@@ -773,7 +779,7 @@ margin: 30px;
 	padding: 39px 62px;
 	border-image-outset: 6px;
 	max-width: 270px;
-	background-image: url(../images/border3.png);
+	background-image: url(../images/border3-2.png);
 	background-size: cover;
 	&:focus {
 		outline:none;
@@ -804,6 +810,7 @@ margin: 30px;
 		//background-image: url(../images/border-3-hover.png);
 		@media(min-width: 905px){
 			background-position: 82.8% 0px;
+			background-position: 70.7% 0px;
 		}
 		//
 		background-position: 82.5% 0px;
@@ -863,6 +870,7 @@ margin: 30px;
 	width: 48%;
     max-width: none;
     padding: calc(8.7% - 13px) 0;
+		width: 36%;
 	&:hover {
 		label {
 			color: #ffff66;
@@ -935,7 +943,7 @@ margin: 30px;
 	    padding: 3em 0;
 			padding-top: 2em;
 			input {
-				width: calc(100% - 200px);
+				width: calc(100% - 260px);
 				background: #ffeee7;
 				border: none;
 				border-bottom: $blue solid 1px;
@@ -1236,6 +1244,8 @@ left: calc(18.3% - 37px);
 	max-width: 480px;
 text-align: center;
 margin: 0 auto;
+    margin-top: -6em;
+    line-height: 1.4em;
 }
 
 .pleaseRotate{
