@@ -359,6 +359,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				display: none;
 			}
 			&.q02 {
+				overflow: hidden;
 				padding-top: 1em;
 				i {
 					margin-top: -5px;
@@ -402,6 +403,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			label {
 	    	white-space: nowrap;
 				width: 219px;
+				@media(max-width: 480px){
+					width: auto;
+				}
 				&:active {
 					border-bottom: solid black 1px;
 				}
@@ -410,11 +414,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				//margin-bottom: 1.2em;
 			}
 			input {
-				border-bottom: none!important;
+				//@media(min-width: 480px){
+					border-bottom: none!important;
+				//}
 			}
 			.one-l{
 				display: inline-block;
 				width: 219px;
+				@media(max-width: 480px){
+					width: auto;
+					display: block;
+				}
 			}
 		}
 		max-width: 62%;
@@ -634,12 +644,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				justify-content: center;
 				//henry
 				span {
-					background-image: url(../images/border-2-both_2.png);
+					//background-image: url(../images/border-2-both_2.png);
+					background-image: url(../images/border-2-both_6.png);
 					background-size: 225% 100%;//cover;
+					background-position: 0.5% 0%;
 					//padding: calc(3.8% - 10px) 0px;
 					width: 46%;
 					&.hovered {
-						background-position: 87.6% 0%;
+						background-position: 87.9% 0%;
+						background-position: 89.9% 0%;
+}
+
 					}
 					@media(max-width:480px){
 						width: 75%;
@@ -914,7 +929,7 @@ margin: 30px;
 			@media(max-width: 480px){
 				line-height: 30px;
 		    position: absolute;
-				left: 45px;
+				left: 22px;
 			}
 		}
 	}
@@ -1141,16 +1156,17 @@ span.wpcf7-list-item {
 
 	.section {
 		&.questionnaire {
-			margin: 3em auto;
+			margin: 3em auto 0 auto;
 			max-width: 80%;
 			.input_contents label {
-				border-bottom: none;
+				//border-bottom: none;
 			}
 			.img_input {
 				height: 26px;
 				width: 120px;
 				padding: 24px 43px;
 				@media(max-width: 480px){
+					width: 85px;
 					position: relative;
 				}
 				min-width: auto;
@@ -1171,6 +1187,9 @@ span.wpcf7-list-item {
 			background-size: 100% 34px;
 			line-height: 34px;
 			background-position-y: 7px;
+			@media(max-width: 480px){
+				background-position-y: 4px;
+			}
 		}
 		.submit_q input{
 			width: 232px !important;
