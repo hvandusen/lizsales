@@ -879,7 +879,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           background-color: transparent;
           border-color: transparent;
           padding: 6% 10.9%;
-          padding: calc(4.8% + 7px) calc(11% - 4px); }
+          padding: calc(6.4% + 6px) calc(14% - 4px); }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover {
             background-image: url(../images/border3-6.png);
             color: #ffff66; }
@@ -1060,6 +1060,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   margin: 1em; }
   .img_input:hover {
     color: #ffff66;
+    background-image: url(../images/border3-ok.png);
     background-position: 82.5% 0px;
     cursor: pointer; }
     @media (min-width: 905px) {

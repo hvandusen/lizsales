@@ -3026,6 +3026,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/border3-ok.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10282,
+		"inputAbbreviatedPath": "\/images\/border3-ok.png",
+		"outputAbbreviatedPath": "\/images\/border3-ok.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/border3.png": {
 		"fileType": 32768,
 		"ignore": 0,

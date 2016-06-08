@@ -570,7 +570,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					background-color: transparent;
 					border-color: transparent;
 					padding: 6% 10.9%;
-					padding: calc(4.8% + 7px) calc(11% - 4px);
+					padding: calc(6.4% + 6px) calc(14% - 4px);
+					//padding: calc(4.8% + 7px) calc(11% - 4px); 
 					//margin-bottom: 5em;
 					&:hover {
 						//background-image: url(../images/border-4-hover.png);
@@ -855,7 +856,7 @@ margin: 30px;
 			background-position: 82.8% 0px;
 			background-position: 70.7% 0px;
 		}
-		//
+		background-image: url(../images/border3-ok.png);
 		background-position: 82.5% 0px;
 		cursor: pointer;
 		.uploadText{
