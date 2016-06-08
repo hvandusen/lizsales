@@ -383,15 +383,18 @@ $('.img_inputs').click(function(e){
   });
 
 $('.one-liner label').click(function(){
+
+return
+	//make it all blue
 	$('.one-liner label').css({
 		'color' : '#0033cc',
 		'border-bottom' : 'solid #0033cc 1px'
 	});
 	$(this).css({
 		'color' : 'black',
-		'border-bottom' : 'solid black 1px'
+		//'border-bottom' : 'solid black 1px'
 	});
-		$(this).find('.one-l').css('color', '#0033cc');
+		$(this).find('.one-l').css('color', 'black');
 });
 
 })(jQuery);

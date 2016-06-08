@@ -2982,6 +2982,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/border3-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18016,
+		"inputAbbreviatedPath": "\/images\/border3-3.png",
+		"outputAbbreviatedPath": "\/images\/border3-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border3-4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20036,
+		"inputAbbreviatedPath": "\/images\/border3-4.png",
+		"outputAbbreviatedPath": "\/images\/border3-4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border3-5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9386,
+		"inputAbbreviatedPath": "\/images\/border3-5.png",
+		"outputAbbreviatedPath": "\/images\/border3-5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border3-6.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3985,
+		"inputAbbreviatedPath": "\/images\/border3-6.png",
+		"outputAbbreviatedPath": "\/images\/border3-6.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/border3.png": {
 		"fileType": 32768,
 		"ignore": 0,

@@ -743,7 +743,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     max-width: 66%;
     margin-bottom: 0em; }
     .section.questionnaire .question, .section #wpcf7-f25-p7-o1 .question {
-      color: #03c;
       margin-bottom: 2em;
       margin-bottom: 2.6em; }
       .section.questionnaire .question.q01 > p, .section #wpcf7-f25-p7-o1 .question.q01 > p {
@@ -783,8 +782,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       @media (max-width: 480px) {
         .section.questionnaire .one-liner label, .section #wpcf7-f25-p7-o1 .one-liner label {
           width: auto; } }
-      .section.questionnaire .one-liner label:active, .section #wpcf7-f25-p7-o1 .one-liner label:active {
-        border-bottom: solid black 1px; }
     .section.questionnaire .one-liner input, .section #wpcf7-f25-p7-o1 .one-liner input {
       border-bottom: none !important; }
     .section.questionnaire .one-liner .one-l, .section #wpcf7-f25-p7-o1 .one-liner .one-l {
@@ -834,7 +831,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       margin-bottom: .5em;
       color: #0033cc; }
     .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input {
-      display: inline; }
+      display: inline;
+      color: black; }
       .section.questionnaire form .txt_input input, .section #wpcf7-f25-p7-o1 form .txt_input input {
         vertical-align: middle; }
     .section.questionnaire .input_inner, .section #wpcf7-f25-p7-o1 .input_inner {
@@ -870,18 +868,20 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       text-align: center;
       display: inline-block; }
       .section.questionnaire .button_box.submit_q, .section #wpcf7-f25-p7-o1 .button_box.submit_q {
-        padding-bottom: 6em; }
+        padding-bottom: 6em;
+        width: 100%; }
         .section.questionnaire .button_box.submit_q input, .section #wpcf7-f25-p7-o1 .button_box.submit_q input {
           background-image: url(../images/border-4.png);
+          background-image: url(../images/border3-2.png);
           background-size: cover;
-          width: 407px;
-          height: 139px;
           background-repeat: no-repeat;
           max-width: none;
           background-color: transparent;
-          border-color: transparent; }
+          border-color: transparent;
+          padding: 6% 10.9%;
+          padding: calc(4.8% + 7px) calc(11% - 4px); }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover {
-            background-image: url(../images/border-4-hover.png);
+            background-image: url(../images/border3-6.png);
             color: #ffff66; }
     .section.questionnaire #inner-editor, .section.questionnaire #placeholder, .section #wpcf7-f25-p7-o1 #inner-editor, .section #wpcf7-f25-p7-o1 #placeholder {
       color: black; }
@@ -925,6 +925,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       .section.questionnaire .post-password-form .pp, .section #wpcf7-f25-p7-o1 .post-password-form .pp {
         margin-top: 20%; }
       .section.questionnaire .post-password-form #pword-box, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
         display: flex;
         justify-content: center; }
         .section.questionnaire .post-password-form #pword-box span, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span {
@@ -1034,7 +1037,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   font-family: Elementa-b;
   color: #c13a1c;
   z-index: 10;
-  padding: 39px 62px;
+  padding: 39px 68px;
+  padding: 59px 109px;
   border-image-outset: 6px;
   max-width: 270px;
   background-image: url(../images/border3-2.png);
@@ -1090,12 +1094,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         color: #ffff66;
         width: 160px;
         position: absolute;
-        left: 0; }
-        @media (max-width: 950px) {
-          .img_input.fileUploaded .uploadText:after {
-            left: -11px; } }
+        left: 0;
+        left: -11px; }
     .img_input.fileUploaded:hover .uploadText:after {
-      content: "RE-UPLOAD"; }
+      content: "CHANGE FILE"; }
   .img_input input {
     visibility: hidden;
     line-height: 0em;
