@@ -372,7 +372,15 @@ if(window.innerWidth>480){
 $('.wpcf7-file').change(function(e){
 	//console.log('file is '+e.currentTarget.value);
 	$('.img_input').addClass('fileUploaded');
-})
+});
+$('.img_inputs').click(function(e){
+	e.stopPropagation();
+});
+	$('.img_input').click(function(e){
+		e.stopPropagation();
+		$('.img_inputs').click();//trigger('click');
+// // 	//$($('.uploadText')[0]).trigger('click');
+  });
 
 $('.one-liner label').click(function(){
 	$('.one-liner label').css({
