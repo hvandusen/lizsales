@@ -734,11 +734,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
             width: 86%; } }
       .section #wpcf7-f25-p7-o1 .pricing-fields.noFlex {
         visibility: visible;
-        max-width: 630px;
+        max-width: 100%;
         margin: 0 auto; }
         .section #wpcf7-f25-p7-o1 .pricing-fields.noFlex p {
           display: inline-block;
-          margin: 0 2%; }
+          margin: 0 6%; }
   .section p {
     max-width: 66%;
     text-align: left;
@@ -1125,7 +1125,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .paypal-submit {
   padding: 60px 64px;
   width: 378px;
-  padding: 5.1% 0;
+  padding: 5.1% 11px;
   padding-top: -webkit-calc(5.7% - 13px);
   padding-top: calc(5.7% - 13px);
   padding-bottom: -webkit-calc(5.7% - 13px);

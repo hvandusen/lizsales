@@ -284,12 +284,13 @@ function calculateTotal(){
 		else {
 			discount = currentCoupon.discount;
 		}
-		$('#couponAmt').text(discount.toFixed(2));
+
+		$('#couponAmt').text('-$'+discount.toFixed(2));
 		//console.log('to '+(allofem-discount).toFixed(2));
 	}
 	$('#amt').text(allofem.toFixed(2));
 	$('#realTotal').text((allofem-discount).toFixed(2));
-	$('#package').val('Artist statement: 100 words, Press Release/Blurb: 400 words');
+	//$('#package').val('Artist statement: 100 words, Press Release/Blurb: 400 words');
 	//console.log($('#package').val());
 	//$('.pricing-fields p').map(function(e,i){
 	var productText = '';
@@ -329,11 +330,12 @@ $('#coupon').on('input',function(e){
 			$('#total,#discount').css('display','block');
 		}
 	});
+	
 	if(currentCoupon === ''){
 		//console.log('wrong coupon code');
 		$('#total').css('display','none');
 		$('#discount').css('display','block');
-		$('#couponAmt').text('0');
+		$('#couponAmt').text('Invalid');
 	}
 		//apply it
 	$('#price').attr('value',calculateTotal());

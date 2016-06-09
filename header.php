@@ -29,6 +29,6 @@ body_class();
 					<a class='left' href='<?php bloginfo('wpurl')?>/#writers'>Writers</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#process'>Process</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#pricing'>Pricing</a>
-					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---K</a>
+					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>O---k</a>
 					<a class='right' href='mailto:info@iwriteartiststatements.com'>Contact</a>
 				</div>

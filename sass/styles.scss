@@ -334,11 +334,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			&.noFlex {
 				visibility:visible;
-				max-width: 630px;
+				max-width:100%;
 				margin: 0 auto;
 				p {
 					display: inline-block;
-					margin: 0 2%;
+					margin: 0 6%;
 				}
 			}
 	}
@@ -946,7 +946,7 @@ margin: 30px;
 	padding: 60px 64px;
 	width: 378px;
 	//padding: calc(4.7% - 13px) 0px;
-	padding: 5.1% 0;
+	padding: 5.1% 11px;
 	@include calc(padding-top, '5.7% - 13px');
 	@include calc(padding-bottom, '5.7% - 13px');
 	//padding: calc(5.7% - 13px) 0px;
