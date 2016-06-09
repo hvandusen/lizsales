@@ -1346,7 +1346,8 @@ span.wpcf7-list-item {
       height: 83px !important;
       padding: 0 !important; }
   .section .bar {
-    padding: 1em 0; }
+    padding: 1em 0;
+    padding-top: 0; }
   .section #wpcf7-f25-p7-o1 {
     max-width: 80%; }
     .section #wpcf7-f25-p7-o1 .pricing-fields {
