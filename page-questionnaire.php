@@ -30,6 +30,7 @@
 			display: block;
 	    text-align: center;
 	    margin-top: 50px;
+			font-family: Elementa;
 		}
 	}
 
