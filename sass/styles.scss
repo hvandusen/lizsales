@@ -332,6 +332,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 							  width: 86%;
 					}
 			}
+			&.noFlex {
+				display: none; 
+			}
 	}
 
 	}
