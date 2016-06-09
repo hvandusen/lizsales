@@ -330,7 +330,7 @@ $('#coupon').on('input',function(e){
 			$('#total,#discount').css('display','block');
 		}
 	});
-	
+
 	if(currentCoupon === ''){
 		//console.log('wrong coupon code');
 		$('#total').css('display','none');
@@ -376,11 +376,15 @@ $('.wpcf7-file').change(function(e){
 	$('.img_input').addClass('fileUploaded');
 });
 $('.img_inputs').click(function(e){
+
+	e.stopPropagation();
 	e.stopPropagation();
 });
 	$('.img_input').click(function(e){
+		e.preventDefault();
 		e.stopPropagation();
 		$('.img_inputs').click();//trigger('click');
+		e.stopPropagation();
 // // 	//$($('.uploadText')[0]).trigger('click');
   });
 
