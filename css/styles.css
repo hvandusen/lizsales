@@ -1348,7 +1348,8 @@ span.wpcf7-list-item {
       background-position-y: 7px; } }
     @media (max-width: 480px) and (max-width: 480px) {
       .section.questionnaire textarea {
-        background-position-y: 4px; } }
+        background-position-y: 4px;
+        font-size: 18px; } }
 @media (max-width: 480px) {
     .section.questionnaire .submit_q input {
       width: 232px !important;

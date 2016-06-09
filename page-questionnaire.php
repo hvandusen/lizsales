@@ -31,6 +31,8 @@
 	    text-align: center;
 	    margin-top: 50px;
 			font-family: Elementa;
+			font-size: 16px;
+
 		}
 	}
 
