@@ -1368,7 +1368,8 @@ span.wpcf7-list-item {
     font-family: Elementa-b;
     text-align: center;
     font-size: 16px;
-    padding: 1em 0; }
+    padding: 1em 0;
+    padding-top: 2em; }
 
   .paypal-submit {
     width: 220px;
