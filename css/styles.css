@@ -1431,9 +1431,14 @@ body#page-id-10 .bar {
   left: 0;
   width: 120%;
   height: 120%;
+  width: calc(100% + 44px);
+  height: calc(100% + 25px);
   background: #0033cc; }
   .pleaseRotate.landscape {
     z-index: 100;
-    display: block; }
+    display: block;
+    text-align: center;
+    padding: calc(26% - 5px) 0;
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */
