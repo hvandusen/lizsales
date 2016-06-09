@@ -1406,10 +1406,12 @@ margin: 0 auto;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 120%;
-	height: 120%;
-	width: calc(100% + 44px);
-height: calc(100% + 25px);
+// 	width: 120%;
+// 	height: 120%;
+// 	width: calc(100% + 44px);
+// height: calc(100% + 25px);
+width: 100%;
+height: 100%;
 	background: $blue;
 	&.landscape {
 		z-index: 100;
