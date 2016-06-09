@@ -686,6 +686,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					    background: none;
 							&.button1 {
 								float: left;
+								background-color: none;
 								@include calc(width,'70% - 30px');
 								padding: calc(8.8% - 10px) 0;
 								padding-left: 30px;

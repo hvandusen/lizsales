@@ -950,6 +950,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           background: none; }
           .section.questionnaire .post-password-form #pword-box input.button1, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.button1 {
             float: left;
+            background-color: none;
             width: -webkit-calc(70% - 30px);
             width: calc(70% - 30px);
             padding: calc(8.8% - 10px) 0;
