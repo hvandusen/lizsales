@@ -11,7 +11,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/compressed/modernizr.js"></script>
 	<?php wp_head(); ?>
 </head>
-<div class='pleaseRotate'>Please refresh this page in portrait mode.</div>
+<div class='pleaseRotate'>Please rotate your phone.</div>
 
 <body <?php
 body_class();

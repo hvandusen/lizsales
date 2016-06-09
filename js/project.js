@@ -6,6 +6,15 @@
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		mobile = true;
 }
+var isMob = window.innerWidth<480;
+$(window).resize(function(){
+	if(window.innerWidth>480 && isMob){
+		$('.pleaseRotate').addClass('landscape');
+	}
+	else {
+			$('.pleaseRotate').removeClass('landscape');
+	}
+})
 
 	function setHeaders(){
 		$('.bar').map(function(e,i){
