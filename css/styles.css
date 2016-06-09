@@ -845,7 +845,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           .section.questionnaire .input_inner .input_content label, .section.questionnaire .input_inner .input_contents label, .section #wpcf7-f25-p7-o1 .input_inner .input_content label, .section #wpcf7-f25-p7-o1 .input_inner .input_contents label {
             display: block; } }
         .section.questionnaire .input_inner .input_content label.followup, .section.questionnaire .input_inner .input_contents label.followup, .section #wpcf7-f25-p7-o1 .input_inner .input_content label.followup, .section #wpcf7-f25-p7-o1 .input_inner .input_contents label.followup {
-          margin-top: 1em; }
+          margin-top: 0.6em; }
         .section.questionnaire .input_inner .input_content.area label, .section.questionnaire .input_inner .input_contents.area label, .section #wpcf7-f25-p7-o1 .input_inner .input_content.area label, .section #wpcf7-f25-p7-o1 .input_inner .input_contents.area label {
           display: block;
           border-bottom: none;
@@ -856,10 +856,14 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         .section.questionnaire .input_inner .input_content.other_text, .section.questionnaire .input_inner .input_contents.other_text, .section #wpcf7-f25-p7-o1 .input_inner .input_content.other_text, .section #wpcf7-f25-p7-o1 .input_inner .input_contents.other_text {
           display: none; }
         .section.questionnaire .input_inner .input_content.truefalse, .section.questionnaire .input_inner .input_contents.truefalse, .section #wpcf7-f25-p7-o1 .input_inner .input_content.truefalse, .section #wpcf7-f25-p7-o1 .input_inner .input_contents.truefalse {
+          margin-top: -4px;
+          margin-bottom: 14px;
           display: block; }
           .section.questionnaire .input_inner .input_content.truefalse > label, .section.questionnaire .input_inner .input_contents.truefalse > label, .section #wpcf7-f25-p7-o1 .input_inner .input_content.truefalse > label, .section #wpcf7-f25-p7-o1 .input_inner .input_contents.truefalse > label {
             padding: 1em 0;
             border: none; }
+          .section.questionnaire .input_inner .input_content.truefalse.num, .section.questionnaire .input_inner .input_contents.truefalse.num, .section #wpcf7-f25-p7-o1 .input_inner .input_content.truefalse.num, .section #wpcf7-f25-p7-o1 .input_inner .input_contents.truefalse.num {
+            margin-top: 0; }
     .section.questionnaire div .input_outer, .section #wpcf7-f25-p7-o1 div .input_outer {
       overflow: hidden;
       left: 20px;
@@ -1248,7 +1252,7 @@ span.wpcf7-list-item {
     .thankyou-page .pword-back div:hover {
       color: #c13a1c; }
   .thankyou-page .smiley {
-    background-image: url(http://liz.dev/wp-content/themes/lizsales/images/smiley.gif);
+    background-image: url(../images/smiley.gif);
     margin-top: calc(100px);
     height: calc(100% - 219px);
     background-size: auto 91%;

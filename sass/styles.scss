@@ -353,7 +353,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			margin-bottom: 2em;
 			margin-bottom: 2.6em;
 			&.q01 > p{
-
 				margin-bottom: 1.6em;
 			}
 			&.q01 .input-outer .input-inner .one-liner:first {
@@ -510,7 +509,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 						display: block;
 					}
 					&.followup {
-						margin-top: 1em;
+						//margin-top: 1em;
+						margin-top: 0.6em;
 					}
 			}
 			&.area label {
@@ -523,6 +523,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				white-space: normal;
 				padding-bottom: 0.5em;
 			}
+			&.followup {}
 			&.other_text{
 				display: none;
 			}
@@ -533,11 +534,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				}
 			}
 			&.truefalse {
-
+				margin-top: -4px;
+				margin-bottom: 14px;
 				display: block;
 				& > label {
 				padding: 1em 0;
 				 border:	none;
+			}
+			&.num {
+				margin-top:0;
 			}
 			}
 		}
@@ -551,6 +556,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     	overflow: hidden;
     	left: 20px;
 			padding: 15px 0;
+			// this means it's under a text field
+
 		}
 		.button_box {
 			//width: 100%;
@@ -571,7 +578,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					border-color: transparent;
 					padding: 6% 10.9%;
 					padding: calc(6.4% + 6px) calc(14% - 4px);
-					//padding: calc(4.8% + 7px) calc(11% - 4px); 
+					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
 						//background-image: url(../images/border-4-hover.png);
@@ -1167,7 +1174,7 @@ span.wpcf7-list-item {
 		}
 	}
 	.smiley {
-		background-image: url(http://liz.dev/wp-content/themes/lizsales/images/smiley.gif);
+		background-image: url(../images/smiley.gif);
     margin-top: calc(100px);
     height: calc(100% - 219px);
     background-size: auto 91%;

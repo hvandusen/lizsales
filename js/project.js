@@ -245,7 +245,7 @@ var bigSquigs;
 			}
 	});
 
-	$('.radio-409 .last input').click(function(){
+	$('.exh-space .last').click(function(){
 		$('.other_text').css('display','block');
 	})
 	$('.truefalse .wpcf7-list-item').click(function(){
