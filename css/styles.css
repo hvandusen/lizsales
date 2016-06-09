@@ -1185,7 +1185,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   margin-bottom: 3em; }
   @media (max-width: 480px) {
     #actual {
-      font-size: 20px; } }
+      font-size: 20px;
+      margin-bottom: 2em; } }
 
 #coupon-label {
   display: inherit;
