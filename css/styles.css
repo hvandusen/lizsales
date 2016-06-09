@@ -733,7 +733,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           .section #wpcf7-f25-p7-o1 .pricing-fields p {
             width: 86%; } }
       .section #wpcf7-f25-p7-o1 .pricing-fields.noFlex {
-        display: none; }
+        visibility: visible; }
   .section p {
     max-width: 66%;
     text-align: left;
