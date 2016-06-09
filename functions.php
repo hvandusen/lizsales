@@ -173,7 +173,7 @@ function custom_password_form() {
 	//' . __( "THIS IS YOUR NEW PASSWORD INTRO TEXT THAT SHOWS ABOVE THE PASSWORD FORM" ) . '
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-    $o = '<div class="key" href="">O---K</div><form class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a>
+    $o = '<div class="key" href="">O---K</div><form autocomplete="off" class="protected-post-form post-password-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post"> <a href="/" class="pword-back"><span><---</span><div>iwriteartiststatements.com</div></a>
 		 </label><div class="pp"><div id="pword-box"><span><input class="pword-field button1" name="post_password" id="' . $label . '" type="password" style="" size="20" placeholder="Password "/><input type="submit" name="Submit" class="button button2" value="' . esc_attr__( "ENTER" ) . '" /></span></div></div>';
   	if (isset($_COOKIE['wp-postpass_' . COOKIEHASH]) and
   	$_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password){
