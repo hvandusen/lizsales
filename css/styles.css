@@ -1191,7 +1191,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   display: inherit;
   border-bottom: none;
   padding: 3em 0;
-  padding-top: 1em; }
+  padding-top: .5em; }
   @media (min-width: 480px) {
     #coupon-label span {
       border-bottom: solid #0033cc 1px; } }
@@ -1206,8 +1206,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       border-bottom: #0033cc solid 1px; }
   #coupon-label #coupon {
     font-size: 22px;
-    color: black;
-    width: 100%; }
+    color: black; }
+    @media (max-width: 480px) {
+      #coupon-label #coupon {
+        width: 100%; } }
 
 .ascii {
   color: black;
