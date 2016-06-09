@@ -1211,7 +1211,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     color: black; }
     @media (max-width: 480px) {
       #coupon-label #coupon {
-        width: 100%; } }
+        width: 90%; } }
 
 .ascii {
   color: black;
