@@ -399,6 +399,7 @@ return
 
 if(Modernizr.flexbox === false){
 	console.log('bump them over')
+	$('.pricing-fields').addClass('noFlex');
 }
 
 })(jQuery);
