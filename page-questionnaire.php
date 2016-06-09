@@ -32,7 +32,7 @@
 	    margin-top: 22px;
 			font-family: Elementa;
 			font-size: 16px;
-
+			padding: 0 10%;
 		}
 	}
 
