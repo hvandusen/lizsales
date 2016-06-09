@@ -1063,12 +1063,13 @@ margin: 30px;
 
 	border-bottom: none;
 	    padding: 3em 0;
-			padding-top: 2em;
+			padding-top: 1em;
 			input {
 				width: calc(100% - 260px);
 				background: #ffeee7;
 				border: none;
 				border-bottom: $blue solid 1px;
+				border-radius: 0px;
 				&:focus {
 					outline: none;
 					border-bottom: $blue solid 1px;
@@ -1078,6 +1079,7 @@ margin: 30px;
 	@extend .elementa;
 	font-size: 22px;
 	    color: black;
+			width: 100%;
 }
 }
 
