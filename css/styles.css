@@ -1226,6 +1226,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   .ascii div .preBar:before {
     content: "      "; }
 
+@media (max-width: 480px) {
+  .preBar, .postBar {
+    visibility: hidden; } }
 .typewriter p {
   margin: 0; }
 

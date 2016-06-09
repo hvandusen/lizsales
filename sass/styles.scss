@@ -1118,6 +1118,12 @@ margin: 30px;
 		}
 	}
 }
+@media(max-width:480px){
+	.preBar, .postBar {
+		visibility: hidden;
+	}
+}
+
 .typewriter {
 	p {
 		margin:0;
