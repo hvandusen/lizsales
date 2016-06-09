@@ -569,6 +569,9 @@ strong {
     .elementa, .ascii-border, .section.questionnaire .post-password-form #pword-box input, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input, .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section.questionnaire textarea, .section #wpcf7-f25-p7-o1 textarea, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .chbox, .section.questionnaire .submit_bg, .section #wpcf7-f25-p7-o1 .submit_bg, .pword-back span, .wpcf7-submit, .img_input, .paypal-submit, .img_input label, #coupon-label #coupon, .ascii {
       font-size: 16px; } }
 
+@media (max-width: 480px) {
+  .noBold {
+    border: none; } }
 .noBold:before {
   content: "" !important; }
 
@@ -609,8 +612,6 @@ label {
   display: table-cell;
   color: #0033cc;
   border-bottom: solid #0033cc 1px; }
-  label.clicked {
-    border-bottom: solid black 1px; }
 
 .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input {
   font-size: 22px;

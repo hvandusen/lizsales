@@ -120,6 +120,9 @@ strong {
 }
 
 .noBold {
+	@media(max-width: 480px){
+		border: none;
+	}
 	&:before {
 		content: ''!important;
 	}
@@ -172,7 +175,7 @@ label {
 		@extend .plantin-bold;
 		border-bottom: solid $blue 1px;
 		&.clicked {
-			border-bottom: solid black 1px;
+			//border-bottom: solid black 1px;
 		}
 }
 .input {
