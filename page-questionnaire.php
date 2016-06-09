@@ -29,7 +29,7 @@
 		.mobile-header {
 			display: block;
 	    text-align: center;
-	    margin-top: 50px;
+	    margin-top: 22px;
 			font-family: Elementa;
 			font-size: 16px;
 

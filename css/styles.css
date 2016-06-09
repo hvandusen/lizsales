@@ -1320,7 +1320,11 @@ span.wpcf7-list-item {
 
   .section.questionnaire {
     margin: 3em auto 0 auto;
-    max-width: 80%; }
+    max-width: 80%; } }
+  @media (max-width: 480px) and (max-width: 480px) {
+    .section.questionnaire {
+      margin-top: 35px; } }
+@media (max-width: 480px) {
     .section.questionnaire .img_input {
       height: 26px;
       width: 120px;
