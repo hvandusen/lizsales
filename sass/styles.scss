@@ -182,6 +182,7 @@ label {
 	width: auto;
 	border: none;
 	border-bottom: solid $blue 1px;
+	border-radius: 0px;
 	width: 100%;
 	background: #ffeee7;
 	@include input-placeholder {

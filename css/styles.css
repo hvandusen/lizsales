@@ -617,6 +617,7 @@ label {
   width: auto;
   border: none;
   border-bottom: solid #0033cc 1px;
+  border-radius: 0px;
   width: 100%;
   background: #ffeee7; }
   .input:-moz-placeholder, .section.questionnaire form .txt_input:-moz-placeholder, .section #wpcf7-f25-p7-o1 form .txt_input:-moz-placeholder {
