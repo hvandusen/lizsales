@@ -423,9 +423,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				//margin-bottom: 1.2em;
 			}
 			input {
-				//@media(min-width: 480px){
+				@media(min-width: 480px){
 					border-bottom: none!important;
-				//}
+				}
 			}
 			.one-l{
 				display: inline-block;

@@ -789,8 +789,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       @media (max-width: 480px) {
         .section.questionnaire .one-liner label, .section #wpcf7-f25-p7-o1 .one-liner label {
           width: auto; } }
-    .section.questionnaire .one-liner input, .section #wpcf7-f25-p7-o1 .one-liner input {
-      border-bottom: none !important; }
+    @media (min-width: 480px) {
+      .section.questionnaire .one-liner input, .section #wpcf7-f25-p7-o1 .one-liner input {
+        border-bottom: none !important; } }
     .section.questionnaire .one-liner .one-l, .section #wpcf7-f25-p7-o1 .one-liner .one-l {
       display: inline-block;
       width: 219px; }
