@@ -1194,7 +1194,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   @media (min-width: 480px) {
     #coupon-label span {
       border-bottom: solid #0033cc 1px; } }
-  @media (min-width: 480px) {
+  @media (max-width: 480px) {
     #coupon-label {
       padding-top: .5em; } }
   #coupon-label input {
