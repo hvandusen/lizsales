@@ -334,6 +334,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			}
 			&.noFlex {
 				visibility:visible;
+				max-width: 630px;
+				margin: 0 auto;
+				p {
+					display: inline-block;
+					margin: 0 2%;
+				}
 			}
 	}
 
