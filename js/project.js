@@ -397,4 +397,8 @@ return
 		$(this).find('.one-l').css('color', 'black');
 });
 
+if ($.browser.webkit) {
+    $('input[name="password"]').attr('autocomplete', 'off');
+}
+
 })(jQuery);
