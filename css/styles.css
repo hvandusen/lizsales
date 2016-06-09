@@ -1118,7 +1118,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .paypal-submit {
   padding: 60px 64px;
   width: 378px;
-  padding: calc(5.7% - 13px) 0px;
+  padding: 5.1% 0;
+  padding-top: -webkit-calc(5.7% - 13px);
+  padding-top: calc(5.7% - 13px);
+  padding-bottom: -webkit-calc(5.7% - 13px);
+  padding-bottom: calc(5.7% - 13px);
   width: 25%;
   max-width: none;
   background-image: url(../images/border_1_2.png);
