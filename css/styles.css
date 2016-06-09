@@ -765,20 +765,24 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           margin-top: -5px; }
         .section.questionnaire .question.q02 .pleaseUpload, .section #wpcf7-f25-p7-o1 .question.q02 .pleaseUpload {
           line-height: 1em; }
-      .section.questionnaire .question.q4, .section.questionnaire .question.q9, .section.questionnaire .question.q17, .section.questionnaire .question.q18, .section #wpcf7-f25-p7-o1 .question.q4, .section #wpcf7-f25-p7-o1 .question.q9, .section #wpcf7-f25-p7-o1 .question.q17, .section #wpcf7-f25-p7-o1 .question.q18 {
+      .section.questionnaire .question.q4, .section.questionnaire .question.q9, .section #wpcf7-f25-p7-o1 .question.q4, .section #wpcf7-f25-p7-o1 .question.q9 {
         margin-bottom: 2em; }
       .section.questionnaire .question.q8, .section #wpcf7-f25-p7-o1 .question.q8 {
         margin-bottom: 3.4em; }
       .section.questionnaire .question.q16, .section #wpcf7-f25-p7-o1 .question.q16 {
         margin-bottom: 1.8em; }
       .section.questionnaire .question.q19, .section #wpcf7-f25-p7-o1 .question.q19 {
-        margin-bottom: 1.2em; }
+        margin-bottom: 1.2em;
+        margin-bottom: calc(2em + 29px) !important; }
       .section.questionnaire .question.q20, .section #wpcf7-f25-p7-o1 .question.q20 {
-        margin-bottom: 3.2em; }
+        margin-bottom: 3.2em;
+        margin-top: -34px; }
       .section.questionnaire .question.q03, .section #wpcf7-f25-p7-o1 .question.q03 {
         margin-bottom: 3.6em; }
         .section.questionnaire .question.q03 .wpcf7-form-control, .section #wpcf7-f25-p7-o1 .question.q03 .wpcf7-form-control {
           margin-bottom: 2.1em; }
+        .section.questionnaire .question.q03.q17, .section.questionnaire .question.q03.q18, .section.questionnaire .question.q03.q19, .section #wpcf7-f25-p7-o1 .question.q03.q17, .section #wpcf7-f25-p7-o1 .question.q03.q18, .section #wpcf7-f25-p7-o1 .question.q03.q19 {
+          margin-bottom: calc(2em + 29px); }
         .section.questionnaire .question.q03 p:first-child, .section #wpcf7-f25-p7-o1 .question.q03 p:first-child {
           margin: 20px 0px; }
         .section.questionnaire .question.q03 #check2, .section #wpcf7-f25-p7-o1 .question.q03 #check2 {
