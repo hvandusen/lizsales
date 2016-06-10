@@ -949,6 +949,17 @@ margin: 30px;
     padding: 1.1% calc((100% - 260px) / 2);
 	}
 }
+
+.paypal-form {
+	.btn {
+		&:after {
+			content: ' ';
+			background: url(../images/border_1_3.png);
+			background-position: 99900px 0px;
+		}
+	}
+}
+
 //.button_box {
 	//display: none;
 	.paypal-submit{
@@ -984,13 +995,10 @@ margin: 30px;
 				//background-position: 71.5% 0px;
 				background: url(../images/border_1_3.png);
 				background-size: cover;
-
-
-
-
-
 	}
 }
+
+
 
 .img_input {
 	width: 48%;

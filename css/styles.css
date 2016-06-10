@@ -1122,6 +1122,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     line-height: 0em;
     padding: 1.1% calc((100% - 260px) / 2); }
 
+.paypal-form .btn:after {
+  content: ' ';
+  background: url(../images/border_1_3.png);
+  background-position: 99900px 0px; }
+
 .paypal-submit:after {
   padding-top: 56.25%;
   /* 16:9 ratio */
