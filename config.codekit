@@ -2850,6 +2850,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/border-2-both_7.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27589,
+		"inputAbbreviatedPath": "\/images\/border-2-both_7.png",
+		"outputAbbreviatedPath": "\/images\/border-2-both_7.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border-2-both_8.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21321,
+		"inputAbbreviatedPath": "\/images\/border-2-both_8.png",
+		"outputAbbreviatedPath": "\/images\/border-2-both_8.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/border-2.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3026,6 +3048,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/border3-8.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19989,
+		"inputAbbreviatedPath": "\/images\/border3-8.png",
+		"outputAbbreviatedPath": "\/images\/border3-8.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border3-9.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9627,
+		"inputAbbreviatedPath": "\/images\/border3-9.png",
+		"outputAbbreviatedPath": "\/images\/border3-9.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/border3-ok.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3066,6 +3110,17 @@
 		"initialSize": 108643,
 		"inputAbbreviatedPath": "\/images\/border_1_2.png",
 		"outputAbbreviatedPath": "\/images\/border_1_2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/border_1_3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108643,
+		"inputAbbreviatedPath": "\/images\/border_1_3.png",
+		"outputAbbreviatedPath": "\/images\/border_1_2 copy.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

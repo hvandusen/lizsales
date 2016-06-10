@@ -597,7 +597,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					background-color: transparent;
 					border-color: transparent;
 					padding: 6% 10.9%;
-					padding: calc(6.4% + 6px) calc(14% - 4px);
+					padding: calc(6.4% + 6px) calc(14% - 2px);
 					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
@@ -692,8 +692,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					//padding: calc(3.8% - 10px) 0px;
 					width: 46%;
 					&.hovered {
-						background-position: 87.9% 0%;
-						background-position: 89.9% 0%;
+						background-image: url(../images/border-2-both_8.png);
+
 }
 
 					//}
@@ -881,11 +881,11 @@ margin: 30px;
 		color: #ffff66;
 		//background-image: url(../images/border-3-hover.png);
 		@media(min-width: 905px){
-			background-position: 82.8% 0px;
-			background-position: 70.7% 0px;
+			//background-position: 82.8% 0px;
+			//background-position: 70.7% 0px;
 		}
-		background-image: url(../images/border3-ok.png);
-		background-position: 82.5% 0px;
+		background-image: url(../images/border3-8.png);
+		//background-position: 82.5% 0px;
 		cursor: pointer;
 		.uploadText{
 			cursor: pointer;
@@ -907,8 +907,9 @@ margin: 30px;
 
 	&.fileUploaded {
 		@media(min-width: 905px){
-			background-position: 82.8% 0px;
-			background-position: 70.7% 0px;
+			background-image: url(../images/border3-9.png);
+			//background-position: 82.8% 0px;
+			//background-position: 70.7% 0px;
 		}
 		color: #ffff66;
 		.uploadText{
@@ -929,6 +930,7 @@ margin: 30px;
 		}
 		}
 		&:hover {
+			background-image: url(../images/border3-8.png); 
 			.uploadText{
 				&:after {
 					content: "CHANGE FILE";
@@ -971,9 +973,11 @@ margin: 30px;
 	&:hover {
 		//background-image: url(../images/border-1-hover.png);
 		color: #ffff66;
-		background-position: 392px 0px;
+		//background-position: 392px 0px;
 		  //  background-position: 80.6% 0px;
-				background-position: 71.5% 0px;
+				//background-position: 71.5% 0px;
+				background: url(../images/border_1_3.png);
+				background-size: cover;
 
 
 
@@ -1005,7 +1009,7 @@ margin: 30px;
 		width: 217px;
 		padding: 39px 0;
 		&:hover {
-			background-position: 358px 0px;
+			//background-position: 358px 0px;
 		}
 		//     line-height: 100px;
 		// 		input {

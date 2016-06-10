@@ -897,7 +897,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           background-color: transparent;
           border-color: transparent;
           padding: 6% 10.9%;
-          padding: calc(6.4% + 6px) calc(14% - 4px); }
+          padding: calc(6.4% + 6px) calc(14% - 2px); }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover {
             background-image: url(../images/border3-6.png);
             color: #ffff66; }
@@ -954,8 +954,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           background-position: 0.5% 0%;
           width: 46%; }
           .section.questionnaire .post-password-form #pword-box span.hovered, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span.hovered {
-            background-position: 87.9% 0%;
-            background-position: 89.9% 0%; }
+            background-image: url(../images/border-2-both_8.png); }
           @media (max-width: 480px) {
             .section.questionnaire .post-password-form #pword-box span, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span {
               width: 75%; } }
@@ -1079,13 +1078,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   margin: 1em; }
   .img_input:hover {
     color: #ffff66;
-    background-image: url(../images/border3-ok.png);
-    background-position: 82.5% 0px;
+    background-image: url(../images/border3-8.png);
     cursor: pointer; }
-    @media (min-width: 905px) {
-      .img_input:hover {
-        background-position: 82.8% 0px;
-        background-position: 70.7% 0px; } }
     .img_input:hover .uploadText {
       cursor: pointer;
       position: relative;
@@ -1102,8 +1096,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     color: #ffff66; }
     @media (min-width: 905px) {
       .img_input.fileUploaded {
-        background-position: 82.8% 0px;
-        background-position: 70.7% 0px; } }
+        background-image: url(../images/border3-9.png); } }
     .img_input.fileUploaded .uploadText {
       cursor: pointer;
       position: relative;
@@ -1116,8 +1109,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         position: absolute;
         left: 0;
         left: -11px; }
-    .img_input.fileUploaded:hover .uploadText:after {
-      content: "CHANGE FILE"; }
+    .img_input.fileUploaded:hover {
+      background-image: url(../images/border3-8.png); }
+      .img_input.fileUploaded:hover .uploadText:after {
+        content: "CHANGE FILE"; }
   .img_input input {
     visibility: hidden;
     line-height: 0em;
@@ -1145,8 +1140,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   margin-left: 6px; }
   .paypal-submit:hover {
     color: #ffff66;
-    background-position: 392px 0px;
-    background-position: 71.5% 0px; }
+    background: url(../images/border_1_3.png);
+    background-size: cover; }
 
 .img_input {
   width: 48%;
@@ -1164,9 +1159,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   @media (max-width: 950px) {
     .img_input {
       width: 217px;
-      padding: 39px 0; }
-      .img_input:hover {
-        background-position: 358px 0px; } }
+      padding: 39px 0; } }
 
 #total {
   display: none;
