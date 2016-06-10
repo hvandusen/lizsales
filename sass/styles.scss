@@ -584,7 +584,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     	text-align: center;
 			display: inline-block;
 			//height: auto;//175px;
-			&.submit_q {
+			&.submit_q { 
 				&:after {
 					background-image: url(../images/border3-6.png);
 				}
