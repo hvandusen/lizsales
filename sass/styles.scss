@@ -585,6 +585,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: inline-block;
 			//height: auto;//175px;
 			&.submit_q {
+				&:after {
+					background-image: url(../images/border3-6.png);
+				}
 				//margin-bottom: 3em;
 				input {
 					background-image: url(../images/border-4.png);
@@ -930,7 +933,7 @@ margin: 30px;
 		}
 		}
 		&:hover {
-			background-image: url(../images/border3-8.png); 
+			background-image: url(../images/border3-8.png);
 			.uploadText{
 				&:after {
 					content: "CHANGE FILE";
@@ -951,6 +954,7 @@ margin: 30px;
 	padding-top: 56.25%;
 	/* 16:9 ratio */
 	display: block;
+
 	content: '';
 	}
 	}
@@ -1027,6 +1031,9 @@ margin: 30px;
 		// 		left: 22px;
 		// 	}
 		// }
+	}
+	&:after {
+		background-image: url(../images/border3-8.png);
 	}
 }
 

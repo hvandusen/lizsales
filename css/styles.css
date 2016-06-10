@@ -888,6 +888,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       .section.questionnaire .button_box.submit_q, .section #wpcf7-f25-p7-o1 .button_box.submit_q {
         padding-bottom: 6em;
         width: 100%; }
+        .section.questionnaire .button_box.submit_q:after, .section #wpcf7-f25-p7-o1 .button_box.submit_q:after {
+          background-image: url(../images/border3-6.png); }
         .section.questionnaire .button_box.submit_q input, .section #wpcf7-f25-p7-o1 .button_box.submit_q input {
           background-image: url(../images/border-4.png);
           background-image: url(../images/border3-2.png);
@@ -1160,6 +1162,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     .img_input {
       width: 217px;
       padding: 39px 0; } }
+  .img_input:after {
+    background-image: url(../images/border3-8.png); }
 
 #total {
   display: none;
