@@ -586,7 +586,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			//height: auto;//175px;
 			&.submit_q {
 				&:after {
-					content: '';
+					content: ' ';
+					background-position: 99900px 0;
 					background-image: url(../images/border3-6.png);
 				}
 				//margin-bottom: 3em;
@@ -1034,7 +1035,7 @@ margin: 30px;
 		// }
 	}
 	&:after {
-		content: '';
+		content: ' ';
 		background-image: url(../images/border3-8.png);
 	}
 }
