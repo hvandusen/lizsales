@@ -1300,6 +1300,9 @@ span.wpcf7-list-item {
 				padding: 24px 43px;
 				@media(max-width: 480px){
 					width: 85px;
+					width: 114px;
+    		//height: 50px;
+			    padding: 36px 43px;
 					position: relative;
 				}
 				min-width: auto;
@@ -1328,6 +1331,8 @@ span.wpcf7-list-item {
 		.submit_q input{
 			width: 232px !important;
 			height: 83px !important;
+			width: 232px !important;
+height: 113px !important;
 			padding: 0!important;
 		}
 		}
