@@ -603,6 +603,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					border-color: transparent;
 					padding: 6% 10.9%;
 					padding: calc(6.4% + 6px) calc(14% - 2px);
+					padding: calc(6.4% + 6px) calc(13.5% - 2px);
 					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
@@ -693,13 +694,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					//background-image: url(../images/border-2-both_2.png);
 					background-image: url(../images/border-2-both_6.png);
 					background-size: 225% 100%;//cover;
-					background-position: 0.5% 0%;
+					//background-position: 0.5% 0%;
 					//padding: calc(3.8% - 10px) 0px;
 					width: 46%;
 					&.hovered {
-						background-image: url(../images/border-2-both_8.png);
-
-}
+						background-image: url(../images/border-2-both_66.png);
+					}
+					&:after {
+						content: ' ';
+						background-image:  url(../images/border-2-both_66.png);
+						background-position: 4000px 0px;
+					}
 
 					//}
 					@media(max-width:480px){

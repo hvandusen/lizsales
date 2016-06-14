@@ -41,9 +41,16 @@ $(window).resize(function(){
 		//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~');
 	}
 
+
   $(window).resize(function(){
+		setHeads();
+		return;
 		if(window.innerWidth< 1193)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~');
+		else if (window.innerWidth< 1353){
+			$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+		}
 		else {
 			$('.postBar, .preBar').text(bigSquigs);
 		}
@@ -55,9 +62,26 @@ $(window).resize(function(){
 		// 	$('.pleaseRotate').css('display','block');
 		// }
 	});
-	if(window.innerWidth< 1193)
-		$('.postBar, .preBar').text('~~~~~~~~');
 
+	function setHeads(){
+		var w = window.innerWidth;
+	if(w< 600)
+		$('.postBar, .preBar').text('');
+	else if(w< 750)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+	else if(w< 870)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~');
+	else if(w< 1193)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~');
+	else if(w< 1350)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+	else if(w< 1450)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+	else if(w> 1480)
+		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+}
+
+setHeads();
 
 	$('textarea').scroll(function(){
 		//console.log($(this).scrollTop());
@@ -89,12 +113,12 @@ $('.wpcf7-not-valid-tip').map(function(e,i){
 
 var bigSquigs;
 	$(document).ready(function(){
-			//setHeaders();
+			setHeads();
 			bigSquigs = $($('.preBar')[0]).text();
-			if(window.innerWidth< 1193)
-			$('.postBar, .preBar').text('~~~~~~~~~~~~~');
-			if(window.innerWidth< 480)
-			$('.postBar, .preBar').text('~~~~~~');
+			// if(window.innerWidth< 1193)
+			// $('.postBar, .preBar').text('~~~~~~~~~~~~~');
+			 if(window.innerWidth< 480)
+			 	$('.postBar, .preBar').text('~~~~~~');
 			//numbered input area
 		$('.numbers').map(function(i,e){
 			//console.log('fuck');

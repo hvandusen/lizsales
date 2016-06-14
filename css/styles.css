@@ -901,7 +901,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           background-color: transparent;
           border-color: transparent;
           padding: 6% 10.9%;
-          padding: calc(6.4% + 6px) calc(14% - 2px); }
+          padding: calc(6.4% + 6px) calc(14% - 2px);
+          padding: calc(6.4% + 6px) calc(13.5% - 2px); }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover {
             background-image: url(../images/border3-6.png);
             color: #ffff66; }
@@ -955,10 +956,13 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         .section.questionnaire .post-password-form #pword-box span, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span {
           background-image: url(../images/border-2-both_6.png);
           background-size: 225% 100%;
-          background-position: 0.5% 0%;
           width: 46%; }
           .section.questionnaire .post-password-form #pword-box span.hovered, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span.hovered {
-            background-image: url(../images/border-2-both_8.png); }
+            background-image: url(../images/border-2-both_66.png); }
+          .section.questionnaire .post-password-form #pword-box span:after, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span:after {
+            content: ' ';
+            background-image: url(../images/border-2-both_66.png);
+            background-position: 4000px 0px; }
           @media (max-width: 480px) {
             .section.questionnaire .post-password-form #pword-box span, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box span {
               width: 75%; } }
