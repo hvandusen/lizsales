@@ -65,20 +65,27 @@ $(window).resize(function(){
 
 	function setHeads(){
 		var w = window.innerWidth;
+		var theText = '';
+
 	if(w< 600)
-		$('.postBar, .preBar').text('');
+		theText = ''//$('.postBar, .preBar').text('');
 	else if(w< 750)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~');
+		theText = '~~~~~~~~~~~~~'//$('.postBar, .preBar').text('~~~~~~~~~~~~~');
 	else if(w< 870)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~');
+			theText = '~~~~~~~~~~~~~~~~~~~';//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~');
 	else if(w< 1193)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~');
+		theText = '~~~~~~~~~~~~~~~~~~~~~~';//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~');
 	else if(w< 1350)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+		theText = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 	else if(w< 1450)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+		theText = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 	else if(w> 1480)
-		$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+		theText = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';//$('.postBar, .preBar').text('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+	if(window.location.pathname.indexOf('questionnaire')>-1){
+
+			theText = theText.substr(10)
+		}
+		$('.postBar, .preBar').text(theText);
 }
 
 setHeads();
