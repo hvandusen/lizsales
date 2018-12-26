@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title><?php print trim(wp_title('', false)); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
+	<title>a<?php print trim(wp_title('', false)); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="We write artist statements, biographies, project statements, press releases, and social media blurbs for artists!" />
 <meta name="keywords" content="artist statement, artist statements, blurbs, biographies, press releases" />
