@@ -317,16 +317,11 @@ function send_my_mail(){
 			else {
 				$str.= '"percent" : 1}';
 			}
-			//$str.= '"percent" :' . $coupon['type'] .'}';
 			$c = $c+1;
-	//	$str = $str + $coupon['coupon_name'];
-	//print_r($coupon['coupon_name'].);
 	}
 
 	$str.=' ]';
 	print_r($str);
-	//print_r('{ name: "' . $coupons[0]['coupon_name'] .'", price: '. $coupons[0]['coupon_discount']);
-	//echo $str;//'coupon1,coupon2,coupon3,coupon4,blank';
 }
 
 add_action('wp_ajax_sendmail', 'send_my_mail');
