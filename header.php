@@ -17,7 +17,7 @@
 
 <body <?php
 body_class();
-?>>
+?>> aaaa
 <?php include_once("analyticstracking.php") ?>
 <div id="container">
     <header id="header">
@@ -27,7 +27,7 @@ body_class();
 			<div id='content'>
 				<div class='mobile-title'>I WRITE ARTIST STATEMENTS</div>
 				<div class='nav'>
-					<a class='left' href='<?php bloginfo('wpurl')?>/#services'>Services  </a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#services'>Servizes</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#writers'>Writers</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#process'>Process</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#pricing'>Pricing</a>
