@@ -364,7 +364,7 @@
       type: "GET",
       cache: false,
       data: "data" + "&action=sendmail", //action defines which function to use in add_action,
-      success: function(i, e) {
+      success: function(i, e) { 
         if (e === "success") {
           coupons = i.substring(0, i.length - 1); //.split(',');
 					console.log(coupons);
