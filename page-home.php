@@ -58,6 +58,7 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 <span class='ty-7'>\|</span>
 	</pre>
 </div>
+
 <?php endwhile; ?>
 
 

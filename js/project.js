@@ -19,10 +19,9 @@
   });
 
   if (
-    window.location.pathname.indexOf("questionnaire") > -1 &&
+    $(".questionnaire").length > 0 &&
     window.innerWidth < 850
   ) {
-    //alert();
     $(".postBar, .preBar").text("~~~~~~~~~");
     //$('.postBar, .preBar').text('~~~~~~~~~~~~~~~');
   }
@@ -31,6 +30,8 @@
     setHeads();
   });
 
+  
+
   function setHeads() {
     var w = window.innerWidth;
     var theText = "";
@@ -38,21 +39,20 @@
     if (w < 600) {
       theText = "";
     } else if (w < 750) {
-      theText = "~~~~~~~~~~~~~";
-    } else if (w < 870) {
-      theText = "~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~";
+    } else if (w < 970) {
+      theText = "~~~~~~~~~";
     } else if (w < 1193) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~~~~~~~~~~";
     } else if (w < 1350) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~~~~~~~~~~~~~~~~~~~";
     } else if (w < 1450) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~~~~~~~~~~~~~~~~~~~~~";
     } else if (w > 1480) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     }
-    if (window.location.pathname.indexOf("questionnaire") > -1) {
-      theText = theText.substr(10);
-    }
+
+    console.log("set ",w,theText)
     $(".postBar, .preBar").text(theText);
   }
 
@@ -364,10 +364,9 @@
       type: "GET",
       cache: false,
       data: "data" + "&action=sendmail", //action defines which function to use in add_action,
-      success: function(i, e) { 
+      success: function(i, e) {
         if (e === "success") {
           coupons = i.substring(0, i.length - 1); //.split(',');
-					console.log(coupons);
           coupons = JSON.parse(coupons);
         }
       }

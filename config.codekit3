@@ -2613,7 +2613,8 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
@@ -3236,6 +3237,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/loop.php",
+		"oF": 0
+		},
+	"/page-generator.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-generator.php",
 		"oF": 0
 		},
 	"/page-home-type.php": {
