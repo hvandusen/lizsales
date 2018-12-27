@@ -9,48 +9,46 @@
 	}
 </style>
 <div class='thanks-text'>Thank you! Your response has been submitted.</div>
-<div class='ascii robot robot1'>
-	<pre>
-		<span> L          m        </span>
-		<span>      a   *   x     U</span>
-		<span>  3      ___|___        !</span>
-		<span>   |  o o  |  S</span>
-		<span>|   /   |</span>
-		<span>\_\_/_/</span>
-		<span>________| |________</span>
-		<span>/   /| ***   *** |\   \</span>
-		<span>/___/ |           | \___\</span>
-		<span>|  |  |   THANK   |  |  |</span>
-		<span>|  |  |    YOU    |  |  |</span>
-		<span>|  |  |           |  |  |</span>
-		<span>|__|  \___________/  |__|</span>
-		<span>(  )  |   |   |   |  (  )</span>
-		<span>|---|   |---|</span>
-		<span>|___|   |___|</span>
-		<span>/    \  /    \</span>
-		<span>|_____| |_____|</span>
-	</pre>
-</div>
-<div class='ascii robot robot2'>
-	<pre>
-		<span>X    e         @   p </span>
-		<span>?        N  *     1    </span>
-		<span>      ~    ___|___ y         </span>
-		<span>   |  • •  |   </span>
-		<span>|   /   |</span>
-		<span>\_\_/_/</span>
-		<span>________| |________</span>
-		<span>/   /| ***   *** |\   \</span>
-		<span>/___/ |           | \___\</span>
-		<span>|  |  |   THANK   |  |  |</span>
-		<span>|  |  |    YOU    |  |  |</span>
-		<span>|  |  |           |  |  |</span>
-		<span>|__|  \___________/  |__|</span>
-		<span>()   |   |   |   |   ()</span>
-		<span>|---|   |---|</span>
-		<span>|___|   |___|</span>
-		<span>/    \  /    \</span>
-		<span>|_____| |_____|</span>
-	</pre>
-</div>
+<div class="robot">
+		<pre class='ascii robot1'>
+ L          m
+      a   *   x     U
+  3      ___|___        !
+   |  o o  |  S
+|   /   |
+\_\_/_/
+________| |________
+/   /| ***   *** |\   \
+/___/ |           | \___\
+|  |  |   THANK   |  |  |
+|  |  |    YOU    |  |  |
+|  |  |           |  |  |
+|__|  \___________/  |__|
+(  )  |   |   |   |  (  )
+|---|   |---|
+|___|   |___|
+/    \  /    \
+|_____| |_____|
+		</pre>
+		<pre class='ascii robot2'>
+X    e         @   p
+?     N  *      1  
+~ ___|___ y
+|  • •  |
+|   /   |
+\_\_/_/
+________| |________
+/   /| ***   *** |\   \
+/___/ |           | \___\
+|  |  |   THANK   |  |  |
+|  |  |    YOU    |  |  |
+|  |  |           |  |  |
+|__|  \___________/  |__|
+()   |   |   |   |   ()
+|---|   |---|
+|___|   |___|
+/    \  /    \
+|_____| |_____|
+		</pre>
+<div>
 </div>

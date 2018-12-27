@@ -1256,7 +1256,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   .ascii pre {
     font-family: Elementa;
     font-family: Elementa-b;
-    padding-right: 7em;
     overflow: inherit; }
   .ascii .asciiTitle {
     color: #c13a1c; }
@@ -1306,12 +1305,10 @@ span.wpcf7-list-item {
   left: 0;
   bottom: 0;
   width: 100%; }
-  .thankyou-page .robot {
-    position: absolute; }
-  .thankyou-page .robot1 {
-    animation: frame1 1s linear infinite; }
-  .thankyou-page .robot2 {
-    animation: frame2 1s linear infinite; }
+  .thankyou-page .robot1, .thankyou-page .robot2 {
+    display: inline-block;
+    width: 340px;
+    overflow: auto; }
   .thankyou-page .pword-back div {
     color: #0033cc; }
     .thankyou-page .pword-back div:hover {

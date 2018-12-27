@@ -1151,7 +1151,7 @@ margin: 30px;
 	pre {
 		font-family: Elementa;
 		font-family: Elementa-b;
-		padding-right: 7em;
+		// padding-right: 7em;
 		    overflow: inherit;
 	}
 	.asciiTitle {
@@ -1246,13 +1246,21 @@ span.wpcf7-list-item {
 	width: 100%;
 	//height: 100%;
 	.robot {
-		position: absolute;
+		// width: 500px;
+		// height: 800px;
+	}
+	.robot1, .robot2 {
+		// position: absolute;
+		display: inline-block;
+		width: 340px;
+		overflow: auto;
+
 	}
 	.robot1 {
-		animation: frame1 1s linear infinite;
+		// animation: frame1 1s linear infinite;
 	}
 	.robot2 {
-		animation: frame2 1s linear infinite;
+		// animation: frame2 1s linear infinite;
 	}
 	.pword-back {
 		div {
