@@ -30,7 +30,6 @@
     setHeads();
   });
 
-  
 
   function setHeads() {
     var w = window.innerWidth;
@@ -106,6 +105,9 @@
       );
       $(e).css("color", "#0033cc");
     });
+    setInterval(function(){
+        $(".thankyou-page .robot").toggleClass("flicker");
+    },400);
   });
   //checkboxes
   $(".wpcf7-list-item label").map(function(i, e) {

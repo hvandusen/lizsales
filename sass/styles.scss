@@ -823,7 +823,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .pword-ok {
 	margin:30px;
 }
-.pword-back {
+body .pdf {
+	left: auto;
+	right: 1em;
+}
+
+.pword-back, .pdf {
 			//float: left;
 			left: 14px;
 			margin:	22px;
@@ -1246,6 +1251,16 @@ span.wpcf7-list-item {
 	width: 100%;
 	//height: 100%;
 	.robot {
+		text-align: center;
+		margin-top: 150px;
+		&.flicker {
+			.robot2 {
+				display: inline-block;
+			}
+			.robot1 {
+				display: none;
+			}
+		}
 		// width: 500px;
 		// height: 800px;
 	}
@@ -1257,10 +1272,10 @@ span.wpcf7-list-item {
 
 	}
 	.robot1 {
-		// animation: frame1 1s linear infinite;
+		display: inline-block;
 	}
 	.robot2 {
-		// animation: frame2 1s linear infinite;
+		display: none;
 	}
 	.pword-back {
 		div {
