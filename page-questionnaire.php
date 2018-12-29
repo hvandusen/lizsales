@@ -2,7 +2,7 @@
 <a href="<?php bloginfo('wpurl'); ?>" class="pword-back blue"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
-
+<a href="<?php bloginfo('wpurl'); ?>" class="pdf blue"><span>DOWNLOAD AS A PDF</span></a>
 <style>
 	.left, .right{
 		display: none;
@@ -25,16 +25,7 @@
 	.mobile-header {
 		  display: none;
 	}
-	@media(max-width: 480px){
-		.mobile-header {
-			display: block;
-	    text-align: center;
-	    margin-top: 22px;
-			font-family: Elementa;
-			font-size: 16px;
-			padding: 0 10%;
-		}
-	}
+
 
 </style>
 <br>

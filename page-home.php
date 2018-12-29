@@ -15,23 +15,23 @@ var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 	 <?php //the_content(); ?>
 <div class='ascii typewriter'>
 <pre>
-	    ---------------------
-	    |                   |
-	    |     <span class='asciiTitle'>I WRITE</span>       |
-	    |     <span class='asciiTitle'>ARTIST</span>        |
-	    |     <span class='asciiTitle'>STATEMENTS</span>    |
-	(     |                   |&nbsp;&nbsp;
-	  \  X=====U===========U======D
-	   \___|_______  V ________|___
-	    /      \  ///III\\\  /      \
-	    /------- + ————————— + -------\
-            |    0 0 0 0 0 0 0 0 0 0 0 0    |
-	    |     0 0 0 0 0 0 0 0 0 0 0     |
-	    |    0 0 0 0 0 0 0 0 0 0 0 0    |
-	    |     0 0 0 0 0 0 0 0 0 0 0     |
-	    |    0 0 0 0 0 0 0 0 0 0 0 0    |
-	    \       (_____________)       /
-	    \___________________________/
+    ---------------------    
+    |                   |    
+    |     <span class='asciiTitle'>I WRITE</span>       |    
+    |     <span class='asciiTitle'>ARTIST</span>        |    
+    |     <span class='asciiTitle'>STATEMENTS</span>    |    
+(     |                   |&nbsp;&nbsp;    
+  \  X=====U===========U======D    
+   \___|_______  V ________|___    
+    /      \  ///III\\\  /      \    
+    /------- + ————————— + -------\    
+    |    0 0 0 0 0 0 0 0 0 0 0 0    |    
+    |     0 0 0 0 0 0 0 0 0 0 0     |    
+    |    0 0 0 0 0 0 0 0 0 0 0 0    |    
+    |     0 0 0 0 0 0 0 0 0 0 0     |    
+    |    0 0 0 0 0 0 0 0 0 0 0 0    |    
+    \       (_____________)       /    
+    \___________________________/    
 	</pre>
 </div>
 

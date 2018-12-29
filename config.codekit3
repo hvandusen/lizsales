@@ -3056,6 +3056,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/border3-6.png": {
+		"ft": 32768,
+		"iS": 3985,
+		"oA": 0,
+		"oAP": "/images/border3-6.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/border3-8.png": {
+		"ft": 32768,
+		"iS": 9627,
+		"oA": 0,
+		"oAP": "/images/border3-8.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/border3.png": {
 		"ft": 32768,
 		"iS": 5981,
@@ -3132,6 +3154,69 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/images/email-menu.png": {
+		"ft": 32768,
+		"iS": 773713,
+		"oA": 0,
+		"oAP": "/images/email-menu.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/email-menu.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/email-menu.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/email-menu1.png": {
+		"ft": 32768,
+		"iS": 550806,
+		"oA": 0,
+		"oAP": "/images/email-menu1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/email-menu1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/email-menu1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/email-menu2.png": {
+		"ft": 32768,
+		"iS": 269681,
+		"oA": 0,
+		"oAP": "/images/email-menu2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/email-menu2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/email-menu2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/images/smiley.gif": {
 		"ft": 4194304,

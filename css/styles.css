@@ -1042,6 +1042,100 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       margin: 5px;
       display: inline; }
 
+.generator #container, .generator #content {
+  background: #1138C0; }
+.generator .ascii {
+  color: white; }
+.generator .email-form {
+  text-align: center;
+  margin: 4em 0 0 0; }
+  .generator .email-form .wpcf7 {
+    max-width: none;
+    display: inline-block; }
+    .generator .email-form .wpcf7 .wpcf7-form > p {
+      margin: 0;
+      position: relative; }
+    .generator .email-form .wpcf7 .wpcf7-form-control-wrap {
+      display: inline-block;
+      width: 677px; }
+      .generator .email-form .wpcf7 .wpcf7-form-control-wrap:before {
+        content: "";
+        position: absolute;
+        top: -2%;
+        left: 0px;
+        width: 100%;
+        height: 104%;
+        pointer-events: none;
+        background-image: url(../images/email-menu1.png);
+        background-image: url(../images/email-menu1.svg);
+        background-size: auto 100%;
+        z-index: 1;
+        background-repeat: no-repeat; }
+    .generator .email-form .wpcf7 .your-email input {
+      font-family: Elementa;
+      font-size: 20px;
+      width: 100%;
+      height: 100px;
+      outline: none;
+      border: none;
+      vertical-align: top;
+      padding: 0;
+      padding-left: 2em;
+      color: black; }
+      .generator .email-form .wpcf7 .your-email input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: black; }
+      .generator .email-form .wpcf7 .your-email input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: black; }
+      .generator .email-form .wpcf7 .your-email input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: black; }
+      .generator .email-form .wpcf7 .your-email input:-moz-placeholder {
+        /* Firefox 18- */
+        color: black; }
+    .generator .email-form .wpcf7 .submit-wrapper {
+      position: relative;
+      display: inline-block; }
+      .generator .email-form .wpcf7 .submit-wrapper:before {
+        content: "";
+        position: absolute;
+        top: -6%;
+        left: -4%;
+        width: 108%;
+        height: 112%;
+        pointer-events: none;
+        background-image: url(../images/email-menu2.png);
+        background-image: url(../images/email-menu2.svg);
+        background-size: auto 100%;
+        z-index: 1;
+        background-repeat: no-repeat; }
+    .generator .email-form .wpcf7 .wpcf7-submit {
+      padding: 0;
+      height: 100px;
+      width: 158px;
+      border: none;
+      outline: none;
+      background: none;
+      vertical-align: top;
+      background: #FFFE93; }
+.generator .section p {
+  color: white; }
+.generator .left, .generator .right {
+  display: none; }
+.generator .right.elementa, .generator .right.ascii-border, .generator .section.questionnaire .post-password-form #pword-box input.right, .section.questionnaire .post-password-form #pword-box .generator input.right, .generator .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box .generator input.right, .generator .section .wpcf7 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box .generator input.right, .generator .right.input, .generator .section.questionnaire form .right.txt_input, .section.questionnaire form .generator .right.txt_input, .generator .section #wpcf7-f25-p7-o1 form .right.txt_input, .section #wpcf7-f25-p7-o1 form .generator .right.txt_input, .generator .section .wpcf7 form .right.txt_input, .section .wpcf7 form .generator .right.txt_input, .generator .section.questionnaire textarea.right, .section.questionnaire .generator textarea.right, .generator .section #wpcf7-f25-p7-o1 textarea.right, .section #wpcf7-f25-p7-o1 .generator textarea.right, .generator .section .wpcf7 textarea.right, .section .wpcf7 .generator textarea.right, .generator .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .generator .right.chbox, .generator .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .generator .right.chbox, .generator .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .generator .right.chbox, .generator .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .generator .right.chbox, .generator .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .generator .right.chbox, .generator .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .generator .right.chbox, .generator .section.questionnaire .right.submit_bg, .section.questionnaire .generator .right.submit_bg, .generator .section #wpcf7-f25-p7-o1 .right.submit_bg, .section #wpcf7-f25-p7-o1 .generator .right.submit_bg, .generator .section .wpcf7 .right.submit_bg, .section .wpcf7 .generator .right.submit_bg, .generator .pword-back span.right, .pword-back .generator span.right, .generator .pdf span.right, .pdf .generator span.right, .generator .right.wpcf7-submit, .generator .right.img_input, .generator .right.paypal-submit, .generator .img_input label.right, .img_input .generator label.right, .generator #coupon-label .right#coupon, #coupon-label .generator .right#coupon, .generator .right.ascii {
+  display: none; }
+.generator .pword-back div {
+  /*color: #0033cc;
+  border-bottom: solid 1px #0033cc;*/ }
+.generator .bar {
+  margin-bottom: 2em; }
+@media (max-width: 480px) {
+  .generator .bar {
+    display: none; } }
+.generator .mobile-header {
+  display: none; }
+
 #wpcf7-f25-p7-o1 {
   margin-top: 0;
   padding-top: 5px; }

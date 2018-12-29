@@ -16,7 +16,8 @@
 <div class='pleaseRotate'>Please rotate your phone.</div>
 
 <body <?php
-body_class();
+global $post;
+body_class($post->post_name);
 ?>>
 <?php include_once("analyticstracking.php") ?>
 <div id="container">
