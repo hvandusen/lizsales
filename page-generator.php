@@ -13,7 +13,7 @@
 <div class='mobile-header'>NEED AN ARTIST STATEMENT?</div>
 <pre class='ascii robot1'>
 L          m
-	a   *   x     U  
+	a   *   x     U
   3      ___|___        !
    |  o o  |  S
 |   /   |
@@ -49,7 +49,7 @@ ________| |________
 <script>
 $(document).ready(function(){
 	$('.wpcf7-form:eq(0)').submit(function(){
-		window.sessionStorage.email = $(".wpcf7-date:eq(0)").val();
+		window.sessionStorage.email = $(".wpcf7-email").val();
 		console.log(window.sessionStorage)
 	});
 })
