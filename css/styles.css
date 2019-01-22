@@ -716,7 +716,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .output {
   transition: .4s all;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   overflow: scroll;
   background: white;
   margin: 0 1em 0 0;
@@ -735,6 +735,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     margin: 1em;
     border: black solid 1px;
     overflow: hidden; }
+  .output .statement {
+    margin-bottom: 1em; }
   .output .setting {
     font-size: .4em;
     line-height: 1em;

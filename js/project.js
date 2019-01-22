@@ -134,7 +134,7 @@
     if(!sessionStorage.hasOwnProperty("form-name")){
       return
     }for(var i in sessionStorage){
-      if(i.indexOf("form-")>-1){
+      if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
         theFormData[i.replace("form-","")] = sessionStorage[i];
         $("[name='"+(i.replace("form-",""))+"']").val(sessionStorage[i]);
     }
@@ -158,10 +158,12 @@
   }
   function updateOutput(){
     var out = {};
-    var html = "";
+    var html = "<h1>Generated Statement</h1>";
     html+= writeStatement();
     for(var i in sessionStorage){
-      if(i.indexOf("form-")>-1 && formFields.indexOf((i.replace("form-",""))>-1)){
+      var name = i.replace("form-","");
+      console.log(formFields.indexOf(name))
+      if(i.indexOf("form-")>-1 && formFields.indexOf(name)>-1){
         html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + sessionStorage[i] + "</div>";
       }
 
