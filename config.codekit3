@@ -2636,12 +2636,42 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/css/styles-safe-min-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/styles-safe-min-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/styles-safe-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/styles-safe-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/styles-safe.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/styles-safe-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/css/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/css/styles-min.css",
 		"oF": 0,
 		"oS": 3
@@ -3111,17 +3141,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/images/border_1_3.png": {
-		"ft": 32768,
-		"iS": 107303,
-		"oA": 0,
-		"oAP": "/images/border_1_3.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/images/border_3.png": {
 		"ft": 32768,
 		"iS": 10158,
@@ -3280,6 +3299,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/js/compressed/sample-form.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/compressed/compressed/sample-form.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/js/jquery.cycle2.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3306,6 +3335,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/compressed/project.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/sample-form.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/compressed/sample-form.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3345,6 +3384,13 @@
 		"oAP": "/page-home.php",
 		"oF": 0
 		},
+	"/page-questionnaire-test.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-questionnaire-test.php",
+		"oF": 0
+		},
 	"/page-questionnaire.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3371,6 +3417,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/post-template.php",
+		"oF": 0
+		},
+	"/questionnaire.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/questionnaire.html",
 		"oF": 0
 		},
 	"/sass/.sass-cache/55f1e9ee6172a120279170a97aba374fd4bf2631/styles.scssc": {

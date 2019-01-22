@@ -1,0 +1,38 @@
+<div class="question q01">
+<p>Please fill in only the questions you think are relevant to your work and skip any that are not.</p>
+<div class='input_contents one-liner'><label><span class='one-l'>Name: </span>[text* name class:txt_input]</label></div>
+<div class='input_contents one-liner'><label><span class='one-l'>Date of birth: </span>[text* bday class:txt_input]</label></div>
+<div class='input_contents one-liner'><label><span class='one-l'>Birthplace city: </span>[text* birthplace class:txt_input]</label></div>
+<div class='input_contents one-liner'><label><span class='one-l'>Country: </span>[text* country class:txt_input]</label></div>
+<div class='input_contents one-liner'><label><span class='one-l'>Workplace city: </span>[text* work-city class:txt_input]</label></div></div>
+<div class="question q03">
+Media-wise, I work with:
+<i>Not required, select multiple</i>
+[checkbox works-with id:check1 class:checkbox-1 use_label_element label_first  "Painting" "Photography" "Drawing" "Sculpture" "Performance" "Media art" "Installation art" "Film Video" "Mixed media" "Bookarts" "Text" "I work in a variety of media"]
+
+<div class="question q1"><div class='input_contents area num'><label>1. I work in this/these medium/media for these reasons: </label>[textarea work-with maxlength:216 x3 textarea-2 id:textarea2 class:textarea]</div>
+<div class="question q2"><div class='input_contents area num'><label>2. When I was growing up I used to: </label>[textarea grew-up id:textarea4 class:textarea x2]</div>
+
+<div class='input_contents area'><label class='followup'>3. This is important to understanding my work because: </label>[textarea grew-up-3 class:textarea x2]</div></div>
+
+<div class="question q4"><div class='input_contents area num'><label>4. My educational background includes:
+<i>Not required, select multiple</i>
+[checkbox also-works-with id:check2 class:checkbox-2 use_label_element label_first  "I am self-taugh" "I a have a BFA" "I a have an MFA" "other"]</div>
+</label>[textarea background class:textarea x4]</div></div>
+<div class="question q5"><div class='input_contents area num'><label>5. I am inspired by these visual artists:</label>[textarea artists class:textarea x2]</div>
+<div class='input_contents area'><label class='followup'>For these reasons:</label>[textarea artists-2 class:textarea x3]</div></div>
+<div class="question q6"><div class='input_contents area num'><label>6. These writers inspire me:</label>[textarea writers class:textarea x2]</div>
+<div class='input_contents area'><label class='followup'>For these reasons:</label>[textarea writers-2 class:textarea x2]</div></div>
+<div class="question q7"><div class='input_contents area num'><label>7. These things inspire me as well:</label>[textarea other-inspo class:textarea x2]</div>
+<div class='input_contents area'><label class='followup'>For these reasons:</label>[textarea other-inspo-2 class:textarea x2]</div></div>
+<div class="question q10"><div class='input_contents area num'><label>8. The subject/s of my work is/are:</label>[textarea work-subject class:textarea x2]</div>
+<div class="question q11"><div class='input_contents area num'><label>9. These formal/visual elements are important to understanding my work:</label>[textarea formal-elements class:textarea x2]</div></div>
+<div class="question q12"><div class='input_contents area num'><label>10. These elements of my process are important to understanding my work:</label>[textarea process class:textarea x2]</div></div>
+<div class="question q15"><div class='input_contents area num'><label>11. I am connected to the contemporary critical dialog of my medium through these ideas/theorists:</label>[textarea critical-dialogue class:textarea x2]</div></div>
+<div class="question q02"><p>If you would like, please upload 5-20 images and any previous statements you would like considered:</p>
+<i>Photographs must be in a .jpeg, .jpg or .pdf format. Files submitted may not be larger than 8”x10” / 72 dpi.</i>
+<div class='btn'><div class="button_box img_input"> <label>[file zip-file limit:15000000 filetypes:.zip class:img_inputs]<span class='uploadText'>Upload .zip</span></label></div></div></div>
+<div class="question q20"><div class='input_contents truefalse num'><label>12. The final exhibition space for my work is a:</label> [radio exh-space use_label_element default:1 "Website" "Gallery" "Book" "Other:"]</div>
+<div class='other_text'>[textarea other-text class:textarea x1]</div>
+<div class='input_contents area'><label class='followup'>This is the best place to see my work because: </label>[textarea textarea-5 class:textarea x2]</div></div>
+<div class='btn'><div class="button_box submit_q"> [submit "SUBMIT"]</div></div>

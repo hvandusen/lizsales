@@ -50,8 +50,6 @@
     } else if (w > 1480) {
       theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     }
-
-    console.log("set ",w,theText)
     $(".postBar, .preBar").text(theText);
   }
 
@@ -92,6 +90,7 @@
   });
 
   var bigSquigs;
+  var theFormData = {};
   $(document).ready(function() {
     setHeads();
     bigSquigs = $($(".preBar")[0]).text();
@@ -108,7 +107,68 @@
     setInterval(function(){
         $(".thankyou-page .robot").toggleClass("flicker");
     },400);
+    setFormData();
+    $(".questionnaire.test .wpcf7-form").submit(function(e){
+      getFormData();
+      e.preventDefault();
+      e.stopPropagation();
+      //sessionStorage.formData = $(this).serialize();
+      window.scrollTo(0,0)
+      updateOutput();
+    });
+    $(".output").click(function(){
+      $(this).toggleClass("hidden")
+    })
   });
+  var formFields = [ 'name', 'bday', 'birthplace', 'country', 'work-city', 'works-with%5B%5D', 'works-with%5B%5D', 'works-with%5B%5D', 'works-with%5B%5D', 'work-with', 'grew-up', 'grew-up-3', 'also-works-with%5B%5D', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
+  function getFormData(){
+    sessionStorage.inputs = "";
+    $(".questionnaire .wpcf7-form input, .questionnaire .wpcf7-form textarea ").map(function(i,e){
+      theFormData[$(e).attr("name")] = $(e).val();
+      sessionStorage["form-"+$(e).attr("name")] = $(e).val();
+      sessionStorage.inputs += " "+$(e).attr("name")
+    })
+    console.log(theFormData)
+  }
+  function setFormData(){
+    if(!sessionStorage.hasOwnProperty("form-name")){
+      return
+    }for(var i in sessionStorage){
+      if(i.indexOf("form-")>-1){
+        theFormData[i.replace("form-","")] = sessionStorage[i];
+        $("[name='"+(i.replace("form-",""))+"']").val(sessionStorage[i]);
+    }
+  }
+    handleCheckboxLabelClick();
+  }
+  function writeStatement(){
+    var html = "<div class='statement'>";
+    for(var i in sessionStorage){
+      if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
+        theFormData[i.replace("form-","")] = sessionStorage[i];
+    }
+  }
+
+    for(var i in theFormData){
+      html+= "<span class='statement-text'>"+i+" "+theFormData[i]+"</span>";//$("[name='"+(i.replace("form-",""))+"']").val(sessionStorage[i]);
+    }
+    html+= "</div>";
+    console.log("dug",theFormData,Object.keys(theFormData))
+    return html;
+  }
+  function updateOutput(){
+    var out = {};
+    var html = "";
+    html+= writeStatement();
+    for(var i in sessionStorage){
+      if(i.indexOf("form-")>-1 && formFields.indexOf((i.replace("form-",""))>-1)){
+        html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + sessionStorage[i] + "</div>";
+      }
+
+    }
+    $(".output").html(html);
+  }
+  updateOutput();
   //checkboxes
   $(".wpcf7-list-item label").map(function(i, e) {
     //$('<span class="xBox">[ ]</span>').prependTo($(e));
@@ -116,8 +176,8 @@
   });
   var ignoreNextClick = false;
   var cartTotal = 0;
-
-  $(".wpcf7-list-item >label").click(function() {
+  function handleCheckboxLabelClick(){
+    console.log("handleCheckboxLabelClick");
     ignoreNextClick = !ignoreNextClick;
     if (ignoreNextClick) {
       return;
@@ -272,28 +332,31 @@
       $("#amt").text(calcTotal);
       $("#realTotal").text(calcTotal);
     }
-  });
-
-  $(".exh-space .last").click(function() {
-    $(".other_text").css("display", "block");
-  });
-  $(".truefalse .wpcf7-list-item").click(function() {
-    $(this)
+  }
+  $(".wpcf7-list-item >label").click(handleCheckboxLabelClick);
+  function handleCheckboxClick(element){
+    console.log("handleCheckboxClick");
+    $(element)
       .closest(".truefalse")
       .find(".chbox span")
       .map(function(i, e) {
         $(e).text(" ");
       });
-    $(this)
+    $(element)
       .find(".chbox span")
       .text("X");
     return;
+  }
+  $(".exh-space .last").click(function() {
+    $(".other_text").css("display", "block");
   });
-  $(".truefalse .last").click(function() {
-    $(this)
+  $(".truefalse .wpcf7-list-item").click(handleCheckboxClick);
+  function handleTrueFalse(el) {
+    console.log("handleTrueFalse");
+    $(el)
       .find(".chbox span")
       .text("X");
-    $(this)
+    $(el)
       .find("input")
       .prop("checked", true);
     $(".truefalse .first")
@@ -302,6 +365,9 @@
     $(".truefalse .first")
       .find(".chbox span")
       .text(" ");
+  }
+  $(".truefalse .last").click(function() {
+    handleTrueFalse(this);
   });
 
   function calculateTotal() {
@@ -406,21 +472,6 @@
     e.stopPropagation();
     // // 	//$($('.uploadText')[0]).trigger('click');
   });
-
-  // $('.one-liner label').click(function(){
-  //
-  // return
-  // 	//make it all blue
-  // 	$('.one-liner label').css({
-  // 		'color' : '#0033cc',
-  // 		'border-bottom' : 'solid #0033cc 1px'
-  // 	});
-  // 	$(this).css({
-  // 		'color' : 'black',
-  // 		//'border-bottom' : 'solid black 1px'
-  // 	});
-  // 		$(this).find('.one-l').css('color', 'black');
-  // });
 
   if (window.Modernizr.flexbox === false) {
     $(".pricing-fields").addClass("noFlex");
