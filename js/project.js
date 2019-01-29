@@ -108,11 +108,11 @@
         $(".thankyou-page .robot").toggleClass("flicker");
     },400);
     setFormData();
-    $(".questionnaire.test .wpcf7-form").submit(function(e){
+    $(".questionnaire.test .wpcf7-form input").on("input",function(e){
       getFormData();
-      e.preventDefault();
-      e.stopPropagation();
-      window.scrollTo(0,0)
+      // e.preventDefault();
+      // e.stopPropagation();
+      // window.scrollTo(0,0)
       updateOutput();
     });
     $(".output").click(function(){

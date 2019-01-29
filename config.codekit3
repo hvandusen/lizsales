@@ -2613,7 +2613,8 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
@@ -2632,6 +2633,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/editor-style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/liz-live-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/liz-live-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -3150,6 +3161,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/border_1_3.png": {
+		"ft": 32768,
+		"iS": 107303,
+		"oA": 0,
+		"oAP": "/images/border_1_3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/border_3.png": {
 		"ft": 32768,
 		"iS": 10158,
@@ -3354,6 +3376,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/compressed/sample-form.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/statement.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/compressed/statement.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
