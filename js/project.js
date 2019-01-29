@@ -112,65 +112,96 @@
       getFormData();
       e.preventDefault();
       e.stopPropagation();
-      //sessionStorage.formData = $(this).serialize();
       window.scrollTo(0,0)
       updateOutput();
     });
     $(".output").click(function(){
       $(this).toggleClass("hidden")
     })
+    updateOutput();
   });
-  var formFields = [ 'name', 'bday', 'birthplace', 'country', 'work-city', 'works-with%5B%5D', 'works-with%5B%5D', 'works-with%5B%5D', 'works-with%5B%5D', 'work-with', 'grew-up', 'grew-up-3', 'also-works-with%5B%5D', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
+  var formFields = [ 'name', 'bday', 'birthplace', 'country', 'work-city', 'works-with', 'work-with', 'grew-up', 'grew-up-3', 'exh-space-2', 'also-works-with', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'process-2','work-subject-2', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
   function getFormData(){
-    sessionStorage.inputs = "";
+    localStorage.inputs = "";
     $(".questionnaire .wpcf7-form input, .questionnaire .wpcf7-form textarea ").map(function(i,e){
-      theFormData[$(e).attr("name")] = $(e).val();
-      sessionStorage["form-"+$(e).attr("name")] = $(e).val();
-      sessionStorage.inputs += " "+$(e).attr("name")
+      var name = $(e).attr("name");
+      console.log("field name: ",name)
+        theFormData[name] = $(e).val();
+        localStorage["form-"+$(e).attr("name")] = $(e).val();
+        localStorage.inputs += " "+name;
+      // }
     })
     console.log(theFormData)
+    var mediaTypes = [];
+    $(".checkbox-1 input:checked").map(function(i,e){
+        mediaTypes.push ($(e).val());
+    })
+    localStorage["form-works-with"] = mediaTypes.join(", ")
+    theFormData["works-with"]= mediaTypes.join(", ")
+    mediaTypes = [];
+    $(".checkbox-2 input:checked").map(function(i,e){
+        mediaTypes.push ($(e).val());
+    })
+
+    localStorage["form-also-works-with"] = mediaTypes.join(", ")
+    theFormData["also-works-with"]= mediaTypes.join(", ")
+    var exh_space = $(".exh-space input:checked").parent().find(".wpcf7-list-item-label").text();
+    localStorage["form-exh-space"] = exh_space
+    theFormData["exh-space"]= exh_space
   }
   function setFormData(){
-    if(!sessionStorage.hasOwnProperty("form-name")){
-      return
-    }for(var i in sessionStorage){
+    if(!localStorage.hasOwnProperty("form-name")){
+      return;
+    }
+    for(var i in localStorage){
       if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
-        theFormData[i.replace("form-","")] = sessionStorage[i];
-        $("[name='"+(i.replace("form-",""))+"']").val(sessionStorage[i]);
+        theFormData[i.replace("form-","")] = localStorage[i];
+        $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
+        console.log(localStorage[i])
     }
   }
-    handleCheckboxLabelClick();
-  }
-  function writeStatement(){
-    var html = "<div class='statement'>";
-    for(var i in sessionStorage){
-      if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
-        theFormData[i.replace("form-","")] = sessionStorage[i];
-    }
+    // handleCheckboxLabelClick();
   }
 
-    for(var i in theFormData){
-      html+= "<span class='statement-text'>"+i+" "+theFormData[i]+"</span>";//$("[name='"+(i.replace("form-",""))+"']").val(sessionStorage[i]);
+
+  function writeStatement(){
+    //John Smith (b. 1980. London, England) is a painter who lives and works in Brooklyn. He works in this medium because he enjoys converting something from the real world into an imagined space through paint. He is inspired by visual artist Philip Guston because this artist painted the
+//existential in an unexpectedly cartoonish way. He is also inspired by the writer Thomas Pynchon because he turned real life into fantasy.
+//The main subject of Smith’s work is artifice, which is important to him because technology has transformed our relationship with reality. His art-making process consists of depicting real world objects he has collected in his studio in imagined space from his fantasy life. This is important to understanding his work because he is concerned with the overlap //between real and imagined worlds. He connected to the contemporary critical dialog of his medium through the ideas of the theorist Jean Baudrillard. The ideal exhibition space for his work is a gallery because paintings are really 3-dimensional objects that should be seen in person.
+    var html = "<div class='statement'>";
+    for(var i in localStorage){
+      if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
+        theFormData[i.replace("form-","")] = localStorage[i];
+      }
     }
+    html +=
+    theFormData["name"]+ " (b. "+theFormData["bday"]+". "+theFormData["birthplace"]+", "+theFormData["country"]+")" +
+    "is a "+theFormData["works-with"]+ " who lives and works in "+theFormData["work-city"]+". He works in this medium because "+theFormData["work-with"]+
+    "He is inspired by the visual artist "+theFormData["artists"]+" because "+theFormData["artists-2"] + ". He is also inspired by the writer "+theFormData["writers"]+" because "+theFormData["writers-2"]+
+    ". <br><br>The main subject of "+ theFormData["name"]+"'s work is "+theFormData["work-subject"]+" which is important to him because "+ theFormData["work-subject-2"] +". "+
+    "His art-making process consists of "+theFormData["process"]+ "This is important to understanding his work because "+theFormData["process-2"]+
+    ". He connected to the contemporary critical dialog of his medium through the ideas of the theorist "+theFormData["critical-dialogue"]+
+    ". The ideal exhibition space for his work is a "+ theFormData["exh-space"]+" because "+ theFormData["exh-space-2"]
+    html += "<br><br>";
+    // for(var i in theFormData){
+      // html+= "<span class='statement-text'>"+theFormData[i]+"</span>";//$("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
+    // }
     html+= "</div>";
-    console.log("dug",theFormData,Object.keys(theFormData))
     return html;
   }
   function updateOutput(){
     var out = {};
     var html = "<h1>Generated Statement</h1>";
     html+= writeStatement();
-    for(var i in sessionStorage){
+    for(var i in localStorage){
       var name = i.replace("form-","");
-      console.log(formFields.indexOf(name))
       if(i.indexOf("form-")>-1 && formFields.indexOf(name)>-1){
-        html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + sessionStorage[i] + "</div>";
+        html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + localStorage[i] + "</div>";
       }
 
     }
     $(".output").html(html);
   }
-  updateOutput();
   //checkboxes
   $(".wpcf7-list-item label").map(function(i, e) {
     //$('<span class="xBox">[ ]</span>').prependTo($(e));
@@ -179,7 +210,6 @@
   var ignoreNextClick = false;
   var cartTotal = 0;
   function handleCheckboxLabelClick(){
-    console.log("handleCheckboxLabelClick");
     ignoreNextClick = !ignoreNextClick;
     if (ignoreNextClick) {
       return;
@@ -206,6 +236,7 @@
       $(this)
         .text()
         .indexOf("All of") > -1;
+
     // if(removeAll)
     //setup cart
     if (!cart.hasOwnProperty(input_group)) {
@@ -335,9 +366,37 @@
       $("#realTotal").text(calcTotal);
     }
   }
-  $(".wpcf7-list-item >label").click(handleCheckboxLabelClick);
+
+  function resetExhSpace(){
+    $(".exh-space input").map(function(i,e){
+      $(e).attr("checked",false);
+      $(e).parent().find(".chbox span").text(" ")
+    })
+  }
+
+  $(".exh-space .wpcf7-list-item").click(function(e){
+    var input = $(this).find("input")[0];
+    var checked = input.checked;
+    resetExhSpace();
+    var box = $(this).find(".chbox span");
+    input.checked = !checked;
+    box.text(input.checked ? "X" : " ");
+    $(this).val($(this).find(".wpcf7-list-item-label").text())
+    localStorage["form-exh-space"] = $(this).find(".wpcf7-list-item-label").text();
+    e.preventDefault();
+    e.stopPropagation();
+  })
+
+  $(".checkbox-1 .wpcf7-list-item, .checkbox-2 .wpcf7-list-item").click(function(e){
+    var input = $(this).find("input")[0];
+    var box = $(this).find(".chbox span");
+    input.checked = !input.checked;
+    box.text(input.checked ? "X" : " ");
+    e.stopPropagation();
+  })
+
+  $(".pricing-fields .wpcf7-list-item >label").click(handleCheckboxLabelClick);
   function handleCheckboxClick(element){
-    console.log("handleCheckboxClick");
     $(element)
       .closest(".truefalse")
       .find(".chbox span")

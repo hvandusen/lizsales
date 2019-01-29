@@ -2613,8 +2613,7 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"cB": 0,
-		"ft": 8192,
+		"ft": 131072,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
@@ -2633,6 +2632,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/editor-style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/liz-live.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/liz-live-min.css",
 		"oF": 0,
 		"oS": 3
 		},

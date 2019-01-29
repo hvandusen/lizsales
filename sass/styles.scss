@@ -305,7 +305,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		line-height: 1em;
 		margin: .5em 0;
 	}
-	position: absolute;
+	position: fixed;
 	overflow: scroll;
 	background: white;
 	margin: 0 1em 0 0;
