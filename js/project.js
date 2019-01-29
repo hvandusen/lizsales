@@ -108,7 +108,8 @@
         $(".thankyou-page .robot").toggleClass("flicker");
     },400);
     setFormData();
-    $(".questionnaire.test .wpcf7-form input").on("input",function(e){
+    $(".questionnaire.test .wpcf7-form input, .questionnaire.test .wpcf7-form textarea").on("input",function(e){
+      console.log(e)
       getFormData();
       // e.preventDefault();
       // e.stopPropagation();
@@ -160,6 +161,19 @@
         console.log(localStorage[i])
     }
   }
+    //henry
+    var worksWith = localStorage["form-works-with"].split(", ");
+    $(".works-with .wpcf7-list-item-label").map(function(i,el){
+      console.log("workswith",worksWith)
+      if(worksWith.indexOf($(el).text())>-1){
+        $(el).parent().click()
+        $(el).parent().find("input")[0].checked = true;
+        console.log("fuck",$(el).parent().find("input"))
+
+      }
+    })
+    console.log(localStorage["form-exh-space"]);
+
     // handleCheckboxLabelClick();
   }
 
@@ -192,7 +206,7 @@
   function updateOutput(){
     var out = {};
     var html = "<h1>Generated Statement</h1>";
-    html+= writeStatement();
+    html+= statement(theFormData);
     for(var i in localStorage){
       var name = i.replace("form-","");
       if(i.indexOf("form-")>-1 && formFields.indexOf(name)>-1){

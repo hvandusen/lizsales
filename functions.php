@@ -4,8 +4,8 @@ function chipsScripts() {
 		wp_register_script('libsJS',get_bloginfo('template_directory') . '/js/compressed/libs.js');
 		wp_enqueue_script('libsJS');
 		//if(is_page('home')){
-		wp_register_script('scriptsJS',get_bloginfo('template_directory') . '/js/compressed/statement.js');
-		wp_enqueue_script('scriptsJS');
+		wp_register_script('statementJS',get_bloginfo('template_directory') . '/js/compressed/statement.js');
+		wp_enqueue_script('statementJS');
 			wp_register_script('scriptsJS',get_bloginfo('template_directory') . '/js/compressed/project.js');
 			wp_enqueue_script('scriptsJS');
 		//}
