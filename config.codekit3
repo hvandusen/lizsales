@@ -3340,6 +3340,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/js/compressed/statement.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/compressed/compressed/statement.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/js/jquery.cycle2.min.js": {
 		"ft": 64,
 		"ma": 0,

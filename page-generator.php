@@ -50,7 +50,25 @@ ________| |________
 $(document).ready(function(){
 	$('.wpcf7-form:eq(0)').submit(function(){
 		window.sessionStorage.email = $(".wpcf7-email").val();
-		console.log(window.sessionStorage)
 	});
+
+	setInterval(function(){
+		var txt = $(".ascii.robot1").html().split('\n');
+		var rest = txt.splice(4);
+		txt[0] = robotString(12);
+		txt[1] = robotString(16);
+		txt[2] = robotString(9)+"  ___|___  "+robotString(9);
+		txt[3] = robotString(3)+"  |  o o  |  "+robotString(3);
+		var out = txt.concat(rest).join("\n");
+		$(".ascii.robot1").html(out);
+	},500)
 })
+function robotString(length){
+	var out = "";
+	var chars = "  a X r t Z s & 8*%#Q(#)$ _             "
+	for (var i = 0; i < length; i++) {
+		out+=chars.charAt(Math.floor(Math.random()*chars.length))
+	}
+	return out;
+}
 </script>

@@ -283,8 +283,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 
 .output {
-	transition: .4s all;
-	cursor: pointer;
 	&.hidden{
 		height: 100px;
 		width: 100px;
@@ -297,14 +295,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		border: black solid 1px;
 		overflow: hidden;
 	}
+	h1 {
+		pointer-events: none;
+	}
 	.statement {
+		pointer-events: none;
 		margin-bottom: 1em;
 	}
 	.setting {
-		font-size: .4em;
+		display: none;
+		font-size: 12px;
 		line-height: 1em;
 		margin: .5em 0;
 	}
+	transition: .4s all;
+	cursor: pointer;
 	position: fixed;
 	overflow: scroll;
 	background: white;
@@ -313,6 +318,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	z-index: 10;
 	top: 0;
 	height: 100vh;
+	font-size: 18px;
+	line-height: 1.1em;
+	max-width: 500px;
 }
 
 .section {
@@ -852,6 +860,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	#container, #content {
 		background: #1138C0;
 	}
+	.pdf {
+		display: none;
+	}
 	.ascii {
 		color: white;
 	}
@@ -949,6 +960,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		display: none;
 	}
 	.pword-back div {
+		color: #c13a1c;
 		/*color: #0033cc;
 		border-bottom: solid 1px #0033cc;*/
 	}

@@ -109,7 +109,6 @@
     },400);
     setFormData();
     $(".questionnaire.test .wpcf7-form input, .questionnaire.test .wpcf7-form textarea").on("input",function(e){
-      console.log(e)
       getFormData();
       // e.preventDefault();
       // e.stopPropagation();
@@ -126,13 +125,11 @@
     localStorage.inputs = "";
     $(".questionnaire .wpcf7-form input, .questionnaire .wpcf7-form textarea ").map(function(i,e){
       var name = $(e).attr("name");
-      console.log("field name: ",name)
         theFormData[name] = $(e).val();
         localStorage["form-"+$(e).attr("name")] = $(e).val();
         localStorage.inputs += " "+name;
       // }
     })
-    console.log(theFormData)
     var mediaTypes = [];
     $(".checkbox-1 input:checked").map(function(i,e){
         mediaTypes.push ($(e).val());
@@ -158,21 +155,23 @@
       if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
         theFormData[i.replace("form-","")] = localStorage[i];
         $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
-        console.log(localStorage[i])
     }
   }
     //henry
     var worksWith = localStorage["form-works-with"].split(", ");
+    var exhSpace = localStorage["form-exh-space"];
     $(".works-with .wpcf7-list-item-label").map(function(i,el){
-      console.log("workswith",worksWith)
       if(worksWith.indexOf($(el).text())>-1){
         $(el).parent().click()
         $(el).parent().find("input")[0].checked = true;
-        console.log("fuck",$(el).parent().find("input"))
-
+      }
+    });
+    $(".exh-space .wpcf7-list-item-label").map(function(i,el){
+      if(exhSpace === $(el).text()){
+        $(el).parent().click()
+        // $(el).parent().find("input")[0].checked = true;
       }
     })
-    console.log(localStorage["form-exh-space"]);
 
     // handleCheckboxLabelClick();
   }
@@ -427,7 +426,6 @@
   });
   $(".truefalse .wpcf7-list-item").click(handleCheckboxClick);
   function handleTrueFalse(el) {
-    console.log("handleTrueFalse");
     $(el)
       .find(".chbox span")
       .text("X");
