@@ -128,7 +128,7 @@
     if($(".questionnaire").length)
       updateOutput();
   });
-  var formFields = [ 'name', 'bday', 'birthplace', 'country', 'work-city', 'works-with', 'work-with', 'grew-up', 'grew-up-3', 'exh-space-2', 'also-works-with', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'process-2','work-subject-2', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
+  var formFields = [ 'artistname','name', 'bday', 'birthplace', 'country', 'work-city', 'works-with', 'work-with', 'grew-up', 'grew-up-3', 'exh-space-2', 'also-works-with', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'process-2','work-subject-2', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
   function getFormData(){
     localStorage.inputs = "";
     $(".questionnaire .wpcf7-form input, .questionnaire .wpcf7-form textarea ").map(function(i,e){
@@ -187,14 +187,20 @@
   function updateOutput(){
     var out = {};
     var html = "<h3>Statement Preview</h3>";
-    if(theFormData && theFormData.hasOwnProperty("name"))
-      html+= statement(theFormData);
+    if(!theFormData && !theFormData.hasOwnProperty("artistname"))
+      return
+    var theStatement = statement(theFormData)
+    var paragraphs = $(theStatement).html().split("\n\n");
+    // console.log("theStatement ",$(theStatement).html().split("\n\n"))
+    $(".generated-statement-1 textarea").val(paragraphs[0]);
+    $(".generated-statement-2 textarea").val(paragraphs[1]);
+    //switch out newlines for <br> tags for our preview
+      html+= theStatement.replace(/\n/g, "<br/>");
     for(var i in localStorage){
       var name = i.replace("form-","");
       if(i.indexOf("form-")>-1 && formFields.indexOf(name)>-1){
         html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + localStorage[i] + "</div>";
       }
-
     }
     $(".output").html(html);
   }

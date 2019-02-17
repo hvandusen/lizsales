@@ -100,7 +100,7 @@ function statement(theFormData){
       }
     }
   }
-  var lastName = theFormData["name"].split(" ").slice(-1)[0];
+  var lastName = theFormData["artistname"].split(" ").slice(-1)[0];
   if(lastName.charAt(lastName.length-1) === "s" || lastName.charAt(lastName.length-1) === "z"){
     lastName += "'";
   }else{
@@ -108,7 +108,7 @@ function statement(theFormData){
   }
 
   html += (
-  theFormData["name"]+ printOrigin(theFormData) + " is a "+
+  theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
   artistTitle(theFormData["works-with"])+ " who lives and works in "+
   theFormData["work-city"]+". "+
 
@@ -129,7 +129,7 @@ function statement(theFormData){
     "They are also inspired by "+stripPeriod(lower(theFormData["other-inspo"]))+
     (theFormData["other-inspo-2"].length>4 ? " because "+
     ensurePeriod(lower(theFormData["other-inspo-2"])): ""):"")+
-  "<br><br>"+
+  "\n\n"+
   (theFormData["work-subject"] ?
     "The main subject of "+lastName+" work is "+
     stripPeriod(lower(theFormData["work-subject"]))+
@@ -152,7 +152,6 @@ function statement(theFormData){
   ensurePeriod(lower(theFormData["exh-space"]))) : "")
 );
 
-  html += "<br><br>";
   html+= "</div>";
   return html;
 }

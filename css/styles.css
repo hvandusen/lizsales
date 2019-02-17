@@ -692,6 +692,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   text-decoration: none;
   border: 0 none; }
 
+.generated-statement {
+  position: absolute;
+  visibility: hidden;
+  top: -9000px;
+  left: -9000px; }
+
 .nav {
   height: 2em;
   padding: 10px;
@@ -738,6 +744,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     top: auto;
     border-radius: 50%;
     margin: 25px 50px;
+    margin: 35px 39px;
     border: black solid 1px;
     overflow: hidden; }
     .output.hidden h3, .output.hidden .statement {
@@ -863,7 +870,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     margin: 0 auto;
     line-height: 1.4em; }
   .section.questionnaire, .section #wpcf7-f25-p7-o1, .section .wpcf7 {
-    margin-bottom: 0em; }
+    margin-bottom: 0em;
+    padding-bottom: 1em; }
     .section.questionnaire .question, .section #wpcf7-f25-p7-o1 .question, .section .wpcf7 .question {
       margin-bottom: 2em;
       margin-bottom: 2.6em; }
