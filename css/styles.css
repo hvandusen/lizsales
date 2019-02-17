@@ -748,6 +748,39 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     line-height: 1em;
     margin: .5em 0; }
 
+@media (max-width: 970px) {
+  .gen-link.right {
+    float: none;
+    display: block;
+    clear: left; }
+
+  .nav a {
+    color: #0033cc;
+    padding: 0 10px;
+    float: none; }
+
+  .ascii.typewriter {
+    padding-top: 3em; } }
+@media (max-width: 660px) {
+  .nav {
+    text-align: center; }
+
+  .ascii.typewriter {
+    overflow: visible;
+    text-indent: inherit;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 1.4em; }
+    .ascii.typewriter .asciiTitle {
+      color: #c13a1c;
+      transform: scale(1.2);
+      display: inline-block;
+      transform-origin: 40px 0px; } }
+@media (max-width: 480px) {
+  .right.elementa.gen-link, .right.gen-link.ascii-border, .section.questionnaire .post-password-form #pword-box input.right.gen-link, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right.gen-link, .section .wpcf7 .post-password-form #pword-box input.right.gen-link, .right.gen-link.input, .section.questionnaire form .right.gen-link.txt_input, .section #wpcf7-f25-p7-o1 form .right.gen-link.txt_input, .section .wpcf7 form .right.gen-link.txt_input, .section.questionnaire textarea.right.gen-link, .section #wpcf7-f25-p7-o1 textarea.right.gen-link, .section .wpcf7 textarea.right.gen-link, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .right.gen-link.submit_bg, .section #wpcf7-f25-p7-o1 .right.gen-link.submit_bg, .section .wpcf7 .right.gen-link.submit_bg, .pword-back span.right.gen-link, .pdf span.right.gen-link, .right.gen-link.wpcf7-submit, .right.gen-link.img_input, .right.gen-link.paypal-submit, .img_input label.right.gen-link, #coupon-label .right.gen-link#coupon, .right.gen-link.ascii {
+    max-width: 169px;
+    line-height: 1.3em;
+    margin-top: 0.3em; } }
 .section {
   margin: 0 auto;
   margin-bottom: 1em; }
@@ -1077,18 +1110,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       margin: 5px;
       display: inline; }
 
-.questionnaire.test .wpcf7-form-control.wpcf7-submit {
-  display: none; }
-
 .generator #container, .generator #content {
   background: #1138C0; }
 .generator .pdf {
   display: none; }
+.generator .bar {
+  margin: 2em 0 !important; }
 .generator .ascii {
-  color: white; }
+  color: white;
+  display: inline-block;
+  margin-bottom: 1em; }
+  .generator .ascii .asciiTitle {
+    color: white; }
 .generator .email-form {
   text-align: center;
-  margin: 4em 0 0 0; }
+  margin: 4em 0 4em 0; }
   .generator .email-form .wpcf7 {
     max-width: none;
     display: inline-block; }
@@ -1167,13 +1203,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   display: none; }
 .generator .pword-back div {
   color: #c13a1c;
+  color: #FFFF99;
   /*color: #0033cc;
   border-bottom: solid 1px #0033cc;*/ }
 .generator .bar {
   margin-bottom: 2em; }
 @media (max-width: 480px) {
-  .generator .bar {
-    display: none; } }
+  .generator .email-form .wpcf7 .wpcf7-form-control-wrap {
+    display: inline-block;
+    width: 250px; }
+    .generator .email-form .wpcf7 .wpcf7-form-control-wrap input {
+      font-size: 18px; } }
 .generator .mobile-header {
   display: none; }
 
@@ -1400,6 +1440,8 @@ body .pdf {
     color: #c13a1c; }
   .ascii div .preBar:before {
     content: "      "; }
+  .ascii div .bar-middle .preBar, .ascii div .bar-middle .postBar {
+    visibility: hidden; }
 
 @media (max-width: 480px) {
   .preBar, .postBar {

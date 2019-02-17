@@ -34,8 +34,8 @@ body_class($post->post_name);
 					<a class='left' href='<?php bloginfo('wpurl')?>/#pricing'>Pricing</a>
 					<?php
 					if ( is_user_logged_in() ) { ?>
-						<a class='right elementa' href='<?php bloginfo('url'); ?>/generator'>ARTIST STATEMENT GENERATOR</a>
 						<a class='left' href='mailto:info@iwriteartiststatements.com'>Contact</a>
+						<a class='right elementa gen-link' href='<?php bloginfo('url'); ?>/generator'>ARTIST STATEMENT GENERATOR</a>
 					<?php
 				} else { ?>
 					<a class='right elementa' href='<?php bloginfo('url'); ?>/questionnaire'>0---k</a>

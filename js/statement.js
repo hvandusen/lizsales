@@ -10,7 +10,7 @@ var worksWithConverter = {
   "Mixed media": "mixed media artist",
   "Bookarts": "book artist",
   "Text": "textual artist",
-  "they work in a variety of media": "works in a variety of media"
+  "they work in a variety of media": "also works in a variety of media"
 };
 
 function ensurePeriod(text){
@@ -34,11 +34,16 @@ function stripPeriod(text){
 function artistTitle(raw){
   var output = "";
   var types = raw.split(", ");
-  types.map(function(e,i){
+  var variety = false;
+  if(types.indexOf("they work in a variety of media")>-1){
+    types = types.splice(0,types.length-1);
+    variety = true;
+  }
+  var seperator = (types.length<=2 ? " and " : ", and ");
+    types.map(function(e,i){
     // second to last
-    console.log("a type: ",e)
     if(i===types.length-2){
-      output+= worksWithConverter[e]+", and ";
+      output+= worksWithConverter[e]+seperator;
     }
     //last
     else if(i===types.length-1){
@@ -47,8 +52,8 @@ function artistTitle(raw){
     else {
         output+= worksWithConverter[e]+", "+ (i===types.length-2 ? "and " : "");
     }
-
   });
+  output+= (variety ? " working in a variety of media": "")
   return output;
 }
 

@@ -23,7 +23,6 @@
     window.innerWidth < 850
   ) {
     $(".postBar, .preBar").text("~~~~~~~~~");
-    //$('.postBar, .preBar').text('~~~~~~~~~~~~~~~');
   }
 
   $(window).resize(function() {
@@ -34,21 +33,20 @@
   function setHeads() {
     var w = window.innerWidth;
     var theText = "";
-
     if (w < 600) {
-      theText = "";
-    } else if (w < 750) {
-      theText = "~~~";
-    } else if (w < 970) {
       theText = "~~~~~~~~~";
-    } else if (w < 1193) {
+    } else if (w < 750) {
       theText = "~~~~~~~~~~~~";
+    } else if (w < 970) {
+      theText = "~~~~~~~~~~~~~~~~~";
+    } else if (w < 1193) {
+      theText = "~~~~~~~~~~~~~~~~~~~~~~~~";
     } else if (w < 1350) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~";
+      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     } else if (w < 1450) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~";
-    } else if (w > 1480) {
       theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+    } else if (w > 1480) {
+      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     }
     $(".postBar, .preBar").text(theText);
   }
