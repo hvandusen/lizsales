@@ -614,7 +614,7 @@ label {
   border-bottom: solid #0033cc 1px; }
 
 .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input {
-  font-size: 22px;
+  font-size: 18px;
   width: auto;
   border: none;
   border-bottom: solid #0033cc 1px;
@@ -719,34 +719,58 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   position: fixed;
   overflow: scroll;
   background: white;
-  margin: 0 1em 0 0;
+  margin: 0;
   padding: 3em;
   z-index: 10;
-  top: 0;
-  height: 100vh;
+  bottom: 25px;
+  right: 50px;
+  border: solid black 1px;
   font-size: 18px;
   line-height: 1.1em;
   max-width: 500px; }
   .output.hidden {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     padding: 0;
     /* color: white; */
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
+    top: auto;
     border-radius: 50%;
-    margin: 1em;
+    margin: 25px 50px;
     border: black solid 1px;
     overflow: hidden; }
-  .output h1 {
+    .output.hidden h3, .output.hidden .statement {
+      display: none; }
+    .output.hidden:before {
+      content: "Preview";
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      /* line-height: 100%; */
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center; }
+  .output h3 {
     pointer-events: none; }
   .output .statement {
     pointer-events: none;
     margin-bottom: 1em; }
   .output .setting {
+    display: none;
     font-size: 12px;
     line-height: 1em;
     margin: .5em 0; }
+  @media (max-width: 480px) {
+    .output {
+      right: 20px;
+      box-sizing: border-box;
+      width: calc(100vw - 40px);
+      bottom: 10px;
+      top: 20px; }
+      .output.hidden {
+        margin: 10px 20px; } }
 
 @media (max-width: 970px) {
   .gen-link.right {
@@ -796,6 +820,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   .section #wpcf7-f25-p7-o1, .section .wpcf7 {
     max-width: 67%;
     margin: 0 auto; }
+    @media (max-width: 480px) {
+      .section #wpcf7-f25-p7-o1, .section .wpcf7 {
+        max-width: none; } }
     .section #wpcf7-f25-p7-o1 .pricing-fields, .section .wpcf7 .pricing-fields {
       max-height: 704px;
       display: flex;
@@ -836,8 +863,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     margin: 0 auto;
     line-height: 1.4em; }
   .section.questionnaire, .section #wpcf7-f25-p7-o1, .section .wpcf7 {
-    max-width: 62%;
-    max-width: 66%;
     margin-bottom: 0em; }
     .section.questionnaire .question, .section #wpcf7-f25-p7-o1 .question, .section .wpcf7 .question {
       margin-bottom: 2em;
@@ -1075,9 +1100,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      max-height: 230px;
+      max-height: 270px;
       justify-content: space-between;
       align-items: baseline; }
+      @media (max-width: 619px) {
+        .section.questionnaire .wpcf7-checkbox, .section.questionnaire .wpcf7-radio, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio, .section .wpcf7 .wpcf7-checkbox, .section .wpcf7 .wpcf7-radio {
+          max-height: none; } }
       .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label, .section.questionnaire .wpcf7-radio .wpcf7-list-item label, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label {
         font-weight: normal;
         border: none;
@@ -1473,9 +1501,6 @@ body .pdf {
     content: "aaaaaaaaaaaaaa";
     color: #ffeee7; }
 
-span.wpcf7-list-item {
-  margin-left: 0em !important; }
-
 .mobile-title {
   display: none; }
 
@@ -1529,7 +1554,13 @@ span.wpcf7-list-item {
     .thankyou-page .thanksgif pre {
       padding: 0; }
 
+@media (max-width: 880px) {
+  span.wpcf7-list-item.last {
+    max-width: 200px; } }
 @media (max-width: 480px) {
+  .pdf.blue {
+    display: none; }
+
   #content {
     margin: 10px; }
 

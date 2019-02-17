@@ -31,24 +31,33 @@
 
 
   function setHeads() {
-    var w = window.innerWidth;
-    var theText = "";
-    if (w < 600) {
-      theText = "~~~~~~~~~";
-    } else if (w < 750) {
-      theText = "~~~~~~~~~~~~";
-    } else if (w < 970) {
-      theText = "~~~~~~~~~~~~~~~~~";
-    } else if (w < 1193) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~";
-    } else if (w < 1350) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    } else if (w < 1450) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    } else if (w > 1480) {
-      theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    }
-    $(".postBar, .preBar").text(theText);
+    console.log("settings headsz")
+    $(".ascii").map(function(i,e){
+      var text = $(e).find(".asciiTitle").text();
+        var w = window.innerWidth;
+        var fixer = "~~~~~";
+        if(text.length>20)
+          fixer = "";
+        var theText = "";
+        if (w < 600) {
+          theText = "~~~~"+fixer;
+        } else if (w < 750) {
+          theText = "~~~~~~~"+fixer;
+        } else if (w < 970) {
+          theText = "~~~~~~~~~~~~"+fixer;
+        } else if (w < 1193) {
+          theText = "~~~~~~~~~~~~~~~~~~~"+fixer;
+        } else if (w < 1350) {
+          theText = "~~~~~~~~~~~~~~~~~~~~~~~"+fixer;
+        } else if (w < 1450) {
+          theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~"+fixer;
+        } else if (w > 1480) {
+          theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"+fixer;
+        }
+        $(e).find(".postBar, .preBar").text(theText);
+      console.log(text,text.length)
+    })
+
   }
 
   setHeads();
@@ -177,7 +186,7 @@
 
   function updateOutput(){
     var out = {};
-    var html = "<h1>Generated Statement</h1>";
+    var html = "<h3>Statement Preview</h3>";
     if(theFormData && theFormData.hasOwnProperty("name"))
       html+= statement(theFormData);
     for(var i in localStorage){

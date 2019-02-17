@@ -34,10 +34,10 @@
 
 	 <?php //the_content(); ?>
 
-<div class='mobile-header'>ARTIST STATEMENT QUESTIONNAIRE</div>
+<div class='mobile-header'>ARTIST STATEMENT GENERATOR</div>
  <span class='ascii'>
  <?php
- $title = 'ARTIST STATEMENT QUESTIONNAIRE';
+ $title = 'ARTIST STATEMENT GENERATOR';
 
  asciiBar($title,true);
  ?>
