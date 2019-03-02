@@ -125,8 +125,14 @@
     $(".output").click(function(){
       $(this).toggleClass("hidden")
     })
-    if($(".questionnaire").length)
+    if($(".questionnaire").length && localStorage.hasOwnProperty("email"))
       updateOutput();
+    if($(".emailaddress").length && localStorage.hasOwnProperty("email"))
+      $(".emailaddress input").val(localStorage["email"])
+    //just a check to see if we on artist statement page. redirect if no email ever entered
+    if($(".generated-statement").length && !localStorage.hasOwnProperty("email")){
+        window.location = "/generator-signup"
+    }
   });
   var formFields = [ 'artistname','name', 'bday', 'birthplace', 'country', 'work-city', 'works-with', 'work-with', 'grew-up', 'grew-up-3', 'exh-space-2', 'also-works-with', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'process-2','work-subject-2', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
   function getFormData(){

@@ -3414,6 +3414,13 @@
 		"oAP": "/loop.php",
 		"oF": 0
 		},
+	"/page-generator-signup.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-generator-signup.php",
+		"oF": 0
+		},
 	"/page-generator.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3433,13 +3440,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/page-home.php",
-		"oF": 0
-		},
-	"/page-questionnaire-test.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/page-questionnaire-test.php",
 		"oF": 0
 		},
 	"/page-questionnaire.php": {
