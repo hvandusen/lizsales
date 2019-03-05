@@ -40,6 +40,9 @@ function stripBecause(text){
 
 function artistTitle(raw){
   var output = "";
+  if(raw === undefined || raw.length === 0){
+    return output;
+  }
   var types = raw.split(", ");
   var variety = false;
   if(types.indexOf("they work in a variety of media")>-1){
@@ -95,7 +98,7 @@ function statement(theFormData){
     " am ":" are ",
     "Because": ""
   };
-  var media = ""; 
+  var media = "";
   if(theFormData){
     media = theFormData.hasOwnProperty("works-with") ? theFormData["works-with"].split(", ") : "";
   }
@@ -109,15 +112,14 @@ function statement(theFormData){
     }
     var re = /me$/;
     theFormData[i] = theFormData[i].replace(re, "them")
-    console.log(theFormData[i])
   }
-  console.log(theFormData)
   var lastName = theFormData.hasOwnProperty("artistname") ? theFormData["artistname"].trim().split(" ").slice(-1)[0] : "";
   if(lastName.charAt(lastName.length-1) === "s" || lastName.charAt(lastName.length-1) === "z"){
     lastName += "'";
   }else{
     lastName += "'s";
   }
+  if(theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"] )
   html += (
   theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
   artistTitle(theFormData["works-with"])+ " who lives and works in "+
@@ -154,14 +156,27 @@ function statement(theFormData){
     " This is important to understanding their work because "+
   stripBecause(ensurePeriod(lower(theFormData["process-2"]))) :"")+
   (theFormData["critical-dialogue"] ?
-    " They connected to the contemporary critical dialog of their medium through the ideas of the theorist "+
+    " They are connected to the contemporary critical dialog of their medium through the ideas of the theorist "+
     stripBecause(ensurePeriod(theFormData["critical-dialogue"])) :"")+
-  (theFormData["exh-space-2"] ?
-  " The ideal exhibition space for their work is a "+
-  (theFormData["exh-space-2"].length>10 ?
-  stripPeriod(lower(theFormData["other-text"]))+" because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
-  stripBecause(ensurePeriod(lower(theFormData["exh-space"])))) : "")
+  (theFormData["exh-space"] ?
+    " The ideal exhibition space for their work is a "+
+    ("WebsiteGalleryBook".indexOf(theFormData["exh-space"])>-1 ?
+      lower(theFormData["exh-space"]) :
+      lower(theFormData["other-text"]))+
+    (theFormData["exh-space-2"].length>10 ?
+      " because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
+      ".")
+  : "")
+
+  // (theFormData["exh-space-2"] ?
+  // " The ideal exhibition space for their work is a "+
+  // (theFormData["exh-space-2"].length>10 ?
+  // stripPeriod(lower(theFormData["other-text"]))+" because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
+  // stripBecause(ensurePeriod(lower(theFormData["exh-space"])))) : "")
 );
+else {
+  html+= "Answer more questions to see a preview."
+}
 
   html+= "</div>";
   return html;

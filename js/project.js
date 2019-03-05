@@ -31,7 +31,6 @@
 
 
   function setHeads() {
-    console.log("settings headsz")
     $(".ascii").map(function(i,e){
       var text = $(e).find(".asciiTitle").text();
         var w = window.innerWidth;
@@ -55,7 +54,6 @@
           theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"+fixer;
         }
         $(e).find(".postBar, .preBar").text(theText);
-      console.log(text,text.length)
     })
 
   }
@@ -197,7 +195,6 @@
       return
     var theStatement = statement(theFormData)
     var paragraphs = $(theStatement).html().split("\n\n");
-    // console.log("theStatement ",$(theStatement).html().split("\n\n"))
     $(".generated-statement-1 textarea").val(paragraphs[0]);
     $(".generated-statement-2 textarea").val(paragraphs[1]);
     //switch out newlines for <br> tags for our preview
@@ -383,6 +380,7 @@
   }
 
   $(".exh-space .wpcf7-list-item").click(function(e){
+    console.log("clicked ",e,$(this).find(".wpcf7-list-item-label").text())
     var input = $(this).find("input")[0];
     var checked = input.checked;
     resetExhSpace();
@@ -393,6 +391,7 @@
     localStorage["form-exh-space"] = $(this).find(".wpcf7-list-item-label").text();
     e.preventDefault();
     e.stopPropagation();
+    updateOutput();
   })
 
   $(".checkbox-1 .wpcf7-list-item, .checkbox-2 .wpcf7-list-item").click(function(e){
