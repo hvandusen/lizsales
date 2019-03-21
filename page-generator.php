@@ -43,7 +43,7 @@
  ?>
  </span>
 <div class='output hidden'></div>
-<div class='questionnaire test section '> 
+<div class='questionnaire test section '>
 	<?php the_content(); ?>
 </div>
 
@@ -55,6 +55,5 @@ $(document).ready(function(){
 	if(window.innerWidth<480){
 		$('.preBar, .postBar').text('')
 	}
-
 })
 </script>

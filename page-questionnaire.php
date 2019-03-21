@@ -56,6 +56,5 @@ $(document).ready(function(){
 	if(window.innerWidth<480){
 		$('.preBar, .postBar').text('')
 	}
-
 })
 </script>

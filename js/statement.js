@@ -84,7 +84,6 @@ function statement(theFormData){
     " My ": " their ",
     "My ": "their ",
     " our ": " their ",
-    "our ": "their ",
     " Our ": " their ",
     "Our ": "their ",
     " I ": " they ",
@@ -119,6 +118,7 @@ function statement(theFormData){
   }else{
     lastName += "'s";
   }
+  console.log("theFormData",theFormData)
   if(theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"] )
   html += (
   theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
@@ -179,6 +179,7 @@ else {
 }
 
   html+= "</div>";
+  console.log(html)
   return html;
 }
 
