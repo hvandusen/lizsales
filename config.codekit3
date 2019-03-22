@@ -2613,7 +2613,8 @@
 		"oF": 0
 		},
 	"/config.rb": {
-		"ft": 131072,
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "/config.rb",
 		"oF": 0
@@ -3160,6 +3161,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/border_1_3.png": {
+		"ft": 32768,
+		"iS": 107303,
+		"oA": 0,
+		"oAP": "/images/border_1_3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/border_3.png": {
 		"ft": 32768,
 		"iS": 10158,
@@ -3552,7 +3564,7 @@
 		},
 	"/screenshot.png": {
 		"ft": 32768,
-		"iS": 2811,
+		"iS": 21042,
 		"oA": 0,
 		"oAP": "/screenshot.png",
 		"oF": 0,

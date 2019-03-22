@@ -1151,11 +1151,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .generator-signup .pdf {
   display: none; }
 .generator-signup .bar {
-  margin: 2em 0 !important; }
+  margin: 3.6em 0 !important; }
 .generator-signup .ascii {
   color: white;
-  display: inline-block;
-  margin-bottom: 1em; }
+  display: inline-block; }
   .generator-signup .ascii .asciiTitle {
     color: white; }
 .generator-signup .email-form {
@@ -1163,13 +1162,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   margin: 4em 0 4em 0; }
   .generator-signup .email-form .wpcf7 {
     max-width: none;
+    width: 66%;
     display: inline-block; }
     .generator-signup .email-form .wpcf7 .wpcf7-form > p {
       margin: 0;
       position: relative; }
     .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap {
       display: inline-block;
-      width: 677px; }
+      width: 677px;
+      width: calc(100% - 160px); }
       .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap:before {
         content: "";
         position: absolute;
@@ -1209,6 +1210,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     .generator-signup .email-form .wpcf7 .submit-wrapper {
       position: relative;
       display: inline-block; }
+      .generator-signup .email-form .wpcf7 .submit-wrapper:hover:before {
+        color: #ffff66;
+        background: url(../images/border_1_3.png); }
       .generator-signup .email-form .wpcf7 .submit-wrapper:before {
         content: "";
         position: absolute;

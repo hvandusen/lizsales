@@ -947,12 +947,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		display: none;
 	}
 	.bar {
-		margin: 2em 0!important;
+		margin: 3.6em 0!important;
 	}
 	.ascii {
 		color: white;
 		display: inline-block;
-		margin-bottom: 1em;
+		// margin-bottom: 1em;
 		.asciiTitle {
 			color:white;
 		}
@@ -963,6 +963,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		margin: 4em 0 4em 0;
 		.wpcf7 {
 			max-width: none;
+			width: 66%;
 			display: inline-block;
 			.wpcf7-form > p {
 				margin: 0;
@@ -971,6 +972,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			.wpcf7-form-control-wrap {
 				display: inline-block;
 				width: 677px;
+				width: calc(100% - 160px);
 				&:before {
 					content: "";
 					position: absolute;
@@ -1013,6 +1015,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			.submit-wrapper {
 				position: relative;
 				display: inline-block;
+				&:hover {
+					&:before{
+						color: #ffff66;
+						background: url(../images/border_1_3.png);
+					}
+				}
 				&:before {
 					content: "";
 					position: absolute;

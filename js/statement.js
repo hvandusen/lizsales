@@ -109,8 +109,8 @@ function statement(theFormData){
           theFormData[i] = stripPeriod(theFormData[i]).slice(0,theFormData[i].length-3)+ " them"
       }
     }
-    var re = /me$/;
-    theFormData[i] = theFormData[i].replace(re, "them")
+    var re = / me$/;
+    theFormData[i] = theFormData[i].replace(re, " them")
   }
   var lastName = theFormData.hasOwnProperty("artistname") ? theFormData["artistname"].trim().split(" ").slice(-1)[0] : "";
   if(lastName.charAt(lastName.length-1) === "s" || lastName.charAt(lastName.length-1) === "z"){
