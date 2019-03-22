@@ -118,7 +118,7 @@ function statement(theFormData){
   }else{
     lastName += "'s";
   }
-  console.log("theFormData",theFormData)
+  console.log("theFormData",theFormData["exh-space"])
   if(theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"] )
   html += (
   theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
@@ -163,7 +163,7 @@ function statement(theFormData){
     ("WebsiteGalleryBook".indexOf(theFormData["exh-space"])>-1 ?
       lower(theFormData["exh-space"]) :
       lower(theFormData["other-text"]))+
-    (theFormData["exh-space-2"].length>10 ?
+    (theFormData["exh-space-2"].length>1 ?
       " because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
       ".")
   : "")

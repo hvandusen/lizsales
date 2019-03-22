@@ -288,32 +288,39 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 
 .output {
+	@extend .elementa;
+	background: white;
 	&.hidden{
-		height: 80px;
-    width: 80px;
+		background-color: transparent;
+		background-image: url(../images/preview-glasses.svg);
+		background-image: url(../images/preview-glasses.png);
+		background-size: 95%;
+    background-repeat: no-repeat;
+		height: 98px;
+		width: 120px;
 		padding: 0;
     /* color: white; */
     bottom: 0;
     right: 0;
     top: auto;
-    border-radius: 50%;
     margin: 25px 50px;
 		margin: 35px 39px;
-    border: black solid 1px;
     overflow: hidden;
 		h3, .statement {
 			display: none;
 		}
 		&:before {
-			content: "Preview";
+			content: "PREVIEW";
 			position: absolute;
-			width: 100%;
-			text-align: center;
+			/* width: 100%; */
+			text-align: right;
 			/* line-height: 100%; */
 			display: flex;
-			justify-content: center;
-			height: 100%;
+			justify-content: flex-end;
+			/* height: 100%; */
 			align-items: center;
+			bottom: 0;
+			right: 0;
 		}
 	}
 	h3 {
@@ -333,13 +340,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	cursor: pointer;
 	position: fixed;
 	overflow: scroll;
-	background: white;
 	margin: 0;
 	padding: 3em;
 	z-index: 10;
 	bottom: 25px;
 	right: 50px;
-	border: solid black 1px;
 	// height: 100vh;
 	font-size: 18px;
 	line-height: 1.1em;
@@ -492,6 +497,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 
 	&.questionnaire, #wpcf7-f25-p7-o1, .wpcf7 {
+		.media-wise {
+			color: #0033cc;
+	    display: inline-block;
+	    margin-bottom: 1em;
+	    font-family: Plantin-bold;
+		}
 		.question {
 			//color: #03c;
 			margin-bottom: 2em;
@@ -737,6 +748,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					padding: 6% 10.9%;
 					padding: calc(6.4% + 6px) calc(14% - 2px);
 					padding: calc(6.4% + 6px) calc(13.5% - 2px);
+					padding: calc(7.4% + 6px) calc(4.9% - 2px);
 					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
@@ -873,9 +885,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		}
 		.wpcf7-checkbox, .wpcf7-radio {
 			display: flex;
-	    flex-direction: column;
-	    flex-wrap: wrap;
-	    max-height: 270px;
+	    flex-flow: column wrap;
+	    max-height: 232px;
 	    justify-content: space-between;
 	    align-items: baseline;
 			//margin-top: .5em;
@@ -939,7 +950,14 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 .questionnaire.test .wpcf7-form-control.wpcf7-submit {
 	// display: none;
 }
+body.generator #content{
+	padding-top: 2.5em;
+}
 .generator-signup {
+	.robot1 {
+		margin-top: 0;
+		margin-bottom: 2.8em;
+	}
 	#container, #content {
 		background: #1138C0;
 	}
@@ -976,14 +994,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				&:before {
 					content: "";
 					position: absolute;
-			    top: -2%;
-			    left: 0px;
-			    width: 100%;
-			    height: 104%;
+			    top: -3px;
+			    left: -8px;
+			    width: calc(100% + 13px);
+			    height: 106px;
 			    pointer-events: none;
-					// background-image: url(../images/email-menu1.png);
-					// background-image: url(../images/email-menu1.svg);
-					border-image: url(../images/artiststatementborderinput-01.png) 28 5 28 32 round;
+			    border-image: url(../images/artiststatementborderinput-02.png) 28 5 28 32 round;
 			    background-size: auto 100%;
 			    z-index: 10;
 			    background-repeat: no-repeat;
@@ -1021,8 +1037,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				display: inline-block;
 				&:hover {
 					&:before{
-						color: #ffff66;
-						background: url(../images/border_1_3.png);
+						// color: #ffff66;
+						// background: url(../images/border_1_3.png);
 					}
 				}
 				&:before {
@@ -1049,6 +1065,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				background: none;
 				vertical-align: top;
 				background: #FFFE93;
+				&:hover {
+					background: #c13a1c;
+					color: #FFFE93;
+				}
 			}
 		}
 	}
@@ -1072,15 +1092,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	.bar {
 			margin-bottom: 2em;
 	}
-	@media(max-width: 480px){
-		.email-form .wpcf7 .wpcf7-form-control-wrap {
-		    display: inline-block;
-		    width: 250px;
-				input {
-					font-size: 18px;
-				}
-		}
-	}
+
 	.mobile-header {
 			display: none;
 	}
@@ -1098,17 +1110,20 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 body .pdf {
 	left: auto;
 	right: 1em;
+	&:hover span {
+		color: #c13a1c;
+	}
 }
 
 .pword-back, .pdf {
 			//float: left;
-			left: 14px;
+			left: 24px;
 			margin:	22px;
 			//margin: 14px;
 			color: #ffff66;
 			text-decoration: none;
 			position: absolute;
-    	top: 14px;
+    	top: 24px;
 			&:hover {
 				color: $red!important;
 			}
@@ -1224,9 +1239,6 @@ margin: 30px;
 			position: absolute;
 			left: 0;
 			left: -11px;
-			@media(max-width: 950px){
-
-			}
 		}
 		}
 		&:hover {
@@ -1590,7 +1602,9 @@ margin: 30px;
 		}
 	}
 }
-
+span.wpcf7-list-item {
+	margin-left: 0!important;
+}
 @media(max-width: 880px){
 	span.wpcf7-list-item.last {
 		max-width: 200px;
@@ -1711,8 +1725,8 @@ height: 113px !important;
 	}
 
 	.thankyou pre {
-		    line-height: 1em;
-				font-size: .4em;
+    line-height: 1em;
+		font-size: .4em;
 	}
 	.pword-back {
 		  margin: 10px 5px;
@@ -1781,4 +1795,31 @@ height: 100%;
 		padding: calc(26% - 5px) 0;
 		color:white;
 	}
+}
+
+@media(max-width: 950px){
+	.generator-signup .email-form .wpcf7 {
+		width: 100%;
+		.wpcf7-form-control-wrap {
+		    display: block;
+		    width: auto;
+				input {
+					font-size: 18px;
+			    margin-bottom: 2em;
+			    width: calc(100% - 2em);
+				}
+		}
+		.wpcf7-form > p {
+			text-align: center;
+			width: 66%;
+			margin-left: 17%;
+		}
+	}
+}
+.thankyou pre {
+	position: relative;
+}
+.ty-1 {
+	position: absolute;
+	right: 0;
 }

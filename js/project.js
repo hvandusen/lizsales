@@ -16,6 +16,7 @@
     } else {
       $(".pleaseRotate").removeClass("landscape");
     }
+    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder", window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started")
   });
 
   if (
@@ -102,6 +103,7 @@
     if (window.innerWidth < 480) {
       $(".postBar, .preBar").text("~~~~~~");
     }
+    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder",window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started")
     $(".numbers").map(function(i, e) {
       $(e).prop(
         "value",
@@ -380,15 +382,15 @@
   }
 
   $(".exh-space .wpcf7-list-item").click(function(e){
-    console.log("clicked ",e,$(this).find(".wpcf7-list-item-label").text())
     var input = $(this).find("input")[0];
     var checked = input.checked;
+    var choice = $(this).find(".wpcf7-list-item-label").text();
     resetExhSpace();
     var box = $(this).find(".chbox span");
     input.checked = !checked;
     box.text(input.checked ? "X" : " ");
     $(this).val($(this).find(".wpcf7-list-item-label").text())
-    localStorage["form-exh-space"] = $(this).find(".wpcf7-list-item-label").text();
+    localStorage["form-exh-space"] = sessionStorage["form-exh-space"] = theFormData["exh-space"] = choice;
     e.preventDefault();
     e.stopPropagation();
     updateOutput();

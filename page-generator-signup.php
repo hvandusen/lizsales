@@ -55,19 +55,25 @@ $(document).ready(function(){
 	if(window.innerWidth<480){
 		$(".your-email input").attr("placeholder","Enter your email")
 	}
-
+	var robotCount = 0;
 	setInterval(function(){
 		var txt = $(".ascii.robot1").html().split('\n');
 		var theTopString = "  ___|___  ";
 		var theEyesString = "  |  o o  |  ";
-		var rest = txt.splice(4);
-		txt[0] = robotString(12); 
+		// var rest = txt.splice(4);
+		txt[0] = robotString(12);
 		txt[1] = robotString(16);
 		var theTop = txt[2].split(theTopString);
 		var theEyes = txt[3].split(theEyesString);
 		txt[2] = robotString(9)+"  ___|___  "+robotString(9);
-		txt[3] = robotString(3)+"  |  o o  |  "+robotString(3);
-		var out = txt.concat(rest).join("\n");
+		if(robotCount++%4 === 0){
+			txt[13] = " ()   |   |   |   |   () ";
+			theEyesString = "  |  • •  |  "
+		}if(robotCount%2 === 0){
+			txt[13] = "(  )  |   |   |   |  (  )";
+		}
+		txt[3] = robotString(3)+theEyesString+robotString(3);
+		var out = txt.concat(txt.splice(4)).join("\n");
 		$(".ascii.robot1").html(out);
 	},250)
 
@@ -103,7 +109,7 @@ $(document).ready(function(){
 })
 function robotString(length){
 	var out = "";
-	var chars = "  a X r t Z s & 8*%#Q(#)$ _             "
+	var chars = "  a X r t Z s & 8*%#Q(#)$ _                                                                                                         "
 	for (var i = 0; i < length; i++) {
 		out+=chars.charAt(Math.floor(Math.random()*chars.length))
 	}

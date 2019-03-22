@@ -2,7 +2,7 @@
 <a href="<?php bloginfo('wpurl'); ?>" class="pword-back blue"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
-<a href="<?php bloginfo('wpurl'); ?>" class="pdf blue"><span>DOWNLOAD AS A PDF</span></a>
+<a href="https://iwriteartiststatements.com/wp-content/uploads/2019/03/iwritegenerator-2.pdf" class="pdf blue"><span>DOWNLOAD AS A PDF</span></a>
 <style>
 	.left, .right{
 		display: none;

@@ -562,11 +562,11 @@ strong {
 .other_text {
   display: none; }
 
-.elementa, .ascii-border, .section.questionnaire .post-password-form #pword-box input, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input, .section .wpcf7 .post-password-form #pword-box input, .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input, .section.questionnaire textarea, .section #wpcf7-f25-p7-o1 textarea, .section .wpcf7 textarea, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .chbox, .section.questionnaire .submit_bg, .section #wpcf7-f25-p7-o1 .submit_bg, .section .wpcf7 .submit_bg, .pword-back span, .pdf span, .wpcf7-submit, .img_input, .paypal-submit, .img_input label, #coupon-label #coupon, .ascii {
+.elementa, .ascii-border, .section.questionnaire .post-password-form #pword-box input, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input, .section .wpcf7 .post-password-form #pword-box input, .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input, .output, .section.questionnaire textarea, .section #wpcf7-f25-p7-o1 textarea, .section .wpcf7 textarea, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .chbox, .section.questionnaire .submit_bg, .section #wpcf7-f25-p7-o1 .submit_bg, .section .wpcf7 .submit_bg, .pword-back span, .pdf span, .wpcf7-submit, .img_input, .paypal-submit, .img_input label, #coupon-label #coupon, .ascii {
   font-family: Elementa;
   font-size: 20px; }
   @media (max-width: 480px) {
-    .elementa, .ascii-border, .section.questionnaire .post-password-form #pword-box input, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input, .section .wpcf7 .post-password-form #pword-box input, .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input, .section.questionnaire textarea, .section #wpcf7-f25-p7-o1 textarea, .section .wpcf7 textarea, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .chbox, .section.questionnaire .submit_bg, .section #wpcf7-f25-p7-o1 .submit_bg, .section .wpcf7 .submit_bg, .pword-back span, .pdf span, .wpcf7-submit, .img_input, .paypal-submit, .img_input label, #coupon-label #coupon, .ascii {
+    .elementa, .ascii-border, .section.questionnaire .post-password-form #pword-box input, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input, .section .wpcf7 .post-password-form #pword-box input, .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input, .output, .section.questionnaire textarea, .section #wpcf7-f25-p7-o1 textarea, .section .wpcf7 textarea, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .chbox, .section.questionnaire .submit_bg, .section #wpcf7-f25-p7-o1 .submit_bg, .section .wpcf7 .submit_bg, .pword-back span, .pdf span, .wpcf7-submit, .img_input, .paypal-submit, .img_input label, #coupon-label #coupon, .ascii {
       font-size: 16px; } }
 
 @media (max-width: 480px) {
@@ -714,51 +714,55 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 
 .right {
   float: right; }
-  .right.elementa, .right.ascii-border, .section.questionnaire .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box input.right, .right.input, .section.questionnaire form .right.txt_input, .section #wpcf7-f25-p7-o1 form .right.txt_input, .section .wpcf7 form .right.txt_input, .section.questionnaire textarea.right, .section #wpcf7-f25-p7-o1 textarea.right, .section .wpcf7 textarea.right, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .right.submit_bg, .section #wpcf7-f25-p7-o1 .right.submit_bg, .section .wpcf7 .right.submit_bg, .pword-back span.right, .pdf span.right, .right.wpcf7-submit, .right.img_input, .right.paypal-submit, .img_input label.right, #coupon-label .right#coupon, .right.ascii {
+  .right.elementa, .right.ascii-border, .section.questionnaire .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box input.right, .right.input, .section.questionnaire form .right.txt_input, .section #wpcf7-f25-p7-o1 form .right.txt_input, .section .wpcf7 form .right.txt_input, .right.output, .section.questionnaire textarea.right, .section #wpcf7-f25-p7-o1 textarea.right, .section .wpcf7 textarea.right, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .right.submit_bg, .section #wpcf7-f25-p7-o1 .right.submit_bg, .section .wpcf7 .right.submit_bg, .pword-back span.right, .pdf span.right, .right.wpcf7-submit, .right.img_input, .right.paypal-submit, .img_input label.right, #coupon-label .right#coupon, .right.ascii {
     color: black;
     text-decoration: none;
     line-height: 47px; }
 
 .output {
+  background: white;
   transition: .4s all;
   cursor: pointer;
   position: fixed;
   overflow: scroll;
-  background: white;
   margin: 0;
   padding: 3em;
   z-index: 10;
   bottom: 25px;
   right: 50px;
-  border: solid black 1px;
   font-size: 18px;
   line-height: 1.1em;
   max-width: 500px; }
   .output.hidden {
-    height: 80px;
-    width: 80px;
+    background-color: transparent;
+    background-image: url(../images/preview-glasses.svg);
+    background-image: url(../images/preview-glasses.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    height: 98px;
+    width: 120px;
     padding: 0;
     /* color: white; */
     bottom: 0;
     right: 0;
     top: auto;
-    border-radius: 50%;
     margin: 25px 50px;
     margin: 35px 39px;
-    border: black solid 1px;
     overflow: hidden; }
     .output.hidden h3, .output.hidden .statement {
       display: none; }
     .output.hidden:before {
-      content: "Preview";
+      content: "PREVIEW";
       position: absolute;
-      width: 100%;
-      text-align: center;
+      /* width: 100%; */
+      text-align: right;
       /* line-height: 100%; */
       display: flex;
-      justify-content: center;
-      height: 100%;
-      align-items: center; }
+      justify-content: flex-end;
+      /* height: 100%; */
+      align-items: center;
+      bottom: 0;
+      right: 0; }
   .output h3 {
     pointer-events: none; }
   .output .statement {
@@ -808,7 +812,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       display: inline-block;
       transform-origin: 40px 0px; } }
 @media (max-width: 480px) {
-  .right.elementa.gen-link, .right.gen-link.ascii-border, .section.questionnaire .post-password-form #pword-box input.right.gen-link, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right.gen-link, .section .wpcf7 .post-password-form #pword-box input.right.gen-link, .right.gen-link.input, .section.questionnaire form .right.gen-link.txt_input, .section #wpcf7-f25-p7-o1 form .right.gen-link.txt_input, .section .wpcf7 form .right.gen-link.txt_input, .section.questionnaire textarea.right.gen-link, .section #wpcf7-f25-p7-o1 textarea.right.gen-link, .section .wpcf7 textarea.right.gen-link, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .right.gen-link.submit_bg, .section #wpcf7-f25-p7-o1 .right.gen-link.submit_bg, .section .wpcf7 .right.gen-link.submit_bg, .pword-back span.right.gen-link, .pdf span.right.gen-link, .right.gen-link.wpcf7-submit, .right.gen-link.img_input, .right.gen-link.paypal-submit, .img_input label.right.gen-link, #coupon-label .right.gen-link#coupon, .right.gen-link.ascii {
+  .right.elementa.gen-link, .right.gen-link.ascii-border, .section.questionnaire .post-password-form #pword-box input.right.gen-link, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right.gen-link, .section .wpcf7 .post-password-form #pword-box input.right.gen-link, .right.gen-link.input, .section.questionnaire form .right.gen-link.txt_input, .section #wpcf7-f25-p7-o1 form .right.gen-link.txt_input, .section .wpcf7 form .right.gen-link.txt_input, .right.gen-link.output, .section.questionnaire textarea.right.gen-link, .section #wpcf7-f25-p7-o1 textarea.right.gen-link, .section .wpcf7 textarea.right.gen-link, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.gen-link.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.gen-link.chbox, .section.questionnaire .right.gen-link.submit_bg, .section #wpcf7-f25-p7-o1 .right.gen-link.submit_bg, .section .wpcf7 .right.gen-link.submit_bg, .pword-back span.right.gen-link, .pdf span.right.gen-link, .right.gen-link.wpcf7-submit, .right.gen-link.img_input, .right.gen-link.paypal-submit, .img_input label.right.gen-link, #coupon-label .right.gen-link#coupon, .right.gen-link.ascii {
     max-width: 169px;
     line-height: 1.3em;
     margin-top: 0.3em; } }
@@ -872,6 +876,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   .section.questionnaire, .section #wpcf7-f25-p7-o1, .section .wpcf7 {
     margin-bottom: 0em;
     padding-bottom: 1em; }
+    .section.questionnaire .media-wise, .section #wpcf7-f25-p7-o1 .media-wise, .section .wpcf7 .media-wise {
+      color: #0033cc;
+      display: inline-block;
+      margin-bottom: 1em;
+      font-family: Plantin-bold; }
     .section.questionnaire .question, .section #wpcf7-f25-p7-o1 .question, .section .wpcf7 .question {
       margin-bottom: 2em;
       margin-bottom: 2.6em; }
@@ -1023,7 +1032,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           border-color: transparent;
           padding: 6% 10.9%;
           padding: calc(6.4% + 6px) calc(14% - 2px);
-          padding: calc(6.4% + 6px) calc(13.5% - 2px); }
+          padding: calc(6.4% + 6px) calc(13.5% - 2px);
+          padding: calc(7.4% + 6px) calc(4.9% - 2px); }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover, .section .wpcf7 .button_box.submit_q input:hover {
             background-image: url(../images/border3-6.png);
             color: #ffff66; }
@@ -1106,9 +1116,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         display: inline; }
     .section.questionnaire .wpcf7-checkbox, .section.questionnaire .wpcf7-radio, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio, .section .wpcf7 .wpcf7-checkbox, .section .wpcf7 .wpcf7-radio {
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-height: 270px;
+      flex-flow: column wrap;
+      max-height: 232px;
       justify-content: space-between;
       align-items: baseline; }
       @media (max-width: 619px) {
@@ -1146,6 +1155,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       margin: 5px;
       display: inline; }
 
+body.generator #content {
+  padding-top: 2.5em; }
+
+.generator-signup .robot1 {
+  margin-top: 0;
+  margin-bottom: 2.8em; }
 .generator-signup #container, .generator-signup #content {
   background: #1138C0; }
 .generator-signup .pdf {
@@ -1174,12 +1189,12 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap:before {
         content: "";
         position: absolute;
-        top: -2%;
-        left: 0px;
-        width: 100%;
-        height: 104%;
+        top: -3px;
+        left: -8px;
+        width: calc(100% + 13px);
+        height: 106px;
         pointer-events: none;
-        border-image: url(../images/artiststatementborderinput-01.png) 28 5 28 32 round;
+        border-image: url(../images/artiststatementborderinput-02.png) 28 5 28 32 round;
         background-size: auto 100%;
         z-index: 10;
         background-repeat: no-repeat;
@@ -1212,9 +1227,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     .generator-signup .email-form .wpcf7 .submit-wrapper {
       position: relative;
       display: inline-block; }
-      .generator-signup .email-form .wpcf7 .submit-wrapper:hover:before {
-        color: #ffff66;
-        background: url(../images/border_1_3.png); }
       .generator-signup .email-form .wpcf7 .submit-wrapper:before {
         content: "";
         position: absolute;
@@ -1237,11 +1249,14 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       background: none;
       vertical-align: top;
       background: #FFFE93; }
+      .generator-signup .email-form .wpcf7 .wpcf7-submit:hover {
+        background: #c13a1c;
+        color: #FFFE93; }
 .generator-signup .section p {
   color: white; }
 .generator-signup .left, .generator-signup .right {
   display: none; }
-.generator-signup .right.elementa, .generator-signup .right.ascii-border, .generator-signup .section.questionnaire .post-password-form #pword-box input.right, .section.questionnaire .post-password-form #pword-box .generator-signup input.right, .generator-signup .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box .generator-signup input.right, .generator-signup .section .wpcf7 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box .generator-signup input.right, .generator-signup .right.input, .generator-signup .section.questionnaire form .right.txt_input, .section.questionnaire form .generator-signup .right.txt_input, .generator-signup .section #wpcf7-f25-p7-o1 form .right.txt_input, .section #wpcf7-f25-p7-o1 form .generator-signup .right.txt_input, .generator-signup .section .wpcf7 form .right.txt_input, .section .wpcf7 form .generator-signup .right.txt_input, .generator-signup .section.questionnaire textarea.right, .section.questionnaire .generator-signup textarea.right, .generator-signup .section #wpcf7-f25-p7-o1 textarea.right, .section #wpcf7-f25-p7-o1 .generator-signup textarea.right, .generator-signup .section .wpcf7 textarea.right, .section .wpcf7 .generator-signup textarea.right, .generator-signup .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section.questionnaire .right.submit_bg, .section.questionnaire .generator-signup .right.submit_bg, .generator-signup .section #wpcf7-f25-p7-o1 .right.submit_bg, .section #wpcf7-f25-p7-o1 .generator-signup .right.submit_bg, .generator-signup .section .wpcf7 .right.submit_bg, .section .wpcf7 .generator-signup .right.submit_bg, .generator-signup .pword-back span.right, .pword-back .generator-signup span.right, .generator-signup .pdf span.right, .pdf .generator-signup span.right, .generator-signup .right.wpcf7-submit, .generator-signup .right.img_input, .generator-signup .right.paypal-submit, .generator-signup .img_input label.right, .img_input .generator-signup label.right, .generator-signup #coupon-label .right#coupon, #coupon-label .generator-signup .right#coupon, .generator-signup .right.ascii {
+.generator-signup .right.elementa, .generator-signup .right.ascii-border, .generator-signup .section.questionnaire .post-password-form #pword-box input.right, .section.questionnaire .post-password-form #pword-box .generator-signup input.right, .generator-signup .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box .generator-signup input.right, .generator-signup .section .wpcf7 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box .generator-signup input.right, .generator-signup .right.input, .generator-signup .section.questionnaire form .right.txt_input, .section.questionnaire form .generator-signup .right.txt_input, .generator-signup .section #wpcf7-f25-p7-o1 form .right.txt_input, .section #wpcf7-f25-p7-o1 form .generator-signup .right.txt_input, .generator-signup .section .wpcf7 form .right.txt_input, .section .wpcf7 form .generator-signup .right.txt_input, .generator-signup .right.output, .generator-signup .section.questionnaire textarea.right, .section.questionnaire .generator-signup textarea.right, .generator-signup .section #wpcf7-f25-p7-o1 textarea.right, .section #wpcf7-f25-p7-o1 .generator-signup textarea.right, .generator-signup .section .wpcf7 textarea.right, .section .wpcf7 .generator-signup textarea.right, .generator-signup .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .generator-signup .right.chbox, .generator-signup .section.questionnaire .right.submit_bg, .section.questionnaire .generator-signup .right.submit_bg, .generator-signup .section #wpcf7-f25-p7-o1 .right.submit_bg, .section #wpcf7-f25-p7-o1 .generator-signup .right.submit_bg, .generator-signup .section .wpcf7 .right.submit_bg, .section .wpcf7 .generator-signup .right.submit_bg, .generator-signup .pword-back span.right, .pword-back .generator-signup span.right, .generator-signup .pdf span.right, .pdf .generator-signup span.right, .generator-signup .right.wpcf7-submit, .generator-signup .right.img_input, .generator-signup .right.paypal-submit, .generator-signup .img_input label.right, .img_input .generator-signup label.right, .generator-signup #coupon-label .right#coupon, #coupon-label .generator-signup .right#coupon, .generator-signup .right.ascii {
   display: none; }
 .generator-signup .pword-back div {
   color: #c13a1c;
@@ -1250,12 +1265,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   border-bottom: solid 1px #0033cc;*/ }
 .generator-signup .bar {
   margin-bottom: 2em; }
-@media (max-width: 480px) {
-  .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap {
-    display: inline-block;
-    width: 250px; }
-    .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap input {
-      font-size: 18px; } }
 .generator-signup .mobile-header {
   display: none; }
 
@@ -1269,14 +1278,16 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 body .pdf {
   left: auto;
   right: 1em; }
+  body .pdf:hover span {
+    color: #c13a1c; }
 
 .pword-back, .pdf {
-  left: 14px;
+  left: 24px;
   margin: 22px;
   color: #ffff66;
   text-decoration: none;
   position: absolute;
-  top: 14px; }
+  top: 24px; }
   .pword-back:hover, .pdf:hover {
     color: #c13a1c !important; }
   .pword-back span, .pdf span {
@@ -1568,6 +1579,9 @@ body .pdf {
     .thankyou-page .thanksgif pre {
       padding: 0; }
 
+span.wpcf7-list-item {
+  margin-left: 0 !important; }
+
 @media (max-width: 880px) {
   span.wpcf7-list-item.last {
     max-width: 200px; } }
@@ -1584,7 +1598,7 @@ body .pdf {
     flex-direction: column;
     align-items: center;
     height: auto; }
-    .nav .right.elementa, .nav .right.ascii-border, .nav .section.questionnaire .post-password-form #pword-box input.right, .section.questionnaire .post-password-form #pword-box .nav input.right, .nav .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box .nav input.right, .nav .section .wpcf7 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box .nav input.right, .nav .right.input, .nav .section.questionnaire form .right.txt_input, .section.questionnaire form .nav .right.txt_input, .nav .section #wpcf7-f25-p7-o1 form .right.txt_input, .section #wpcf7-f25-p7-o1 form .nav .right.txt_input, .nav .section .wpcf7 form .right.txt_input, .section .wpcf7 form .nav .right.txt_input, .nav .section.questionnaire textarea.right, .section.questionnaire .nav textarea.right, .nav .section #wpcf7-f25-p7-o1 textarea.right, .section #wpcf7-f25-p7-o1 .nav textarea.right, .nav .section .wpcf7 textarea.right, .section .wpcf7 .nav textarea.right, .nav .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section.questionnaire .right.submit_bg, .section.questionnaire .nav .right.submit_bg, .nav .section #wpcf7-f25-p7-o1 .right.submit_bg, .section #wpcf7-f25-p7-o1 .nav .right.submit_bg, .nav .section .wpcf7 .right.submit_bg, .section .wpcf7 .nav .right.submit_bg, .nav .pword-back span.right, .pword-back .nav span.right, .nav .pdf span.right, .pdf .nav span.right, .nav .right.wpcf7-submit, .nav .right.img_input, .nav .right.paypal-submit, .nav .img_input label.right, .img_input .nav label.right, .nav #coupon-label .right#coupon, #coupon-label .nav .right#coupon, .nav .right.ascii {
+    .nav .right.elementa, .nav .right.ascii-border, .nav .section.questionnaire .post-password-form #pword-box input.right, .section.questionnaire .post-password-form #pword-box .nav input.right, .nav .section #wpcf7-f25-p7-o1 .post-password-form #pword-box input.right, .section #wpcf7-f25-p7-o1 .post-password-form #pword-box .nav input.right, .nav .section .wpcf7 .post-password-form #pword-box input.right, .section .wpcf7 .post-password-form #pword-box .nav input.right, .nav .right.input, .nav .section.questionnaire form .right.txt_input, .section.questionnaire form .nav .right.txt_input, .nav .section #wpcf7-f25-p7-o1 form .right.txt_input, .section #wpcf7-f25-p7-o1 form .nav .right.txt_input, .nav .section .wpcf7 form .right.txt_input, .section .wpcf7 form .nav .right.txt_input, .nav .right.output, .nav .section.questionnaire textarea.right, .section.questionnaire .nav textarea.right, .nav .section #wpcf7-f25-p7-o1 textarea.right, .section #wpcf7-f25-p7-o1 .nav textarea.right, .nav .section .wpcf7 textarea.right, .section .wpcf7 .nav textarea.right, .nav .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section.questionnaire .wpcf7-radio .wpcf7-list-item label .right.chbox, .section.questionnaire .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section #wpcf7-f25-p7-o1 .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-checkbox .wpcf7-list-item label .nav .right.chbox, .nav .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .right.chbox, .section .wpcf7 .wpcf7-radio .wpcf7-list-item label .nav .right.chbox, .nav .section.questionnaire .right.submit_bg, .section.questionnaire .nav .right.submit_bg, .nav .section #wpcf7-f25-p7-o1 .right.submit_bg, .section #wpcf7-f25-p7-o1 .nav .right.submit_bg, .nav .section .wpcf7 .right.submit_bg, .section .wpcf7 .nav .right.submit_bg, .nav .pword-back span.right, .pword-back .nav span.right, .nav .pdf span.right, .pdf .nav span.right, .nav .right.wpcf7-submit, .nav .right.img_input, .nav .right.paypal-submit, .nav .img_input label.right, .img_input .nav label.right, .nav #coupon-label .right#coupon, #coupon-label .nav .right#coupon, .nav .right.ascii {
       order: 1; }
 
   .section.questionnaire {
@@ -1716,5 +1730,26 @@ body#page-id-10 .bar {
     text-align: center;
     padding: calc(26% - 5px) 0;
     color: white; }
+
+@media (max-width: 950px) {
+  .generator-signup .email-form .wpcf7 {
+    width: 100%; }
+    .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap {
+      display: block;
+      width: auto; }
+      .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap input {
+        font-size: 18px;
+        margin-bottom: 2em;
+        width: calc(100% - 2em); }
+    .generator-signup .email-form .wpcf7 .wpcf7-form > p {
+      text-align: center;
+      width: 66%;
+      margin-left: 17%; } }
+.thankyou pre {
+  position: relative; }
+
+.ty-1 {
+  position: absolute;
+  right: 0; }
 
 /*# sourceMappingURL=styles.css.map */
