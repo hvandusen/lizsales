@@ -1237,6 +1237,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       background: none;
       vertical-align: top;
       background: #FFFE93; }
+      .generator-signup .email-form .wpcf7 .wpcf7-submit:hover {
+        background: #c13a1c;
+        color: #FFFE93; }
 .generator-signup .section p {
   color: white; }
 .generator-signup .left, .generator-signup .right {

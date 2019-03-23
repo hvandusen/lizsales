@@ -2940,6 +2940,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/artiststatementborderinput.png": {
+		"ft": 32768,
+		"iS": 1759,
+		"oA": 0,
+		"oAP": "/images/artiststatementborderinput.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/border-1-hover.png": {
 		"ft": 32768,
 		"iS": 91856,
@@ -3176,17 +3187,6 @@
 		"iS": 108643,
 		"oA": 0,
 		"oAP": "/images/border_1_2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/images/border_1_3.png": {
-		"ft": 32768,
-		"iS": 107303,
-		"oA": 0,
-		"oAP": "/images/border_1_3.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -3585,7 +3585,7 @@
 		},
 	"/screenshot.png": {
 		"ft": 32768,
-		"iS": 21042,
+		"iS": 2811,
 		"oA": 0,
 		"oAP": "/screenshot.png",
 		"oF": 0,
