@@ -304,7 +304,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     right: 0;
     top: auto;
     margin: 25px 50px;
-		margin: 35px 39px;
+		margin: 25px 50px;
     overflow: hidden;
 		h3, .statement {
 			display: none;
@@ -325,6 +325,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 	h3 {
 		pointer-events: none;
+		margin-top: 0;
 	}
 	.statement {
 		pointer-events: none;
@@ -355,12 +356,25 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		width: calc(100vw - 40px);
 		bottom: 10px;
 		top: 20px;
+		&:after {
+			content: "X";
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+			font-size: 2em;
+		}
 		&.hidden {
 			margin: 10px 20px;
+			&:after {
+				content: "";
+			}
 		}
 	}
 }
 
+.ascii.typewriter {
+	 // transform: translateX(-25px);
+}
 
 @media(max-width: 970px){
 	.gen-link.right {
@@ -749,6 +763,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					padding: calc(6.4% + 6px) calc(14% - 2px);
 					padding: calc(6.4% + 6px) calc(13.5% - 2px);
 					padding: calc(7.4% + 6px) calc(4.9% - 2px);
+					padding: 55px 30px;
 					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
@@ -955,7 +970,7 @@ body.generator #content{
 }
 .generator-signup {
 	.robot1 {
-		margin-top: 0;
+		margin-top: 1em;
 		margin-bottom: 2.8em;
 	}
 	#container, #content {
@@ -1585,10 +1600,11 @@ margin: 30px;
 		text-align: center;
 
 		color: $blue;
-		position: absolute;
+		// position: absolute;
 		width: 100%;
 		bottom: 100px;
 		@extend .plantin-bold;
+		margin-top: 2em;
 	}
 	.ascii pre {
 		color: white;
@@ -1612,6 +1628,15 @@ span.wpcf7-list-item {
 }
 
 @media(max-width:480px){
+	.thankyou-page .robot {
+		margin-top: 60px;
+	}
+	.thankyou-page .thanks-text {
+		position: static;
+	}
+	.generator-signup .ascii {
+		margin-top: 3em;
+	}
 	.pdf.blue {
 		display: none;
 	}
@@ -1803,6 +1828,9 @@ height: 100%;
 		.wpcf7-form-control-wrap {
 		    display: block;
 		    width: auto;
+				&:before {
+					border-image: url(../images/artiststatementborderinput-02.png) 28 50 28 32 round;
+				}
 				input {
 					font-size: 18px;
 			    margin-bottom: 2em;

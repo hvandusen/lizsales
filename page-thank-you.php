@@ -8,7 +8,6 @@
 		color:black;
 	}
 </style>
-<div class='thanks-text'>Thank you! Your response has been submitted.</div>
 <div class="robot">
 		<pre class='ascii robot1'>
  L          m
@@ -47,8 +46,8 @@ ________| |________
 |---|   |---|
 |___|   |___|
 /    \  /    \
-|_____| |_____|
-		</pre>
+|_____| |_____|</pre>
 <div>
+<div class='thanks-text'>Thank you! Your response has been submitted.</div>
 </div>
 <?php get_footer(); ?>

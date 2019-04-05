@@ -747,7 +747,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     right: 0;
     top: auto;
     margin: 25px 50px;
-    margin: 35px 39px;
+    margin: 25px 50px;
     overflow: hidden; }
     .output.hidden h3, .output.hidden .statement {
       display: none; }
@@ -764,7 +764,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       bottom: 0;
       right: 0; }
   .output h3 {
-    pointer-events: none; }
+    pointer-events: none;
+    margin-top: 0; }
   .output .statement {
     pointer-events: none;
     margin-bottom: 1em; }
@@ -780,8 +781,16 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       width: calc(100vw - 40px);
       bottom: 10px;
       top: 20px; }
+      .output:after {
+        content: "X";
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        font-size: 2em; }
       .output.hidden {
-        margin: 10px 20px; } }
+        margin: 10px 20px; }
+        .output.hidden:after {
+          content: ""; } }
 
 @media (max-width: 970px) {
   .gen-link.right {
@@ -1033,7 +1042,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
           padding: 6% 10.9%;
           padding: calc(6.4% + 6px) calc(14% - 2px);
           padding: calc(6.4% + 6px) calc(13.5% - 2px);
-          padding: calc(7.4% + 6px) calc(4.9% - 2px); }
+          padding: calc(7.4% + 6px) calc(4.9% - 2px);
+          padding: 55px 30px; }
           .section.questionnaire .button_box.submit_q input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q input:hover, .section .wpcf7 .button_box.submit_q input:hover {
             background-image: url(../images/border3-6.png);
             color: #ffff66; }
@@ -1159,7 +1169,7 @@ body.generator #content {
   padding-top: 2.5em; }
 
 .generator-signup .robot1 {
-  margin-top: 0;
+  margin-top: 1em;
   margin-bottom: 2.8em; }
 .generator-signup #container, .generator-signup #content {
   background: #1138C0; }
@@ -1568,9 +1578,9 @@ body .pdf {
   .thankyou-page .thanks-text {
     text-align: center;
     color: #0033cc;
-    position: absolute;
     width: 100%;
-    bottom: 100px; }
+    bottom: 100px;
+    margin-top: 2em; }
   .thankyou-page .ascii pre {
     color: white; }
   .thankyou-page .thanksgif {
@@ -1586,6 +1596,15 @@ span.wpcf7-list-item {
   span.wpcf7-list-item.last {
     max-width: 200px; } }
 @media (max-width: 480px) {
+  .thankyou-page .robot {
+    margin-top: 60px; }
+
+  .thankyou-page .thanks-text {
+    position: static; }
+
+  .generator-signup .ascii {
+    margin-top: 3em; }
+
   .pdf.blue {
     display: none; }
 
@@ -1737,6 +1756,8 @@ body#page-id-10 .bar {
     .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap {
       display: block;
       width: auto; }
+      .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap:before {
+        border-image: url(../images/artiststatementborderinput-02.png) 28 50 28 32 round; }
       .generator-signup .email-form .wpcf7 .wpcf7-form-control-wrap input {
         font-size: 18px;
         margin-bottom: 2em;

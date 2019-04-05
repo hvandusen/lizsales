@@ -162,7 +162,7 @@
     theFormData["exh-space"]= exh_space
   }
   function setFormData(){
-    if(!localStorage.hasOwnProperty("form-name")){
+    if(!localStorage.hasOwnProperty("form-artistname")){
       return;
     }
     for(var i in localStorage){

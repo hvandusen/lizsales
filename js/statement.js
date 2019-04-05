@@ -80,7 +80,6 @@ function statement(theFormData){
   var html = "<div class='statement'>";
   var converters = {
     " my ": " their ",
-    "my ": "their ",
     " My ": " their ",
     "My ": "their ",
     " our ": " their ",
@@ -130,7 +129,7 @@ function statement(theFormData){
 
   (theFormData["artists"] ?
     " They are inspired by the visual artist "+ stripPeriod(theFormData["artists"])+
-      (theFormData["artists-2"] ? " because "+ stripBecause(ensurePeriod(lower(theFormData["artists-2"])))
+      (theFormData["artists-2"] ? " because "+ stripBecause(ensurePeriod(lower(theFormData["artists-2"])))+" "
       :". ") :" ")+
 
   (theFormData["writers"] ?
