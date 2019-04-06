@@ -181,7 +181,7 @@ label {
 .input {
 	@extend .elementa;
 //	color: #c13a1c;
-  font-size: 18px;
+  // font-size: 18px;
 	width: auto;
 	border: none;
 	border-bottom: solid $blue 1px;
@@ -325,11 +325,11 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	}
 	h3 {
 		pointer-events: none;
-		margin-top: 0;
+		margin-top: 2em;
 	}
 	.statement {
 		pointer-events: none;
-		margin-bottom: 1em;
+		margin: 0 0 3em 0;
 	}
 	.setting {
 		display: none;
@@ -340,21 +340,23 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	transition: .4s all;
 	cursor: pointer;
 	position: fixed;
-	overflow: scroll;
 	margin: 0;
-	padding: 3em;
+	padding: 0 3em;
 	z-index: 10;
 	bottom: 25px;
 	right: 50px;
 	// height: 100vh;
 	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.1em;
 	max-width: 500px;
-	@media(max-width: 480px){
+	overflow: scroll;
+	max-height: calc(100vh - 50px);
+	@media(max-width: 709px){
 		right: 20px;
 		box-sizing: border-box;
 		width: calc(100vw - 40px);
-		bottom: 10px;
+		bottom: 20px;
 		top: 20px;
 		&:after {
 			content: "X";
@@ -743,6 +745,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			display: inline-block;
 			//height: auto;//175px;
 			&.submit_q {
+				opacity: 1;
+				&.not-ready {
+					opacity: .5;
+					input:hover {
+						background-image: url(../images/border-4.png);
+						background-image: url(../images/border3-2.png);
+						color: #c13a1c;
+					}
+				}
 				&:after {
 					content: ' ';
 					background-position: 99900px 0;
@@ -764,6 +775,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 					padding: calc(6.4% + 6px) calc(13.5% - 2px);
 					padding: calc(7.4% + 6px) calc(4.9% - 2px);
 					padding: 55px 30px;
+
 					//padding: calc(4.8% + 7px) calc(11% - 4px);
 					//margin-bottom: 5em;
 					&:hover {
@@ -1598,13 +1610,11 @@ margin: 30px;
 	}
 	.thanks-text {
 		text-align: center;
-
 		color: $blue;
-		// position: absolute;
 		width: 100%;
 		bottom: 100px;
 		@extend .plantin-bold;
-		margin-top: 2em;
+		margin-top: 3em;
 	}
 	.ascii pre {
 		color: white;
@@ -1778,8 +1788,8 @@ body#page-id-10 {
     position: absolute;
     /* left: -37px; */
 		font-family: Plantin;
-left: calc(18.3% - 37px);
-    font-size: 18px;
+		left: calc(18.3% - 37px);
+    // font-size: 18px;
 		@media(max-width:480px){
 			left: calc(18.3% - 49px);
 			line-height: 1em;
@@ -1850,4 +1860,12 @@ height: 100%;
 .ty-1 {
 	position: absolute;
 	right: 0;
+}
+
+
+@media(max-width: 480px){
+	.generator-signup .email-form .wpcf7 .wpcf7-form > p {
+		width: 80%;
+		margin-left: 10%;
+	}
 }

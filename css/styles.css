@@ -614,7 +614,6 @@ label {
   border-bottom: solid #0033cc 1px; }
 
 .input, .section.questionnaire form .txt_input, .section #wpcf7-f25-p7-o1 form .txt_input, .section .wpcf7 form .txt_input {
-  font-size: 18px;
   width: auto;
   border: none;
   border-bottom: solid #0033cc 1px;
@@ -724,15 +723,17 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   transition: .4s all;
   cursor: pointer;
   position: fixed;
-  overflow: scroll;
   margin: 0;
-  padding: 3em;
+  padding: 0 3em;
   z-index: 10;
   bottom: 25px;
   right: 50px;
   font-size: 18px;
+  font-size: 16px;
   line-height: 1.1em;
-  max-width: 500px; }
+  max-width: 500px;
+  overflow: scroll;
+  max-height: calc(100vh - 50px); }
   .output.hidden {
     background-color: transparent;
     background-image: url(../images/preview-glasses.svg);
@@ -765,21 +766,21 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       right: 0; }
   .output h3 {
     pointer-events: none;
-    margin-top: 0; }
+    margin-top: 2em; }
   .output .statement {
     pointer-events: none;
-    margin-bottom: 1em; }
+    margin: 0 0 3em 0; }
   .output .setting {
     display: none;
     font-size: 12px;
     line-height: 1em;
     margin: .5em 0; }
-  @media (max-width: 480px) {
+  @media (max-width: 709px) {
     .output {
       right: 20px;
       box-sizing: border-box;
       width: calc(100vw - 40px);
-      bottom: 10px;
+      bottom: 20px;
       top: 20px; }
       .output:after {
         content: "X";
@@ -1025,8 +1026,15 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       text-align: center;
       display: inline-block; }
       .section.questionnaire .button_box.submit_q, .section #wpcf7-f25-p7-o1 .button_box.submit_q, .section .wpcf7 .button_box.submit_q {
+        opacity: 1;
         padding-bottom: 6em;
         width: 100%; }
+        .section.questionnaire .button_box.submit_q.not-ready, .section #wpcf7-f25-p7-o1 .button_box.submit_q.not-ready, .section .wpcf7 .button_box.submit_q.not-ready {
+          opacity: .5; }
+          .section.questionnaire .button_box.submit_q.not-ready input:hover, .section #wpcf7-f25-p7-o1 .button_box.submit_q.not-ready input:hover, .section .wpcf7 .button_box.submit_q.not-ready input:hover {
+            background-image: url(../images/border-4.png);
+            background-image: url(../images/border3-2.png);
+            color: #c13a1c; }
         .section.questionnaire .button_box.submit_q:after, .section #wpcf7-f25-p7-o1 .button_box.submit_q:after, .section .wpcf7 .button_box.submit_q:after {
           content: ' ';
           background-position: 99900px 0;
@@ -1580,7 +1588,7 @@ body .pdf {
     color: #0033cc;
     width: 100%;
     bottom: 100px;
-    margin-top: 2em; }
+    margin-top: 3em; }
   .thankyou-page .ascii pre {
     color: white; }
   .thankyou-page .thanksgif {
@@ -1717,8 +1725,7 @@ body#page-id-10 .bar {
   position: absolute;
   /* left: -37px; */
   font-family: Plantin;
-  left: calc(18.3% - 37px);
-  font-size: 18px; }
+  left: calc(18.3% - 37px); }
   @media (max-width: 480px) {
     .input-error:before {
       left: calc(18.3% - 49px);
@@ -1772,5 +1779,10 @@ body#page-id-10 .bar {
 .ty-1 {
   position: absolute;
   right: 0; }
+
+@media (max-width: 480px) {
+  .generator-signup .email-form .wpcf7 .wpcf7-form > p {
+    width: 80%;
+    margin-left: 10%; } }
 
 /*# sourceMappingURL=styles.css.map */

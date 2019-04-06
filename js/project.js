@@ -5,8 +5,7 @@
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
-    )
-  ) {
+    )){
     mobile = true;
   }
   var isMob = window.innerWidth < 480;
@@ -16,7 +15,8 @@
     } else {
       $(".pleaseRotate").removeClass("landscape");
     }
-    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder", window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started")
+    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder", window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started");
+    $(".output").scrollTop(0);
   });
 
   if (
@@ -36,9 +36,9 @@
       var text = $(e).find(".asciiTitle").text();
         var w = window.innerWidth;
         var fixer = "~~~~~";
-        if(text.length>20)
+        if(text.length>20){
           fixer = "";
-        var theText = "";
+        }var theText = "";
         if (w < 600) {
           theText = "~~~~"+fixer;
         } else if (w < 750) {
@@ -55,7 +55,7 @@
           theText = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"+fixer;
         }
         $(e).find(".postBar, .preBar").text(theText);
-    })
+    });
 
   }
 
@@ -71,13 +71,15 @@
   });
   count++;
   $(".input_contents").map(function(e, i) {
-    $(i).wrap(
-      $("<div class='input_outer'><div class='input_inner'></div></div>")
-    );
-    //$(i).remove();
+    $(i).wrap($("<div class='input_outer'><div class='input_inner'></div></div>"));
   });
   var cart = {};
   var words = {};
+
+  $(document).on("click", ".submit_q.not-ready",function(e){
+    $(e).preventDefault();
+    $(".output").removeClass("hidden");
+  });
 
   $("input").focus(function() {
     $(".clicked").removeClass("clicked");
@@ -103,7 +105,7 @@
     if (window.innerWidth < 480) {
       $(".postBar, .preBar").text("~~~~~~");
     }
-    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder",window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started")
+    $(".generator-signup .email-form .wpcf7-form-control-wrap input").attr("placeholder",window.innerWidth < 670 ? "Enter your email" : "Enter your email to get started");
     $(".numbers").map(function(i, e) {
       $(e).prop(
         "value",
@@ -115,23 +117,20 @@
         $(".thankyou-page .robot").toggleClass("flicker");
     },400);
     setFormData();
-    $(".questionnaire.test .wpcf7-form input, .questionnaire.test .wpcf7-form textarea").on("input",function(e){
+    $(".questionnaire.test .wpcf7-form input, .questionnaire.test .wpcf7-form textarea").on("input",function(){
       getFormData();
-      // e.preventDefault();
-      // e.stopPropagation();
-      // window.scrollTo(0,0)
       updateOutput();
     });
     $(".output").click(function(){
-      $(this).toggleClass("hidden")
-    })
-    if($(".questionnaire").length && localStorage.hasOwnProperty("email"))
+      $(this).toggleClass("hidden");
+    });
+    if($(".questionnaire").length && localStorage.hasOwnProperty("email")){
       updateOutput();
-    if($(".emailaddress").length && localStorage.hasOwnProperty("email"))
-      $(".emailaddress input").val(localStorage["email"])
-    //just a check to see if we on artist statement page. redirect if no email ever entered
+    }if($(".emailaddress").length && localStorage.hasOwnProperty("email")){
+      $(".emailaddress input").val(localStorage.email);
+    }//just a check to see if we on artist statement page. redirect if no email ever entered
     if($(".generated-statement").length && !localStorage.hasOwnProperty("email")){
-        window.location = "/generator-signup"
+        window.location = "/generator-signup";
     }
   });
   var formFields = [ 'artistname','name', 'bday', 'birthplace', 'country', 'work-city', 'works-with', 'work-with', 'grew-up', 'grew-up-3', 'exh-space-2', 'also-works-with', 'background', 'artists', 'artists-2', 'writers', 'writers-2', 'other-inspo', 'other-inspo-2', 'work-subject', 'formal-elements', 'process', 'process-2','work-subject-2', 'critical-dialogue', 'exh-space', 'other-text', 'textarea-5'];
@@ -143,59 +142,56 @@
         localStorage["form-"+$(e).attr("name")] = $(e).val();
         localStorage.inputs += " "+name;
       // }
-    })
+    });
     var mediaTypes = [];
     $(".checkbox-1 input:checked").map(function(i,e){
         mediaTypes.push ($(e).val());
-    })
-    localStorage["form-works-with"] = mediaTypes.join(", ")
-    theFormData["works-with"]= mediaTypes.join(", ")
+    });
+    localStorage["form-works-with"] = mediaTypes.join(", ");
+    theFormData["works-with"]= mediaTypes.join(", ");
     mediaTypes = [];
     $(".checkbox-2 input:checked").map(function(i,e){
         mediaTypes.push ($(e).val());
-    })
+    });
 
-    localStorage["form-also-works-with"] = mediaTypes.join(", ")
-    theFormData["also-works-with"]= mediaTypes.join(", ")
+    localStorage["form-also-works-with"] = mediaTypes.join(", ");
+    theFormData["also-works-with"]= mediaTypes.join(", ");
     var exh_space = $(".exh-space input:checked").parent().find(".wpcf7-list-item-label").text();
-    localStorage["form-exh-space"] = exh_space
-    theFormData["exh-space"]= exh_space
+    localStorage["form-exh-space"] = exh_space;
+    theFormData["exh-space"]= exh_space;
   }
   function setFormData(){
-    if(!localStorage.hasOwnProperty("form-artistname")){
-      return;
-    }
     for(var i in localStorage){
       if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
         theFormData[i.replace("form-","")] = localStorage[i];
-        $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
+        // $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
     }
   }
     //henry
-    var worksWith = localStorage["form-works-with"].split(", ");
-    var exhSpace = localStorage["form-exh-space"];
+    var worksWith = localStorage["form-works-with"] ? localStorage["form-works-with"].split(", ") : "";
+    var exhSpace = localStorage["form-exh-space"] ? localStorage["form-exh-space"] : "" ;
     $(".works-with .wpcf7-list-item-label").map(function(i,el){
       if(worksWith.indexOf($(el).text())>-1){
-        $(el).parent().click()
+        $(el).parent().click();
         $(el).parent().find("input")[0].checked = true;
       }
     });
     $(".exh-space .wpcf7-list-item-label").map(function(i,el){
       if(exhSpace === $(el).text()){
-        $(el).parent().click()
+        $(el).parent().click();
         // $(el).parent().find("input")[0].checked = true;
       }
-    })
+    });
 
     // handleCheckboxLabelClick();
   }
 
   function updateOutput(){
-    var out = {};
     var html = "<h3>Statement Preview</h3>";
-    if(!theFormData && !theFormData.hasOwnProperty("artistname"))
-      return
-    var theStatement = statement(theFormData)
+    if(!theFormData && !theFormData.hasOwnProperty("artistname")){
+      return;
+    }
+    var theStatement = window.statement(theFormData);
     var paragraphs = $(theStatement).html().split("\n\n");
     $(".generated-statement-1 textarea").val(paragraphs[0]);
     $(".generated-statement-2 textarea").val(paragraphs[1]);
@@ -377,8 +373,8 @@
   function resetExhSpace(){
     $(".exh-space input").map(function(i,e){
       $(e).attr("checked",false);
-      $(e).parent().find(".chbox span").text(" ")
-    })
+      $(e).parent().find(".chbox span").text(" ");
+    });
   }
 
   $(".exh-space .wpcf7-list-item").click(function(e){
@@ -389,12 +385,12 @@
     var box = $(this).find(".chbox span");
     input.checked = !checked;
     box.text(input.checked ? "X" : " ");
-    $(this).val($(this).find(".wpcf7-list-item-label").text())
+    $(this).val($(this).find(".wpcf7-list-item-label").text());
     localStorage["form-exh-space"] = sessionStorage["form-exh-space"] = theFormData["exh-space"] = choice;
     e.preventDefault();
     e.stopPropagation();
     updateOutput();
-  })
+  });
 
   $(".checkbox-1 .wpcf7-list-item, .checkbox-2 .wpcf7-list-item").click(function(e){
     var input = $(this).find("input")[0];
@@ -402,7 +398,7 @@
     input.checked = !input.checked;
     box.text(input.checked ? "X" : " ");
     e.stopPropagation();
-  })
+  });
 
   $(".pricing-fields .wpcf7-list-item >label").click(handleCheckboxLabelClick);
   function handleCheckboxClick(element){
@@ -470,7 +466,6 @@
       }
     }
     $("#package").val(productText);
-    //})
     return allofem - discount;
   }
 
@@ -537,9 +532,8 @@
   $(".img_input").click(function(e) {
     e.preventDefault();
     e.stopPropagation();
-    $(".img_inputs").click(); //trigger('click');
+    $(".img_inputs").click();
     e.stopPropagation();
-    // // 	//$($('.uploadText')[0]).trigger('click');
   });
 
   if (window.Modernizr.flexbox === false) {

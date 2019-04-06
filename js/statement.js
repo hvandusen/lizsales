@@ -74,6 +74,14 @@ function lower(string) {
 }
 
 function statement(theFormData){
+  function isReady(){
+    var yes = theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"];
+    if(yes){
+      $(".submit_q").removeClass("not-ready");
+    }else{
+      $(".submit_q").addClass("not-ready");
+    }return yes;
+  }
   if(!theFormData){
     return;
   }
@@ -117,8 +125,7 @@ function statement(theFormData){
   }else{
     lastName += "'s";
   }
-  console.log("theFormData",theFormData["exh-space"])
-  if(theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"] )
+  if(isReady())
   html += (
   theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
   artistTitle(theFormData["works-with"])+ " who lives and works in "+
@@ -166,12 +173,6 @@ function statement(theFormData){
       " because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
       ".")
   : "")
-
-  // (theFormData["exh-space-2"] ?
-  // " The ideal exhibition space for their work is a "+
-  // (theFormData["exh-space-2"].length>10 ?
-  // stripPeriod(lower(theFormData["other-text"]))+" because "+stripBecause(ensurePeriod(lower(theFormData["exh-space-2"]))) :
-  // stripBecause(ensurePeriod(lower(theFormData["exh-space"])))) : "")
 );
 else {
   html+= "Answer more questions to see a preview."
