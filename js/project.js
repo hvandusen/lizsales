@@ -187,7 +187,7 @@
   }
 
   function updateOutput(){
-    var html = "<h3>Statement Preview</h3>";
+    var html = "<div class='statement-header'>Statement Preview</div>"; 
     if(!theFormData && !theFormData.hasOwnProperty("artistname")){
       return;
     }

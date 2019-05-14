@@ -724,7 +724,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   cursor: pointer;
   position: fixed;
   margin: 0;
-  padding: 0 3em;
+  padding: 0 1.5em;
   z-index: 10;
   bottom: 25px;
   right: 50px;
@@ -734,6 +734,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   max-width: 500px;
   overflow: scroll;
   max-height: calc(100vh - 50px); }
+  .output .statement-header {
+    margin: 2em 0 1em 0;
+    text-transform: uppercase; }
   .output.hidden {
     background-color: transparent;
     background-image: url(../images/preview-glasses.svg);
@@ -750,7 +753,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     margin: 25px 50px;
     margin: 25px 50px;
     overflow: hidden; }
-    .output.hidden h3, .output.hidden .statement {
+    .output.hidden h3, .output.hidden .statement, .output.hidden .statement-header {
       display: none; }
     .output.hidden:before {
       content: "PREVIEW";
@@ -784,9 +787,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       top: 20px; }
       .output:after {
         content: "X";
-        position: absolute;
-        top: 0.5em;
-        right: 0.5em;
+        position: fixed;
+        top: 45px;
+        right: 40px;
+        font-size: 2em;
         font-size: 2em; }
       .output.hidden {
         margin: 10px 20px; }
