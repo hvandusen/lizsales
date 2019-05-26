@@ -42,7 +42,7 @@
  asciiBar($title,true);
  ?>
  </span>
-<div class='output hidden'></div>
+<div class='output hidden not-ready'></div>
 <div class='questionnaire test section '>
 	<?php the_content(); ?>
 </div>

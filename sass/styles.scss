@@ -288,6 +288,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 }
 
 .output {
+	&.not-ready {
+		opacity: 0;
+	}
+	opacity: 1;
 	@extend .elementa;
 	background: white;
 	.statement-header {
@@ -346,6 +350,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	position: fixed;
 	margin: 0;
 	// padding: 0 3em;
+	line-height: 18px;
 	padding: 0 1.5em;
 	z-index: 10;
 	bottom: 25px;
@@ -366,10 +371,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		&:after {
 			content: "X";
 			position: fixed;
-			top: 45px;
+			top: 51px;
 			right: 40px;
 			font-size: 2em;
-			font-size: 2em;
+			font-size: 16px;
 		}
 		&.hidden {
 			margin: 10px 20px;
@@ -522,7 +527,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 		.media-wise {
 			color: #0033cc;
 	    display: inline-block;
-	    margin-bottom: 1em;
+	    // margin-bottom: 1em;
 	    font-family: Plantin-bold;
 		}
 		.question {
@@ -563,9 +568,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 				    margin-top: -34px;
 			}
 			&.q03 {
-				margin-bottom: 3.6em;
+				margin-bottom: 1em;
 				.wpcf7-form-control {
-							margin-bottom: 2.1em;
+							margin-bottom: 1em;
 				}
 				&.q17, &.q18, &.q19{
 					margin-bottom: calc(2em + 29px);
@@ -1416,6 +1421,10 @@ margin: 30px;
 
 #coupon-label {
 	display: inherit;
+	max-width: 67%;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 27px;
 	span {
 		@media(min-width: 480px){
 		border-bottom: solid $blue 1px;
@@ -1443,10 +1452,11 @@ margin: 30px;
 			}
 #coupon {
 	@extend .elementa;
-	font-size: 22px;
+	// font-size: 22px;
 	    color: black;
 			@media(max-width: 480px){
 			width: 90%;
+			display: block;
 			}
 
 }

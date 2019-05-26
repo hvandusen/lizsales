@@ -719,11 +719,13 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     line-height: 47px; }
 
 .output {
+  opacity: 1;
   background: white;
   transition: .4s all;
   cursor: pointer;
   position: fixed;
   margin: 0;
+  line-height: 18px;
   padding: 0 1.5em;
   z-index: 10;
   bottom: 25px;
@@ -734,6 +736,8 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
   max-width: 500px;
   overflow: scroll;
   max-height: calc(100vh - 50px); }
+  .output.not-ready {
+    opacity: 0; }
   .output .statement-header {
     margin: 2em 0 1em 0;
     text-transform: uppercase; }
@@ -788,10 +792,10 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
       .output:after {
         content: "X";
         position: fixed;
-        top: 45px;
+        top: 51px;
         right: 40px;
         font-size: 2em;
-        font-size: 2em; }
+        font-size: 16px; }
       .output.hidden {
         margin: 10px 20px; }
         .output.hidden:after {
@@ -893,7 +897,6 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
     .section.questionnaire .media-wise, .section #wpcf7-f25-p7-o1 .media-wise, .section .wpcf7 .media-wise {
       color: #0033cc;
       display: inline-block;
-      margin-bottom: 1em;
       font-family: Plantin-bold; }
     .section.questionnaire .question, .section #wpcf7-f25-p7-o1 .question, .section .wpcf7 .question {
       margin-bottom: 2em;
@@ -922,9 +925,9 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
         margin-bottom: 3.2em;
         margin-top: -34px; }
       .section.questionnaire .question.q03, .section #wpcf7-f25-p7-o1 .question.q03, .section .wpcf7 .question.q03 {
-        margin-bottom: 3.6em; }
+        margin-bottom: 1em; }
         .section.questionnaire .question.q03 .wpcf7-form-control, .section #wpcf7-f25-p7-o1 .question.q03 .wpcf7-form-control, .section .wpcf7 .question.q03 .wpcf7-form-control {
-          margin-bottom: 2.1em; }
+          margin-bottom: 1em; }
         .section.questionnaire .question.q03.q17, .section.questionnaire .question.q03.q18, .section.questionnaire .question.q03.q19, .section #wpcf7-f25-p7-o1 .question.q03.q17, .section #wpcf7-f25-p7-o1 .question.q03.q18, .section #wpcf7-f25-p7-o1 .question.q03.q19, .section .wpcf7 .question.q03.q17, .section .wpcf7 .question.q03.q18, .section .wpcf7 .question.q03.q19 {
           margin-bottom: calc(2em + 29px); }
         .section.questionnaire .question.q03 p:first-child, .section #wpcf7-f25-p7-o1 .question.q03 p:first-child, .section .wpcf7 .question.q03 p:first-child {
@@ -1473,6 +1476,10 @@ body .pdf {
 
 #coupon-label {
   display: inherit;
+  max-width: 67%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 27px;
   border-bottom: none;
   padding: 3em 0;
   padding-top: 2em; }
@@ -1492,11 +1499,11 @@ body .pdf {
       outline: none;
       border-bottom: #0033cc solid 1px; }
   #coupon-label #coupon {
-    font-size: 22px;
     color: black; }
     @media (max-width: 480px) {
       #coupon-label #coupon {
-        width: 90%; } }
+        width: 90%;
+        display: block; } }
 
 .ascii {
   color: black;

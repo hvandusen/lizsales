@@ -75,11 +75,11 @@ function lower(string) {
 
 function statement(theFormData){
   function isReady(){
-    var yes = theFormData["artistname"] && theFormData["work-city"] && theFormData["works-with"];
+    var yes = theFormData["artistname"];
     if(yes){
-      $(".submit_q").removeClass("not-ready");
+      $(".submit_q, .output").removeClass("not-ready");
     }else{
-      $(".submit_q").addClass("not-ready");
+      $(".submit_q, .output").addClass("not-ready");
     }return yes;
   }
   if(!theFormData){
@@ -127,9 +127,10 @@ function statement(theFormData){
   }
   if(isReady())
   html += (
-  theFormData["artistname"]+ printOrigin(theFormData) + " is a "+
-  artistTitle(theFormData["works-with"])+ " who lives and works in "+
-  theFormData["work-city"]+". "+
+  theFormData["artistname"]+ printOrigin(theFormData) +
+  (theFormData["works-with"] ? " is a "+ artistTitle(theFormData["works-with"]): "")+
+  (theFormData["work-city"] ? (theFormData["works-with"] ? " who" : "")+" lives and works in "+ theFormData["work-city"] : "")+
+  ". "+
 
   (theFormData["work-with"] ?
     "They work in "+(media.length>1 ? "these media":"this medium")+" because "+stripBecause(ensurePeriod(lower(theFormData["work-with"]))) :"") +

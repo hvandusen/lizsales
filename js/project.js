@@ -116,7 +116,7 @@
     setInterval(function(){
         $(".thankyou-page .robot").toggleClass("flicker");
     },400);
-    setFormData();
+    // setFormData();
     $(".questionnaire.test .wpcf7-form input, .questionnaire.test .wpcf7-form textarea").on("input",function(){
       getFormData();
       updateOutput();
@@ -161,12 +161,12 @@
     theFormData["exh-space"]= exh_space;
   }
   function setFormData(){
-    for(var i in localStorage){
-      if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
-        theFormData[i.replace("form-","")] = localStorage[i];
-        // $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
-    }
-  }
+  //   for(var i in localStorage){
+  //     if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
+  //       theFormData[i.replace("form-","")] = localStorage[i];
+  //       // $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
+  //   }
+  // }
     //henry
     var worksWith = localStorage["form-works-with"] ? localStorage["form-works-with"].split(", ") : "";
     var exhSpace = localStorage["form-exh-space"] ? localStorage["form-exh-space"] : "" ;
@@ -187,7 +187,7 @@
   }
 
   function updateOutput(){
-    var html = "<div class='statement-header'>Statement Preview</div>"; 
+    var html = "<div class='statement-header'>Statement Preview</div>";
     if(!theFormData && !theFormData.hasOwnProperty("artistname")){
       return;
     }
