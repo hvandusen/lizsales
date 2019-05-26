@@ -168,8 +168,8 @@
   //   }
   // }
     //henry
-    var worksWith = localStorage["form-works-with"] ? localStorage["form-works-with"].split(", ") : "";
-    var exhSpace = localStorage["form-exh-space"] ? localStorage["form-exh-space"] : "" ;
+    var worksWith = "";
+    var exhSpace = "" ;
     $(".works-with .wpcf7-list-item-label").map(function(i,el){
       if(worksWith.indexOf($(el).text())>-1){
         $(el).parent().click();
