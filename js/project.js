@@ -76,7 +76,7 @@
   var cart = {};
   var words = {};
 
-  $(document).on("click", ".submit_q.not-ready",function(e){
+  $(document).on("click", ".submit_q.not-readyz",function(e){
     $(e).preventDefault();
     $(".output").removeClass("hidden");
   });
@@ -159,14 +159,15 @@
     var exh_space = $(".exh-space input:checked").parent().find(".wpcf7-list-item-label").text();
     localStorage["form-exh-space"] = exh_space;
     theFormData["exh-space"]= exh_space;
+    // if no exh boxes are checked, just use the "other" as a dummy value
+    if(exh_space === ""){
+      $(".exh-space input:eq(3)").prop("checked",true);
+      theFormData["form-exh-space-2"] = "";
+      console.log();
+    }
+    console.log("exh space: ",exh_space)
   }
   function setFormData(){
-  //   for(var i in localStorage){
-  //     if(i.indexOf("form-")>-1 && formFields.indexOf(i.replace("form-",""))>-1){
-  //       theFormData[i.replace("form-","")] = localStorage[i];
-  //       // $("[name='"+(i.replace("form-",""))+"']").val(localStorage[i]);
-  //   }
-  // }
     //henry
     var worksWith = "";
     var exhSpace = "" ;
@@ -196,13 +197,7 @@
     $(".generated-statement-1 textarea").val(paragraphs[0]);
     $(".generated-statement-2 textarea").val(paragraphs[1]);
     //switch out newlines for <br> tags for our preview
-      html+= theStatement.replace(/\n/g, "<br/>");
-    for(var i in localStorage){
-      var name = i.replace("form-","");
-      if(i.indexOf("form-")>-1 && formFields.indexOf(name)>-1){
-        html += "<div class='setting'>"+ (i.replace("form-","")) + ": " + localStorage[i] + "</div>";
-      }
-    }
+    html+= theStatement.replace(/\n/g, "<br/>");
     $(".output").html(html);
   }
   //checkboxes
@@ -239,7 +234,6 @@
       $(this)
         .text()
         .indexOf("All of") > -1;
-
     // if(removeAll)
     //setup cart
     if (!cart.hasOwnProperty(input_group)) {
@@ -386,7 +380,8 @@
     input.checked = !checked;
     box.text(input.checked ? "X" : " ");
     $(this).val($(this).find(".wpcf7-list-item-label").text());
-    localStorage["form-exh-space"] = sessionStorage["form-exh-space"] = theFormData["exh-space"] = choice;
+    theFormData["exh-space"] = choice;
+    getFormData();
     e.preventDefault();
     e.stopPropagation();
     updateOutput();

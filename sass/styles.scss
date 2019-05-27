@@ -757,7 +757,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 			//height: auto;//175px;
 			&.submit_q {
 				opacity: 1;
-				&.not-ready {
+				&.not-readyz {
 					opacity: .5;
 					input:hover {
 						background-image: url(../images/border-4.png);

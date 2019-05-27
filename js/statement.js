@@ -74,6 +74,7 @@ function lower(string) {
 }
 
 function statement(theFormData){
+  window.theFormData = theFormData;
   function isReady(){
     var yes = theFormData["artistname"];
     if(yes){
@@ -165,7 +166,8 @@ function statement(theFormData){
   (theFormData["critical-dialogue"] ?
     " They are connected to the contemporary critical dialog of their medium through the ideas of the theorist "+
     stripBecause(ensurePeriod(theFormData["critical-dialogue"])) :"")+
-  (theFormData["exh-space"] ?
+  //below line means, if we have exh-space selected, add sentence as long as we dont have other and an empty "other" answer
+  (theFormData["exh-space"] && !(theFormData["exh-space"] === "Other:" && theFormData["other-text"]==="") ?
     " The ideal exhibition space for their work is a "+
     ("WebsiteGalleryBook".indexOf(theFormData["exh-space"])>-1 ?
       lower(theFormData["exh-space"]) :
