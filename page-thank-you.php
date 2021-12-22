@@ -3,11 +3,7 @@
 	<a href="/" class="pword-back"><span>&lt;---</span>
 <div>iwriteartiststatements.com</div>
 </a>
-<style media="screen">
-	body .thankyou-page .ascii pre {
-		color:black;
-	}
-</style>
+
 <div class="robot">
 		<pre class='ascii robot1'>
  L          m
@@ -48,6 +44,6 @@ ________| |________
 /    \  /    \
 |_____| |_____|</pre>
 <div>
-<div class='thanks-text'>Thank you! Your response has been submitted.</div>
+<div class='thanks-text'>Thank you! We will email you shortly.</div>
 </div>
 <?php get_footer(); ?>

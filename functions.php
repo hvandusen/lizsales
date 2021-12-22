@@ -341,3 +341,47 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
+add_action( 'wp', 'njengah_remove_zoom_effect_theme_support', 99 );
+
+function njengah_remove_zoom_effect_theme_support() {
+
+   remove_theme_support( 'wc-product-gallery-zoom' );
+
+   remove_theme_support( 'wc-product-gallery-lightbox' );
+
+   remove_theme_support( 'wc-product-gallery-slider' );
+
+}
+
+function remove_product_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_product_zoom_support', 100 );
+
+/**
+ * @snippet       Add Product to Cart When Visiting Page ID - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @sourcecode    https://businessbloomer.com/?p=75861
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 3.4.3
+ */
+ 
+add_action( 'wp', 'bbloomer_add_product_to_cart_on_page_id_load' );
+  
+function bbloomer_add_product_to_cart_on_page_id_load() {
+          
+   // product ID to add to cart
+   $product_id = 569;
+ 
+   // page ID to target         
+   if ( is_page( 531 ) ) {    
+      WC()->cart->empty_cart();
+      WC()->cart->add_to_cart( $product_id ); 
+   }
+    
+}
+add_filter( 'woocommerce_add_to_cart_redirect', 'bbloomer_redirect_checkout_add_cart' );
+ 
+function bbloomer_redirect_checkout_add_cart() {
+   return wc_get_checkout_url();
+}

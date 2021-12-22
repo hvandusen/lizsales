@@ -30,9 +30,10 @@ body_class($post->post_name);
 				<div class='nav'>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#services'>Services</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#writers'>Writers</a>
-					<a class='left' href='<?php bloginfo('wpurl')?>/#process'>Process</a>
+					<a class='left' href='<?php bloginfo('wpurl')?>/#packages'>Packages</a>
 					<a class='left' href='<?php bloginfo('wpurl')?>/#pricing'>Pricing</a>
 						<a class='left' href='mailto:info@iwriteartiststatements.com'>Contact</a>
+                    <a class='left' href='/blog/'>Blog</a>
 						<a class='right elementa gen-link' href='<?php bloginfo('url'); ?>/generator-signup'>ARTIST STATEMENT GENERATOR</a>
 
 				</div>
